@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Temporary scraper scripts and data dumps
+*.js
+*.py
+*.json
+*.png
+fb_scraped_photos/
+fb_deep_scraped/
+downloaded_fb/
+.superdesign/
+
+# Allow essential assets and documents
+!assets/
+!README.md
+!index.html
+!en.html
+!CNAME
