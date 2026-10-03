@@ -40,12 +40,12 @@ If deploying this cafe's web presence on a content management system (such as Wo
 
 1. **Smash Balloon Social Post Feed (Custom Facebook Feed)**
    - *Purpose:* Automatically pulls daily cafe updates, seasonal drink announcements, and photos directly from `https://www.facebook.com/profile.php?id=100057527526785` so the website stays fresh without double-posting.
-2. **WP Social Chat / Joinchat (Facebook Messenger & LINE Floating Button)**
-   - *Purpose:* Thai cafe customers prefer quick messaging for directions, pet-friendly policy queries, and table availability.
+2. **WP Social Chat / Joinchat (Facebook Messenger Floating Button)**
+   - *Purpose:* Direct customer messaging via Facebook Messenger (`m.me/100057527526785`) and phone (`080-576-8179`) for directions, pet-friendly policy queries, and table availability.
 3. **Five Star Restaurant Menu / WP Cafe**
    - *Purpose:* Responsive categorized digital menu for Slow Bar Drip Coffee, cold drinks, homemade bakery, and Thai single-dish meals with prices and dietary tags.
 4. **WP Cafe Reservation / Restaurant Reservations**
-   - *Purpose:* Allows customers to request or reserve prime waterfront seats, especially during weekend peak hours.
+   - *Purpose:* Allows customers to prepare table reservation requests for waterfront and garden zones.
 5. **WP Go Maps / Leaflet Map**
    - *Purpose:* Interactive map pinned at Bang Chak Soi 19, Choeng Noen, Rayong with a one-tap "Get Directions" trigger for Google Maps mobile navigation.
 6. **Rank Math SEO (with Local SEO Module)**
@@ -53,26 +53,46 @@ If deploying this cafe's web presence on a content management system (such as Wo
 
 ---
 
-## 3. Online Table Reservation & Booking System
+## 3. Online Table Reservation Request System
 
-The website includes an interactive online booking system tailored to the cafe's physical layout and operating schedule:
-- **3 Visual Seating Zones:**
-  1. *ระเบียงชานไม้ริมคลอง (Waterfront Deck)* — Prime photo & feet-dangling spot overlooking Bang Chak canal.
-  2. *เรือนไม้โบราณวินเทจ (Vintage Heritage House)* — Shaded, peaceful indoor seating under vintage wooden beams.
-  3. *สวนใต้ร่มไม้โกงกาง (Mangrove Garden)* — Outdoor family & group seating under lush trees.
-- **Operating Hours Rules:**
-  - Automated Monday detection: Alerts customers that the cafe is closed on Mondays and guides them to select Tue–Sun.
-  - Time slots from 09:30 to 16:00 (closing at 17:00).
-- **Instant Facebook Messenger & LINE Handoff:**
-  - Generates a formatted reservation code (`#TK-XXXX`).
-  - Pre-populates a direct message link to the cafe's Facebook Messenger (`https://m.me/100057527526785?text=...`) for instant zero-friction confirmation.
-- **Local Client-Side Storage:**
-  - Persists active reservations in `localStorage` so customers can view their upcoming bookings.
+The website includes a bilingual (`index.html` TH / `en.html` EN) reservation request builder tailored to the cafe's layout and operating schedule:
+- **4 Authentic Seating Zones:**
+  1. *ศาลาไม้จิกน้ำริมคลอง (Waterfront Sala Pavilion)*
+  2. *โซนโกงกางริมน้ำ (Mangrove Riverside Bar)* — Showcased with 3 authentic zone photos
+  3. *ซุ้มระเบียงไม้ล้อเกวียน (Rustic Covered Terrace)*
+  4. *ลานสวนร่มไม้ธรรมชาติ (Shaded Outdoor Garden)*
+- **Operating Hours & Time Slots:**
+  - Automated Monday detection: Alerts customers that the cafe is closed on Mondays and guides them to select Tuesday – Sunday.
+  - 16 selectable 30-minute arrival intervals (`09:00` – `16:30`) plus a custom arrival time picker (`09:00` – `16:45`) with no fixed seating duration limit.
+- **Device-Only Request Storage (`localStorage`):**
+  - Submitting the form saves a draft request on the user's device only (`tidklong_bookings`, status `request_awaiting_staff_confirmation`) and **does not transmit anything to the cafe automatically**.
+  - Explicitly labeled in both Thai and English as a local request awaiting staff confirmation, not a confirmed reservation.
+- **Facebook Messenger Handoff & Prefill Caveat:**
+  - Generates a reference ID (`#TK-XXXX`) and populates `https://m.me/100057527526785?text=...` with the URL-encoded request details.
+  - **Messenger Prefill Caveat:** Opening the `m.me` link redirects (`HTTP 302`) to Facebook Messenger (`facebook.com/msg/...`). It does not send a booking automatically—the customer must be signed into Facebook/Messenger and manually send the message for staff to receive and confirm the request. On some desktop browsers requiring a fresh login redirect, Facebook may not preserve the `?text=` prefill parameter across authentication.
 
 ---
 
-## 4. Local Web Prototype & Live Server
+## 4. Production Deployment, Domain Status & QA Verification
 
-- **Live URL:** [http://localhost:8088#booking](http://localhost:8088#booking)
-- **Source File:** `index.html` (Tailwind CSS, Google Fonts Prompt/Sarabun, Lucide icons, LocalBusiness Schema JSON-LD).
+### Primary Public URLs
+- **Primary Public URL (Thai):** [https://canalbound.vercel.app/](https://canalbound.vercel.app/)
+- **Primary Public URL (English):** [https://canalbound.vercel.app/en.html](https://canalbound.vercel.app/en.html)
+- **Additional Active `.vercel.app` Aliases:**
+  - `https://ติดคลองคาเฟ่.vercel.app/` (`https://xn--42cai4ce8dwb2d4bn3l2d.vercel.app/`)
+  - `https://tidklong-cafe.vercel.app/`
+  - `https://canal-bound.vercel.app/`
+- **GitHub Pages Mirror:**
+  - Thai: [https://hackhapong-code.github.io/tidklong-cafe/](https://hackhapong-code.github.io/tidklong-cafe/)
+  - English: [https://hackhapong-code.github.io/tidklong-cafe/en.html](https://hackhapong-code.github.io/tidklong-cafe/en.html)
+- **Source Deployment Commit:** `5321a041c6fbe2276a95711f3ddc42e13c214338` (`main` on [hackhapong-code/tidklong-cafe](https://github.com/hackhapong-code/tidklong-cafe))
 
+### Domain & Security Status
+- **Unpaid `.com` Domain Status:** `ติดคลองคาเฟ่.com` (`xn--42cai4ce8dwb2d4bn3l2d.com`) remains **unregistered and unpaid** (`No match for domain` in WHOIS). No domain purchases or charges were made.
+- **Security Settings:** Vercel project deployment protection (`--sso`) and account permissions remain enabled and unchanged.
+
+### Actual QA Evidence
+- **Live Bilingual Verification:** Independently verified in-browser on `https://canalbound.vercel.app/` and `https://canalbound.vercel.app/en.html`; both pages render the updated request-only wording and pass JS syntax/source parsing.
+- **DOM XSS Hardening Regression:** All dynamic booking rendering in `#modalSummaryBox` and `#myBookingsList` uses `document.createElement(...)`, `.textContent`, and `.replaceChildren(...)` (`0` `.innerHTML` occurrences in `index.html` and `en.html`). Tested against hostile payloads (`<img src=x onerror=...>`, `<script>`, `<svg onload=...>`, `<iframe>`) with `xssTriggered: false` and `0` injected elements.
+- **Corrupted `localStorage` Recovery:** Verified `readStoredBookings()` with malformed JSON (`"{bad_json[["`) and non-array payloads (`{"not":"an array"}`); corrupted entries are automatically cleared (`null`) and recover cleanly to the empty state with `0` console/page errors.
+- **Mobile Layout (`390x844`):** Verified `0px` horizontal overflow (`scrollWidth === innerWidth`) and `0` failed asset requests across both Thai and English pages.
