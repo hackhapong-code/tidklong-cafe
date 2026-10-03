@@ -1130,11 +1130,11 @@
             <div class="pt-2">
               <button type="submit" 
                       class="w-full py-4 rounded-2xl bg-[#01472e] hover:bg-[#025a3a] text-[#fefae0] font-display font-bold text-base shadow-lg hover:shadow-xl transition transform active:scale-[0.99] flex items-center justify-center gap-2">
-                <i data-lucide="check-circle" class="w-5 h-5 text-[#ccd5ae]"></i>
-                ยืนยันการจองโต๊ะ (ไม่มีค่าใช้จ่ายล่วงหน้า)
+                <i data-lucide="send" class="w-5 h-5 text-[#ccd5ae]"></i>
+                เตรียมคำขอจองโต๊ะ (บันทึกในอุปกรณ์นี้ • รอส่งแจ้งเจ้าหน้าที่)
               </button>
-              <p class="text-center text-xs text-[#01472e]/60 mt-2.5">
-                *ทางร้านจะเก็บโต๊ะไว้ให้ 15 นาทีหลังจากเวลานัดหมาย หากติดปัญหาโทร 080-576-8179
+              <p class="text-center text-xs text-[#01472e]/70 mt-2.5">
+                *การกดปุ่มนี้จะบันทึกคำขอไว้ในอุปกรณ์ของคุณเท่านั้น ทางร้านจะได้รับข้อมูลเมื่อคุณส่งข้อความผ่าน Facebook Messenger และยืนยันกลับแล้ว
               </p>
             </div>
 
@@ -1151,10 +1151,10 @@
               <div class="flex items-center justify-between border-b border-[#025a3a] pb-4">
                 <h4 class="font-display font-bold text-base text-[#e9edc9] flex items-center gap-2">
                   <i data-lucide="clipboard-list" class="w-4 h-4 text-[#ccd5ae]"></i>
-                  สรุปรายละเอียดการจอง
+                  สรุปคำขอจองโต๊ะ
                 </h4>
-                <span class="text-[10px] bg-white/10 text-[#ccd5ae] font-semibold px-2.5 py-0.5 rounded-full border border-[#ccd5ae]/30">
-                  จองฟรี
+                <span class="text-[10px] bg-amber-400/20 text-amber-200 font-semibold px-2.5 py-0.5 rounded-full border border-amber-300/30">
+                  รอส่งยืนยันกับเจ้าหน้าที่
                 </span>
               </div>
 
@@ -1188,9 +1188,9 @@
               <!-- Direct Assurance -->
               <div class="bg-[#002216] rounded-xl p-3.5 border border-[#025a3a] text-[11px] text-[#ccd5ae] space-y-1">
                 <div class="flex items-center gap-1.5 text-[#fefae0] font-semibold">
-                  <i data-lucide="shield-check" class="w-3.5 h-3.5 text-[#ccd5ae]"></i> นโยบายของทางร้าน
+                  <i data-lucide="shield-check" class="w-3.5 h-3.5 text-[#ccd5ae]"></i> ขั้นตอนการส่งคำขอจอง
                 </div>
-                <p>ไม่มีการเรียกเก็บมัดจำ สามารถส่งข้อความยืนยันเข้า Facebook เพจร้านได้ทันที</p>
+                <p>ไม่มีการเก็บมัดจำ แบบฟอร์มนี้จะถูกบันทึกไว้ในอุปกรณ์ของคุณเพื่อเตรียมข้อความ และเจ้าหน้าที่ร้านจะได้รับคำขอต่อเมื่อคุณกดส่งข้อความใน Facebook Messenger แล้วเท่านั้น</p>
               </div>
 
             </div>
@@ -1200,16 +1200,19 @@
 
           <!-- Existing Bookings in Local Storage -->
           <div class="bg-white rounded-3xl p-6 shadow-sm border border-[#ccd5ae]">
-            <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center justify-between mb-2">
               <h4 class="font-display font-bold text-sm text-[#01472e] flex items-center gap-2">
                 <i data-lucide="calendar" class="w-4 h-4 text-[#01472e]"></i>
-                การจองของคุณในเครื่องนี้
+                คำขอจองที่บันทึกในอุปกรณ์นี้
               </h4>
               <button onclick="clearMyBookings()" class="text-[11px] text-slate-400 hover:text-red-500 transition">ล้างประวัติ</button>
             </div>
+            <p class="text-[11px] text-amber-800 bg-amber-50 border border-amber-200/80 rounded-xl px-3 py-1.5 mb-3">
+              บันทึกในเครื่องนี้เท่านั้น (ยังไม่ใช่การยืนยันโต๊ะ • เจ้าหน้าที่จะได้รับข้อมูลเมื่อคุณส่งข้อความผ่าน Messenger)
+            </p>
             
             <div id="myBookingsList" class="space-y-2.5 text-xs">
-              <p class="text-slate-400 text-center py-4 text-xs italic">ยังไม่มีรายการจอง กรอกแบบฟอร์มด้านซ้ายเพื่อจองโต๊ะ</p>
+              <p class="text-slate-400 text-center py-4 text-xs italic">ยังไม่มีคำขอจองในอุปกรณ์นี้ กรอกแบบฟอร์มด้านซ้ายเพื่อสร้างคำขอจองโต๊ะ</p>
             </div>
           </div>
 
@@ -1654,32 +1657,32 @@
     </a>
   </div>
 
-  <!-- Success Confirmation Modal -->
+  <!-- Request Saved Modal -->
   <div id="bookingSuccessModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
     <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-[#ccd5ae] text-center space-y-5 animate-in fade-in zoom-in duration-200">
       
-      <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center mx-auto shadow-inner">
-        <i data-lucide="check-check" class="w-8 h-8"></i>
+      <div class="w-16 h-16 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center mx-auto shadow-inner">
+        <i data-lucide="send" class="w-8 h-8"></i>
       </div>
 
       <div class="space-y-1">
-        <span class="text-xs font-semibold text-[#01472e] uppercase tracking-wider">Booking Successful</span>
-        <h3 class="font-display font-extrabold text-2xl text-[#01472e]">บันทึกการจองสำเร็จ!</h3>
-        <p class="text-xs text-slate-500">รหัสอ้างอิงการจอง: <span id="modalBookingId" class="font-mono font-bold text-[#01472e]">#TK-XXXX</span></p>
+        <span class="text-xs font-semibold text-amber-700 uppercase tracking-wider">Saved on Device • Awaiting Staff Confirmation</span>
+        <h3 class="font-display font-extrabold text-2xl text-[#01472e]">เตรียมคำขอจองโต๊ะแล้ว (รอส่งยืนยัน)</h3>
+        <p class="text-xs text-slate-500">รหัสอ้างอิงคำขอจอง: <span id="modalBookingId" class="font-mono font-bold text-[#01472e]">#TK-XXXX</span></p>
       </div>
 
       <div id="modalSummaryBox" class="bg-[#fefae0] rounded-2xl p-4 text-xs text-left space-y-2 border border-[#ccd5ae]">
-        <!-- Rendered by JS -->
+        <!-- Rendered safely via DOM textContent -->
       </div>
 
-      <p class="text-xs text-slate-600 leading-relaxed">
-        ส่งข้อมูลนี้แจ้งทางร้านผ่าน Facebook Messenger หรือโทรแจ้งทันทีเพื่อความสะดวกรวดเร็ว:
+      <p class="text-xs text-amber-900 bg-amber-50 border border-amber-200 rounded-xl p-3 leading-relaxed text-left">
+        <strong>สำคัญ:</strong> ข้อมูลนี้ถูกบันทึกไว้ในอุปกรณ์ของคุณเท่านั้น ยังไม่ได้ส่งไปยังทางร้าน และยังไม่ใช่การยืนยันการจองโต๊ะ เจ้าหน้าที่ของร้านจะได้รับคำขอต่อเมื่อคุณกดส่งข้อความผ่าน Facebook Messenger ด้านล่าง (หรือโทร 080-576-8179) เพื่อรอเจ้าหน้าที่ยืนยันกลับครับ
       </p>
 
       <div class="space-y-2.5">
-        <a id="modalMessengerBtn" href="#" target="_blank" 
+        <a id="modalMessengerBtn" href="#" target="_blank" rel="noopener noreferrer"
            class="w-full py-3.5 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm shadow-md transition flex items-center justify-center gap-2">
-          <i data-lucide="send" class="w-4 h-4"></i> ส่งยืนยันผ่าน Facebook Messenger ทันที
+          <i data-lucide="send" class="w-4 h-4"></i> ส่งคำขอจองผ่าน Facebook Messenger ให้เจ้าหน้าที่ยืนยัน
         </a>
         <button onclick="closeSuccessModal()" 
                 class="w-full py-3 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-xs transition">
@@ -1692,6 +1695,56 @@
 
   <!-- Booking System JavaScript Logic -->
   <script>
+    const BOOKINGS_STORAGE_KEY = 'tidklong_bookings';
+
+    function readStoredBookings() {
+      try {
+        const raw = localStorage.getItem(BOOKINGS_STORAGE_KEY);
+        if (!raw) return [];
+        const parsed = JSON.parse(raw);
+        if (!Array.isArray(parsed)) {
+          localStorage.removeItem(BOOKINGS_STORAGE_KEY);
+          return [];
+        }
+        return parsed.filter(item => item && typeof item === 'object');
+      } catch (err) {
+        try {
+          localStorage.removeItem(BOOKINGS_STORAGE_KEY);
+        } catch (_) {}
+        return [];
+      }
+    }
+
+    function createSummaryRow(label, valueText, valueClass) {
+      const row = document.createElement('div');
+      row.className = 'flex justify-between gap-2';
+      const labelSpan = document.createElement('span');
+      labelSpan.className = 'text-slate-500 shrink-0';
+      labelSpan.textContent = label;
+      const valueSpan = document.createElement('span');
+      valueSpan.className = valueClass || 'font-bold text-[#01472e] text-right break-words';
+      valueSpan.textContent = valueText;
+      row.appendChild(labelSpan);
+      row.appendChild(valueSpan);
+      return row;
+    }
+
+    function renderModalSummary(booking) {
+      const box = document.getElementById('modalSummaryBox');
+      if (!box) return;
+      const rows = [
+        createSummaryRow('สถานะ:', 'คำขอจองในเครื่อง (รอส่งให้เจ้าหน้าที่ยืนยัน)', 'font-bold text-amber-700 text-right'),
+        createSummaryRow('ผู้จอง:', `${booking.name || '-'} (${booking.phone || '-'})`),
+        createSummaryRow('โซนที่นั่ง:', String(booking.zone || '-')),
+        createSummaryRow('วัน/เวลา:', `${booking.date || '-'} เวลา ${booking.time || '-'} น.`),
+        createSummaryRow('จำนวน:', String(booking.guests || '-'))
+      ];
+      if (booking.notes) {
+        rows.push(createSummaryRow('เพิ่มเติม:', String(booking.notes), 'text-slate-700 text-right break-words'));
+      }
+      box.replaceChildren(...rows);
+    }
+
     // Initialize default date (tomorrow or next valid day)
     document.addEventListener("DOMContentLoaded", () => {
       const dateInput = document.getElementById("bookingDate");
@@ -1732,7 +1785,7 @@
             card.classList.remove('border-[#ccd5ae]/60', 'bg-white/70');
             chk.classList.remove('hidden');
             document.getElementById('selectedZoneInput').value = zones[k].name;
-            document.getElementById('summaryZone').innerText = zones[k].name;
+            document.getElementById('summaryZone').textContent = zones[k].name;
           } else {
             card.classList.remove('border-[#01472e]', 'bg-white');
             card.classList.add('border-[#ccd5ae]/60', 'bg-white/70');
@@ -1745,7 +1798,7 @@
     // Time Selection
     function selectTime(timeVal) {
       document.getElementById('selectedTimeInput').value = timeVal;
-      document.getElementById('summaryTime').innerText = `${timeVal} น.`;
+      document.getElementById('summaryTime').textContent = `${timeVal} น.`;
       const customPicker = document.getElementById('customTimePicker');
       if (customPicker) customPicker.value = '';
 
@@ -1762,7 +1815,7 @@
     function selectCustomTime(timeVal) {
       if (!timeVal) return;
       document.getElementById('selectedTimeInput').value = timeVal;
-      document.getElementById('summaryTime').innerText = `${timeVal} น.`;
+      document.getElementById('summaryTime').textContent = `${timeVal} น.`;
 
       const buttons = document.querySelectorAll('.time-btn');
       buttons.forEach(btn => {
@@ -1773,7 +1826,7 @@
     // Guest Selection
     function selectGuests(guestText) {
       document.getElementById('selectedGuestsInput').value = guestText;
-      document.getElementById('summaryGuests').innerText = guestText;
+      document.getElementById('summaryGuests').textContent = guestText;
 
       const buttons = document.querySelectorAll('.guest-btn');
       buttons.forEach(btn => {
@@ -1798,15 +1851,15 @@
 
       const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
       const formatted = selected.toLocaleDateString('th-TH', options);
-      document.getElementById('summaryDate').innerText = formatted;
+      document.getElementById('summaryDate').textContent = formatted;
     }
 
     // Live update for inputs
     function updateSummary() {
       const name = document.getElementById('custName').value.trim();
       const phone = document.getElementById('custPhone').value.trim();
-      document.getElementById('summaryName').innerText = name || '-';
-      document.getElementById('summaryPhone').innerText = phone || '-';
+      document.getElementById('summaryName').textContent = name || '-';
+      document.getElementById('summaryPhone').textContent = phone || '-';
     }
 
     // Form Submit Handler
@@ -1822,8 +1875,9 @@
 
       const booking = {
         id: 'TK-' + Math.floor(1000 + Math.random() * 9000),
+        status: 'request_awaiting_staff_confirmation',
         zone: document.getElementById('selectedZoneInput').value,
-        date: document.getElementById('summaryDate').innerText,
+        date: document.getElementById('summaryDate').textContent,
         dateRaw: dateVal,
         time: document.getElementById('selectedTimeInput').value,
         guests: document.getElementById('selectedGuestsInput').value,
@@ -1833,28 +1887,26 @@
         createdAt: new Date().toISOString()
       };
 
-      // Save to localStorage
-      const existing = JSON.parse(localStorage.getItem('tidklong_bookings') || '[]');
+      // Save to localStorage on this device only
+      const existing = readStoredBookings();
       existing.unshift(booking);
-      localStorage.setItem('tidklong_bookings', JSON.stringify(existing));
+      try {
+        localStorage.setItem(BOOKINGS_STORAGE_KEY, JSON.stringify(existing));
+      } catch (_) {}
 
-      // Show Modal
-      document.getElementById('modalBookingId').innerText = `#${booking.id}`;
-      document.getElementById('modalSummaryBox').innerHTML = `
-        <div class="flex justify-between"><span class="text-slate-500">ผู้จอง:</span><span class="font-bold text-[#01472e]">${booking.name} (${booking.phone})</span></div>
-        <div class="flex justify-between"><span class="text-slate-500">โซนที่นั่ง:</span><span class="font-bold text-[#01472e]">${booking.zone}</span></div>
-        <div class="flex justify-between"><span class="text-slate-500">วัน/เวลา:</span><span class="font-bold text-[#01472e]">${booking.date} เวลา ${booking.time} น.</span></div>
-        <div class="flex justify-between"><span class="text-slate-500">จำนวน:</span><span class="font-bold text-[#01472e]">${booking.guests}</span></div>
-        ${booking.notes ? `<div class="flex justify-between"><span class="text-slate-500">เพิ่มเติม:</span><span class="text-slate-700">${booking.notes}</span></div>` : ''}
-      `;
+      // Show Modal safely via textContent
+      document.getElementById('modalBookingId').textContent = `#${booking.id}`;
+      renderModalSummary(booking);
 
       // Format Messenger URI
-      const msgText = encodeURIComponent(`สวัสดีครับคุณติดคลอง คาเฟ่ ขอจองโต๊ะล่วงหน้าครับ:\n- รหัสจอง: #${booking.id}\n- ผู้จอง: ${booking.name} (${booking.phone})\n- โซน: ${booking.zone}\n- วันที่: ${booking.date} เวลา ${booking.time} น.\n- จำนวน: ${booking.guests}\n- เพิ่มเติม: ${booking.notes || '-'}`);
+      const msgText = encodeURIComponent(`สวัสดีครับคุณติดคลอง คาเฟ่ ขอส่งคำขอจองโต๊ะล่วงหน้า (รอเจ้าหน้าที่ยืนยัน) ครับ:\n- รหัสคำขอ: #${booking.id}\n- ผู้จอง: ${booking.name} (${booking.phone})\n- โซน: ${booking.zone}\n- วันที่: ${booking.date} เวลา ${booking.time} น.\n- จำนวน: ${booking.guests}\n- เพิ่มเติม: ${booking.notes || '-'}`);
       document.getElementById('modalMessengerBtn').href = `https://m.me/100057527526785?text=${msgText}`;
 
       document.getElementById('bookingSuccessModal').classList.remove('hidden');
       loadMyBookings();
-      lucide.createIcons();
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+      }
     }
 
     function closeSuccessModal() {
@@ -1863,30 +1915,82 @@
 
     function loadMyBookings() {
       const container = document.getElementById('myBookingsList');
-      const existing = JSON.parse(localStorage.getItem('tidklong_bookings') || '[]');
+      if (!container) return;
+      const existing = readStoredBookings();
       
       if (existing.length === 0) {
-        container.innerHTML = `<p class="text-slate-400 text-center py-4 text-xs italic">ยังไม่มีรายการจอง กรอกแบบฟอร์มด้านซ้ายเพื่อจองโต๊ะ</p>`;
+        const emptyP = document.createElement('p');
+        emptyP.className = 'text-slate-400 text-center py-4 text-xs italic';
+        emptyP.textContent = 'ยังไม่มีคำขอจองในอุปกรณ์นี้ กรอกแบบฟอร์มด้านซ้ายเพื่อสร้างคำขอจองโต๊ะ';
+        container.replaceChildren(emptyP);
         return;
       }
 
-      container.innerHTML = existing.slice(0, 3).map(b => `
-        <div class="p-3.5 rounded-2xl bg-white border border-[#ccd5ae]/60 space-y-1 shadow-sm">
-          <div class="flex items-center justify-between">
-            <span class="font-mono font-bold text-[#01472e] text-xs">#${b.id}</span>
-            <span class="text-[10px] bg-[#ccd5ae]/40 text-[#01472e] px-2 py-0.5 rounded font-bold">${b.time} น.</span>
-          </div>
-          <p class="font-bold text-[#01472e] text-xs">${b.zone}</p>
-          <div class="flex justify-between text-[11px] text-[#01472e]/70">
-            <span>${b.date}</span>
-            <span>${b.guests}</span>
-          </div>
-        </div>
-      `).join('');
+      const cards = existing.slice(0, 3).map(b => {
+        const card = document.createElement('div');
+        card.className = 'p-3.5 rounded-2xl bg-white border border-[#ccd5ae]/60 space-y-1.5 shadow-sm';
+
+        const topRow = document.createElement('div');
+        topRow.className = 'flex items-center justify-between gap-2';
+
+        const idSpan = document.createElement('span');
+        idSpan.className = 'font-mono font-bold text-[#01472e] text-xs';
+        idSpan.textContent = `#${String(b.id || 'TK-REQ')}`;
+
+        const timeSpan = document.createElement('span');
+        timeSpan.className = 'text-[10px] bg-[#ccd5ae]/40 text-[#01472e] px-2 py-0.5 rounded font-bold';
+        timeSpan.textContent = `${String(b.time || '-')} น.`;
+
+        topRow.appendChild(idSpan);
+        topRow.appendChild(timeSpan);
+
+        const statusBadge = document.createElement('div');
+        statusBadge.className = 'text-[10px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-semibold inline-block';
+        statusBadge.textContent = 'บันทึกในเครื่อง • รอส่ง Messenger ให้เจ้าหน้าที่ยืนยัน';
+
+        const zoneP = document.createElement('p');
+        zoneP.className = 'font-bold text-[#01472e] text-xs break-words';
+        zoneP.textContent = String(b.zone || '-');
+
+        const guestP = document.createElement('p');
+        guestP.className = 'text-[11px] text-slate-600 break-words';
+        guestP.textContent = `${String(b.name || '-')} (${String(b.phone || '-')})`;
+
+        const metaRow = document.createElement('div');
+        metaRow.className = 'flex justify-between text-[11px] text-[#01472e]/70 gap-2';
+
+        const dateSpan = document.createElement('span');
+        dateSpan.textContent = String(b.date || '-');
+
+        const guestsSpan = document.createElement('span');
+        guestsSpan.textContent = String(b.guests || '-');
+
+        metaRow.appendChild(dateSpan);
+        metaRow.appendChild(guestsSpan);
+
+        card.appendChild(topRow);
+        card.appendChild(statusBadge);
+        card.appendChild(zoneP);
+        card.appendChild(guestP);
+        card.appendChild(metaRow);
+
+        if (b.notes) {
+          const notesP = document.createElement('p');
+          notesP.className = 'text-[11px] text-slate-500 italic break-words';
+          notesP.textContent = `หมายเหตุ: ${String(b.notes)}`;
+          card.appendChild(notesP);
+        }
+
+        return card;
+      });
+
+      container.replaceChildren(...cards);
     }
 
     function clearMyBookings() {
-      localStorage.removeItem('tidklong_bookings');
+      try {
+        localStorage.removeItem(BOOKINGS_STORAGE_KEY);
+      } catch (_) {}
       loadMyBookings();
     }
 
