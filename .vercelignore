@@ -1,0 +1,17 @@
+node_modules/
+package-lock.json
+package.json
+/*.js
+/*.py
+/*.json
+/*.png
+fb_scraped_photos/
+fb_deep_scraped/
+downloaded_fb/
+.superdesign/
+.git/
+!assets/
+!assets/**
+!README.md
+!index.html
+!en.html
