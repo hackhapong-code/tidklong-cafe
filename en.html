@@ -181,6 +181,10 @@
         <a href="#about" class="px-3.5 py-1.5 rounded-full hover:bg-[#ccd5ae]/30 transition">Atmosphere</a>
         <a href="#menu" class="px-3.5 py-1.5 rounded-full hover:bg-[#ccd5ae]/30 transition">Menu</a>
         <a href="#boat" class="px-3.5 py-1.5 rounded-full hover:bg-[#ccd5ae]/30 transition">Free Boating</a>
+        <a href="#reels" class="px-3.5 py-1.5 rounded-full hover:bg-[#ccd5ae]/30 transition flex items-center gap-1">
+          <i data-lucide="play-circle" class="w-3.5 h-3.5 text-red-500"></i>
+          <span>Reels Vibe</span>
+        </a>
         <a href="#booking" class="px-3.5 py-1.5 rounded-full bg-[#01472e] text-[#fefae0] shadow hover:bg-[#025a3a] transition flex items-center gap-1.5 font-bold">
           <i data-lucide="calendar-check" class="w-3.5 h-3.5 text-emerald-200"></i>
           Book Table
@@ -443,6 +447,166 @@
     </div>
   </section>
 
+  <!-- Reels & Vibe Showcase Section (Inspired by Instagram Reels & Short Video Vibe) -->
+  <section id="reels" class="py-16 sm:py-24 bg-gradient-to-b from-[#fefae0] to-white/90 relative overflow-hidden border-b border-[#ccd5ae]/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <div class="inline-flex items-center gap-2 bg-[#01472e] text-[#fefae0] text-xs font-bold px-3.5 py-1.5 rounded-full mb-3 shadow-sm">
+            <i data-lucide="video" class="w-3.5 h-3.5 text-emerald-300"></i>
+            <span>30-Second Tour • Reels & Vibe Showcase</span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-[#01472e] tracking-tight">
+            Experience the Vibe in 30 Seconds
+          </h2>
+          <p class="text-sm sm:text-base text-[#01472e]/75 mt-2 max-w-xl">
+            Watch authentic reels of our wooden rowboats, Slow Bar coffee drip, and serene mangrove canopy along Bang Chak canal.
+          </p>
+        </div>
+
+        <!-- Social Facebook Reel Channel Link -->
+        <a href="https://www.facebook.com/profile.php?id=100057527526785" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-[#01472e] font-bold text-xs sm:text-sm px-5 py-3 rounded-full border border-[#ccd5ae] shadow-sm transition group self-start md:self-auto shrink-0">
+          <svg class="w-4 h-4 fill-current text-blue-600" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          <span>Watch All Reels on Facebook</span>
+          <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400 group-hover:text-[#01472e] transition"></i>
+        </a>
+      </div>
+
+      <!-- 4 Vertical 9:16 Reels Grid -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        
+        <!-- Reel Card 1: Row Boat -->
+        <div onclick="openReelModal(0)" class="group cursor-pointer relative rounded-3xl overflow-hidden aspect-[9/16] shadow-lg hover:shadow-2xl transition-all duration-300 border border-white/60 hover:-translate-y-1.5 bg-[#01472e]/10">
+          <img src="assets/fb_reel_row_boat_canvas.jpg" alt="Rowing wooden boat along canal" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/20"></div>
+          
+          <!-- Top Badges -->
+          <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between z-10">
+            <span class="bg-red-600/90 text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-wider shadow">Reel</span>
+            <span class="bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 border border-white/20">
+              <i data-lucide="clock" class="w-2.5 h-2.5"></i> 0:30
+            </span>
+          </div>
+
+          <!-- Center Play Button -->
+          <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/90 group-hover:bg-emerald-400 text-[#01472e] group-hover:text-black flex items-center justify-center shadow-xl group-hover:scale-110 transition duration-300">
+              <i data-lucide="play" class="w-5 h-5 fill-current ml-0.5"></i>
+            </div>
+          </div>
+
+          <!-- Bottom Captions -->
+          <div class="absolute bottom-4 left-3.5 right-3.5 text-white z-10">
+            <span class="text-xs text-emerald-300 font-semibold block mb-0.5">🛶 Signature Vibe</span>
+            <h4 class="font-display font-bold text-sm sm:text-base leading-snug drop-shadow line-clamp-2">Free Blue Wooden Rowboat along Canal</h4>
+            <p class="text-[10px] sm:text-xs text-[#fefae0]/80 mt-1 line-clamp-1">Complimentary for all cafe visitors</p>
+          </div>
+        </div>
+
+        <!-- Reel Card 2: Pedal Dolphin Boat -->
+        <div onclick="openReelModal(1)" class="group cursor-pointer relative rounded-3xl overflow-hidden aspect-[9/16] shadow-lg hover:shadow-2xl transition-all duration-300 border border-white/60 hover:-translate-y-1.5 bg-[#01472e]/10">
+          <img src="assets/fb_reel_pedal_boat_canvas.jpg" alt="Dolphin pedal boat" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/20"></div>
+          
+          <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between z-10">
+            <span class="bg-blue-600/90 text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-wider shadow">Family</span>
+            <span class="bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 border border-white/20">
+              <i data-lucide="clock" class="w-2.5 h-2.5"></i> 0:35
+            </span>
+          </div>
+
+          <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/90 group-hover:bg-blue-400 text-[#01472e] group-hover:text-black flex items-center justify-center shadow-xl group-hover:scale-110 transition duration-300">
+              <i data-lucide="play" class="w-5 h-5 fill-current ml-0.5"></i>
+            </div>
+          </div>
+
+          <div class="absolute bottom-4 left-3.5 right-3.5 text-white z-10">
+            <span class="text-xs text-blue-300 font-semibold block mb-0.5">🐬 Fun for All</span>
+            <h4 class="font-display font-bold text-sm sm:text-base leading-snug drop-shadow line-clamp-2">Dolphin Pedal Boat Fun for Families</h4>
+            <p class="text-[10px] sm:text-xs text-[#fefae0]/80 mt-1 line-clamp-1">Free leisurely boating across calm waters</p>
+          </div>
+        </div>
+
+        <!-- Reel Card 3: Slow Bar Coffee -->
+        <div onclick="openReelModal(2)" class="group cursor-pointer relative rounded-3xl overflow-hidden aspect-[9/16] shadow-lg hover:shadow-2xl transition-all duration-300 border border-white/60 hover:-translate-y-1.5 bg-[#01472e]/10">
+          <img src="assets/real_fb_orange_americano.jpg" alt="Slow Bar Drip Coffee" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/20"></div>
+          
+          <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between z-10">
+            <span class="bg-amber-600/90 text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-wider shadow">Coffee</span>
+            <span class="bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 border border-white/20">
+              <i data-lucide="clock" class="w-2.5 h-2.5"></i> 0:25
+            </span>
+          </div>
+
+          <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/90 group-hover:bg-amber-400 text-[#01472e] group-hover:text-black flex items-center justify-center shadow-xl group-hover:scale-110 transition duration-300">
+              <i data-lucide="play" class="w-5 h-5 fill-current ml-0.5"></i>
+            </div>
+          </div>
+
+          <div class="absolute bottom-4 left-3.5 right-3.5 text-white z-10">
+            <span class="text-xs text-amber-300 font-semibold block mb-0.5">☕ Coffee Craft</span>
+            <h4 class="font-display font-bold text-sm sm:text-base leading-snug drop-shadow line-clamp-2">Slow Bar Fresh Orange Americano & Matcha</h4>
+            <p class="text-[10px] sm:text-xs text-[#fefae0]/80 mt-1 line-clamp-1">Premium beans brewed fresh by the water</p>
+          </div>
+        </div>
+
+        <!-- Reel Card 4: 50-Year Heritage Wooden House -->
+        <div onclick="openReelModal(3)" class="group cursor-pointer relative rounded-3xl overflow-hidden aspect-[9/16] shadow-lg hover:shadow-2xl transition-all duration-300 border border-white/60 hover:-translate-y-1.5 bg-[#01472e]/10">
+          <img src="assets/hero_real.jpg" alt="50-Year Heritage Wooden House" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/20"></div>
+          
+          <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between z-10">
+            <span class="bg-emerald-700/90 text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-wider shadow">Heritage</span>
+            <span class="bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 border border-white/20">
+              <i data-lucide="clock" class="w-2.5 h-2.5"></i> 0:40
+            </span>
+          </div>
+
+          <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/90 group-hover:bg-emerald-300 text-[#01472e] group-hover:text-black flex items-center justify-center shadow-xl group-hover:scale-110 transition duration-300">
+              <i data-lucide="play" class="w-5 h-5 fill-current ml-0.5"></i>
+            </div>
+          </div>
+
+          <div class="absolute bottom-4 left-3.5 right-3.5 text-white z-10">
+            <span class="text-xs text-emerald-200 font-semibold block mb-0.5">🏡 Antique House</span>
+            <h4 class="font-display font-bold text-sm sm:text-base leading-snug drop-shadow line-clamp-2">50-Year Rustic Teak House & Waterfront Decks</h4>
+            <p class="text-[10px] sm:text-xs text-[#fefae0]/80 mt-1 line-clamp-1">Tranquil haven beneath lush tropical trees</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Slow Living Manifesto Callout (Inspired by Post 46 & 49) -->
+      <div class="mt-10 sm:mt-12 bg-gradient-to-r from-[#01472e] via-[#025a3a] to-[#013824] text-[#fefae0] rounded-3xl p-6 sm:p-8 border border-[#ccd5ae]/30 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-[#ccd5ae]/20 flex items-center justify-center text-emerald-300 shrink-0">
+            <i data-lucide="sparkles" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <div class="inline-flex items-center gap-1.5 text-xs text-emerald-300 font-bold tracking-wider uppercase mb-1">
+              <span>Value Guaranteed • True Relaxation</span>
+            </div>
+            <h4 class="font-display font-bold text-base sm:text-lg text-white">Slow down along the canal... 1 hour to simply listen to the water</h4>
+            <p class="text-xs sm:text-sm text-[#ccd5ae] mt-1 leading-relaxed">
+              Every drink or dish order includes complimentary, unlimited rowboat & pedal boat access (฿200 value included free).
+            </p>
+          </div>
+        </div>
+        <a href="#booking" class="bg-[#fefae0] text-[#01472e] hover:bg-white font-display font-bold text-xs sm:text-sm px-6 py-3.5 rounded-full transition shadow-md shrink-0 flex items-center gap-2">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>Reserve Table Ahead</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
 
   <!-- About / Ambience Section -->
   <section id="about" class="py-20 bg-white/70">
@@ -2060,7 +2224,396 @@
       window.open(`https://m.me/100057527526785?text=${text}`, '_blank');
     }
 
+    // ==========================================
+    // REELS MODAL & VIBE SHOWCASE
+    // ==========================================
+    const REELS_DATA = [
+      {
+        title: "Free Blue Wooden Rowboat along Canal",
+        tag: "Signature Vibe",
+        desc: "Afternoon breeze with our signature blue wooden rowboat drifting along calm Bang Chak canal waters. Complimentary for all visitors every Tuesday to Sunday.",
+        img: "assets/fb_reel_row_boat_canvas.jpg",
+        fbLink: "https://www.facebook.com/reel/1525303492078464"
+      },
+      {
+        title: "Dolphin Pedal Boat Fun for Families",
+        tag: "Family Fun",
+        desc: "A beloved highlight for kids and families! Leisurely pedal across the gentle mangrove stream with complimentary safety life jackets provided.",
+        img: "assets/fb_reel_pedal_boat_canvas.jpg",
+        fbLink: "https://www.facebook.com/reel/1827363501303769"
+      },
+      {
+        title: "Slow Bar Fresh Orange Americano & Matcha",
+        tag: "Coffee Craft",
+        desc: "Carefully selected single-origin and house blend coffee beans brewed freshly cup-by-cup, paired with 100% freshly squeezed orange juice and homemade bakery.",
+        img: "assets/real_fb_orange_americano.jpg",
+        fbLink: "https://www.facebook.com/profile.php?id=100057527526785"
+      },
+      {
+        title: "50-Year Rustic Teak House & Waterfront Decks",
+        tag: "Antique House",
+        desc: "Lovingly restored 50-year-old traditional Thai wooden house nestled along the canal. Open-air wooden verandas with cool river breezes all afternoon.",
+        img: "assets/hero_real.jpg",
+        fbLink: "https://www.facebook.com/profile.php?id=100057527526785"
+      }
+    ];
+
+    function openReelModal(index) {
+      const data = REELS_DATA[index];
+      if (!data) return;
+      document.getElementById('modalReelImg').src = data.img;
+      document.getElementById('modalReelTag').textContent = data.tag;
+      document.getElementById('modalReelTitle').textContent = data.title;
+      document.getElementById('modalReelDesc').textContent = data.desc;
+      document.getElementById('modalReelFbLink').href = data.fbLink;
+      document.getElementById('reelVideoModal').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function closeReelModal() {
+      document.getElementById('reelVideoModal').classList.add('hidden');
+    }
+
+    // ==========================================
+    // SPOTIFY-STYLE AMBIENT SOUND GENERATOR
+    // ==========================================
+    class TidKlongSoundscape {
+      constructor() {
+        this.ctx = null;
+        this.masterGain = null;
+        this.currentSound = 'canal';
+        this.isPlaying = false;
+        this.volume = 0.5;
+        this.activeNodes = [];
+        this.loopTimer = null;
+      }
+
+      init() {
+        if (!this.ctx) {
+          const AudioContext = window.AudioContext || window.webkitAudioContext;
+          this.ctx = new AudioContext();
+          this.masterGain = this.ctx.createGain();
+          this.masterGain.gain.setValueAtTime(this.volume, this.ctx.currentTime);
+          this.masterGain.connect(this.ctx.destination);
+        }
+        if (this.ctx.state === 'suspended') {
+          this.ctx.resume();
+        }
+      }
+
+      setVolume(val) {
+        this.volume = Math.max(0, Math.min(1, parseFloat(val)));
+        if (this.masterGain && this.ctx) {
+          this.masterGain.gain.setTargetAtTime(this.volume, this.ctx.currentTime, 0.05);
+        }
+      }
+
+      stop() {
+        this.isPlaying = false;
+        if (this.loopTimer) {
+          clearInterval(this.loopTimer);
+          this.loopTimer = null;
+        }
+        this.activeNodes.forEach(node => {
+          try {
+            if (node.stop) node.stop();
+            node.disconnect();
+          } catch (_) {}
+        });
+        this.activeNodes = [];
+        this.updateUI();
+      }
+
+      play(soundType) {
+        this.init();
+        this.stop();
+        this.currentSound = soundType || this.currentSound;
+        this.isPlaying = true;
+
+        if (this.currentSound === 'canal') {
+          this.playCanalWater();
+        } else if (this.currentSound === 'rain') {
+          this.playRainOnRoof();
+        } else if (this.currentSound === 'acoustic') {
+          this.playAcousticChill();
+        }
+        this.updateUI();
+      }
+
+      toggle() {
+        if (this.isPlaying) {
+          this.stop();
+        } else {
+          this.play(this.currentSound);
+        }
+      }
+
+      createBrownNoiseBuffer() {
+        const bufferSize = this.ctx.sampleRate * 3;
+        const buffer = this.ctx.createBuffer(1, bufferSize, this.ctx.sampleRate);
+        const data = buffer.getChannelData(0);
+        let lastOut = 0.0;
+        for (let i = 0; i < bufferSize; i++) {
+          const white = Math.random() * 2 - 1;
+          data[i] = (lastOut + (0.02 * white)) / 1.02;
+          lastOut = data[i];
+          data[i] *= 3.5;
+        }
+        return buffer;
+      }
+
+      createPinkNoiseBuffer() {
+        const bufferSize = this.ctx.sampleRate * 3;
+        const buffer = this.ctx.createBuffer(1, bufferSize, this.ctx.sampleRate);
+        const data = buffer.getChannelData(0);
+        let b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0;
+        for (let i = 0; i < bufferSize; i++) {
+          const white = Math.random() * 2 - 1;
+          b0 = 0.99886 * b0 + white * 0.0555179;
+          b1 = 0.99332 * b1 + white * 0.0750759;
+          b2 = 0.96900 * b2 + white * 0.1538520;
+          b3 = 0.86650 * b3 + white * 0.3104856;
+          b4 = 0.55000 * b4 + white * 0.5329522;
+          b5 = -0.7616 * b5 - white * 0.0168980;
+          data[i] = (b0 + b1 + b2 + b3 + b4 + b5 + b6 + white * 0.5362) * 0.11;
+          b6 = white * 0.115926;
+        }
+        return buffer;
+      }
+
+      playCanalWater() {
+        const src = this.ctx.createBufferSource();
+        src.buffer = this.createBrownNoiseBuffer();
+        src.loop = true;
+
+        const lowpass = this.ctx.createBiquadFilter();
+        lowpass.type = 'lowpass';
+        lowpass.frequency.setValueAtTime(450, this.ctx.currentTime);
+
+        const lfo = this.ctx.createOscillator();
+        lfo.type = 'sine';
+        lfo.frequency.setValueAtTime(0.18, this.ctx.currentTime);
+
+        const waveGain = this.ctx.createGain();
+        waveGain.gain.setValueAtTime(0.6, this.ctx.currentTime);
+
+        lfo.connect(waveGain.gain);
+        src.connect(lowpass);
+        lowpass.connect(waveGain);
+        waveGain.connect(this.masterGain);
+
+        src.start();
+        lfo.start();
+        this.activeNodes.push(src, lowpass, lfo, waveGain);
+      }
+
+      playRainOnRoof() {
+        const src = this.ctx.createBufferSource();
+        src.buffer = this.createPinkNoiseBuffer();
+        src.loop = true;
+
+        const bandpass = this.ctx.createBiquadFilter();
+        bandpass.type = 'bandpass';
+        bandpass.frequency.setValueAtTime(1200, this.ctx.currentTime);
+        bandpass.Q.setValueAtTime(0.8, this.ctx.currentTime);
+
+        const rainGain = this.ctx.createGain();
+        rainGain.gain.setValueAtTime(0.55, this.ctx.currentTime);
+
+        src.connect(bandpass);
+        bandpass.connect(rainGain);
+        rainGain.connect(this.masterGain);
+
+        src.start();
+        this.activeNodes.push(src, bandpass, rainGain);
+      }
+
+      playAcousticChill() {
+        const notes = [261.63, 329.63, 392.00, 440.00, 523.25, 587.33];
+        let noteIdx = 0;
+
+        const triggerNote = () => {
+          if (!this.isPlaying || !this.ctx) return;
+          const freq = notes[noteIdx % notes.length];
+          noteIdx = (noteIdx + 1) % notes.length;
+
+          const osc = this.ctx.createOscillator();
+          const noteGain = this.ctx.createGain();
+
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(freq, this.ctx.currentTime);
+
+          noteGain.gain.setValueAtTime(0.001, this.ctx.currentTime);
+          noteGain.gain.exponentialRampToValueAtTime(0.18, this.ctx.currentTime + 0.05);
+          noteGain.gain.exponentialRampToValueAtTime(0.0001, this.ctx.currentTime + 1.8);
+
+          osc.connect(noteGain);
+          noteGain.connect(this.masterGain);
+
+          osc.start();
+          osc.stop(this.ctx.currentTime + 1.8);
+        };
+
+        triggerNote();
+        this.loopTimer = setInterval(triggerNote, 750);
+      }
+
+      updateUI() {
+        const playBtn = document.getElementById('soundPlayIcon');
+        const pauseBtn = document.getElementById('soundPauseIcon');
+        const eqBars = document.querySelectorAll('.eq-bar');
+        const statusText = document.getElementById('soundStatusText');
+        const isEn = document.documentElement.lang === 'en';
+
+        // Update button tabs active state
+        const tabBtns = document.querySelectorAll('.sound-tab-btn');
+        tabBtns.forEach(btn => {
+          const snd = btn.getAttribute('data-sound');
+          if (snd === this.currentSound && this.isPlaying) {
+            btn.className = 'sound-tab-btn px-2 py-1.5 rounded-lg text-[10px] font-bold bg-[#01472e] text-emerald-200 border border-emerald-500/40 hover:bg-[#025a3a] transition flex items-center justify-center gap-1';
+          } else {
+            btn.className = 'sound-tab-btn px-2 py-1.5 rounded-lg text-[10px] font-medium bg-black/30 text-slate-300 border border-white/10 hover:bg-white/10 transition flex items-center justify-center gap-1';
+          }
+        });
+
+        if (this.isPlaying) {
+          if (playBtn) playBtn.classList.add('hidden');
+          if (pauseBtn) pauseBtn.classList.remove('hidden');
+          eqBars.forEach(b => b.classList.add('animate-pulse'));
+          if (statusText) statusText.textContent = this.getTrackName();
+        } else {
+          if (playBtn) playBtn.classList.remove('hidden');
+          if (pauseBtn) pauseBtn.classList.add('hidden');
+          eqBars.forEach(b => b.classList.remove('animate-pulse'));
+          if (statusText) statusText.textContent = isEn ? 'Tap play to listen' : 'กดปุ่มเล่นเพื่อฟังเสียงริมคลอง';
+        }
+      }
+
+      getTrackName() {
+        const isEn = document.documentElement.lang === 'en';
+        if (this.currentSound === 'canal') return isEn ? '🌊 Gentle Canal Water' : '🌊 เสียงสายน้ำริมคลอง';
+        if (this.currentSound === 'rain') return isEn ? '🌧️ Rain on Wooden Roof' : '🌧️ ฝนตกบนหลังคาไม้';
+        if (this.currentSound === 'acoustic') return isEn ? '☕ Acoustic Cafe Chill' : '☕ กีตาร์โปร่งริมคลอง';
+        return '';
+      }
+    }
+
+    function toggleSoundPlayerMinimize() {
+      const card = document.getElementById('soundPlayerCard');
+      const mini = document.getElementById('soundPlayerMiniBtn');
+      card.classList.toggle('hidden');
+      mini.classList.toggle('hidden');
+    }
+
+    const soundscape = new TidKlongSoundscape();
+
     lucide.createIcons();
   </script>
+
+  <!-- Reel Video Preview Modal -->
+  <div id="reelVideoModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <div class="bg-[#002216] border border-[#ccd5ae]/40 rounded-3xl max-w-md w-full overflow-hidden shadow-2xl relative text-white animate-in fade-in zoom-in-95 duration-200">
+      
+      <!-- Close Button -->
+      <button onclick="closeReelModal()" class="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-black/60 hover:bg-black text-white flex items-center justify-center transition border border-white/20">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <!-- Video / Photo Container -->
+      <div class="relative aspect-[9/14] bg-black">
+        <img id="modalReelImg" src="" alt="Reel Preview" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#002216] via-transparent to-black/40"></div>
+        
+        <!-- Animated Wave/Sound Overlay -->
+        <div class="absolute bottom-4 left-4 right-4 z-10">
+          <span id="modalReelTag" class="text-xs text-emerald-300 font-bold uppercase tracking-wider block mb-1"></span>
+          <h3 id="modalReelTitle" class="font-display font-extrabold text-lg sm:text-xl text-white leading-tight"></h3>
+          <p id="modalReelDesc" class="text-xs text-[#fefae0]/85 mt-1.5 leading-relaxed"></p>
+        </div>
+      </div>
+
+      <!-- Actions Footer -->
+      <div class="p-4 bg-[#013824] flex items-center justify-between gap-3 border-t border-white/10">
+        <a id="modalReelFbLink" href="" target="_blank" rel="noopener noreferrer" 
+           class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition shadow">
+          <svg class="w-4 h-4 fill-current text-white" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          <span>Watch on Facebook Reels</span>
+        </a>
+        <button onclick="closeReelModal()" class="px-4 py-3 bg-white/10 hover:bg-white/20 text-xs font-bold rounded-xl transition text-[#ccd5ae]">
+          Close
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Floating Spotify-Style Ambient Sound Player Widget -->
+  <div id="ambientSoundPlayer" class="fixed bottom-5 right-5 z-40 transition-all duration-300">
+    
+    <!-- Expanded Floating Card -->
+    <div id="soundPlayerCard" class="bg-[#002216]/95 backdrop-blur-xl border border-[#ccd5ae]/40 rounded-2xl p-3.5 shadow-2xl text-white w-72 sm:w-80 transition-all duration-300 flex flex-col gap-2.5">
+      
+      <!-- Top Bar: Title, Minimizer, Close -->
+      <div class="flex items-center justify-between border-b border-white/10 pb-2">
+        <div class="flex items-center gap-2">
+          <div class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></div>
+          <span class="text-xs font-bold text-[#ccd5ae] tracking-wider uppercase font-display">Tid Klong Soundscape</span>
+        </div>
+        <button onclick="toggleSoundPlayerMinimize()" class="text-slate-400 hover:text-white transition p-1" title="Minimize">
+          <i data-lucide="minus" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <!-- Track Information & Visualizer Bars -->
+      <div class="flex items-center justify-between gap-3">
+        <div class="truncate">
+          <p id="soundStatusText" class="text-xs font-bold text-white truncate">Tap play to listen</p>
+          <p class="text-[10px] text-[#ccd5ae]/70">Refreshing Bang Chak Canal Ambience</p>
+        </div>
+
+        <!-- Equalizer Bars -->
+        <div class="flex items-end gap-0.5 h-5 shrink-0 px-2">
+          <span class="eq-bar w-1 bg-emerald-400 rounded-full h-3"></span>
+          <span class="eq-bar w-1 bg-emerald-400 rounded-full h-5"></span>
+          <span class="eq-bar w-1 bg-emerald-400 rounded-full h-2"></span>
+          <span class="eq-bar w-1 bg-emerald-400 rounded-full h-4"></span>
+        </div>
+      </div>
+
+      <!-- Sound Selector Buttons -->
+      <div class="grid grid-cols-3 gap-1.5 pt-1">
+        <button onclick="soundscape.play('canal')" data-sound="canal" class="sound-tab-btn active px-2 py-1.5 rounded-lg text-[10px] font-bold bg-[#01472e] text-emerald-200 border border-emerald-500/40 hover:bg-[#025a3a] transition flex items-center justify-center gap-1">
+          <span>🌊 Canal</span>
+        </button>
+        <button onclick="soundscape.play('rain')" data-sound="rain" class="sound-tab-btn px-2 py-1.5 rounded-lg text-[10px] font-medium bg-black/30 text-slate-300 border border-white/10 hover:bg-white/10 transition flex items-center justify-center gap-1">
+          <span>🌧️ Rain</span>
+        </button>
+        <button onclick="soundscape.play('acoustic')" data-sound="acoustic" class="sound-tab-btn px-2 py-1.5 rounded-lg text-[10px] font-medium bg-black/30 text-slate-300 border border-white/10 hover:bg-white/10 transition flex items-center justify-center gap-1">
+          <span>☕ Acoustic</span>
+        </button>
+      </div>
+
+      <!-- Controls: Play/Pause & Volume -->
+      <div class="flex items-center gap-3 pt-1">
+        <button onclick="soundscape.toggle()" class="w-8 h-8 rounded-full bg-emerald-500 hover:bg-emerald-400 text-black flex items-center justify-center shadow transition shrink-0">
+          <i id="soundPlayIcon" data-lucide="play" class="w-4 h-4 fill-current ml-0.5"></i>
+          <i id="soundPauseIcon" data-lucide="pause" class="w-4 h-4 fill-current hidden"></i>
+        </button>
+
+        <div class="flex items-center gap-2 flex-1">
+          <i data-lucide="volume-2" class="w-3.5 h-3.5 text-slate-400 shrink-0"></i>
+          <input type="range" min="0" max="1" step="0.05" value="0.5" oninput="soundscape.setVolume(this.value)" 
+                 class="w-full h-1 bg-white/20 rounded-lg appearance-none cursor-pointer accent-emerald-400">
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Minimized Floating Badge -->
+    <button id="soundPlayerMiniBtn" onclick="toggleSoundPlayerMinimize()" class="hidden w-12 h-12 rounded-full bg-[#002216] border-2 border-emerald-400 text-emerald-300 shadow-2xl flex items-center justify-center hover:scale-110 transition group">
+      <i data-lucide="music" class="w-5 h-5 group-hover:rotate-12 transition"></i>
+    </button>
+
+  </div>
 </body>
 </html>
