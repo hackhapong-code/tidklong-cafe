@@ -21,3 +21,5 @@ downloaded_fb/
 !CNAME
 !robots.txt
 !sitemap.xml
+.vercel
+.env*
