@@ -186,8 +186,8 @@
           <span>Reels สั้น</span>
         </a>
         <a href="#booking" class="px-3.5 py-1.5 rounded-full bg-[#01472e] text-[#fefae0] shadow hover:bg-[#025a3a] transition flex items-center gap-1.5 font-bold">
-          <i data-lucide="calendar-check" class="w-3.5 h-3.5 text-emerald-200"></i>
-          จองโต๊ะริมน้ำ
+          <i data-lucide="message-square" class="w-3.5 h-3.5 text-emerald-200"></i>
+          สอบถามโต๊ะ/คิว
         </a>
         <a href="#location" class="px-3.5 py-1.5 rounded-full hover:bg-[#ccd5ae]/30 transition">การเดินทาง</a>
       </nav>
@@ -208,8 +208,8 @@
         
         <!-- Mobile Booking Quick Trigger -->
         <a href="#booking" class="md:hidden inline-flex items-center gap-1 bg-[#01472e] text-[#fefae0] px-3.5 py-2 rounded-full text-xs font-bold shadow-sm">
-          <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
-          <span>จองโต๊ะ</span>
+          <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
+          <span>เช็คโต๊ะ/คิว</span>
         </a>
 
         <a href="tel:0805768179" class="p-2 bg-[#01472e] text-[#fefae0] rounded-full hover:bg-[#025a3a] transition shadow-sm" title="โทรติดต่อสอบถาม">
@@ -250,8 +250,8 @@
 
           <div class="flex flex-wrap gap-4 pt-3">
             <a href="#booking" class="inline-flex items-center gap-2.5 bg-[#01472e] hover:bg-[#025a3a] text-[#fefae0] font-display font-bold px-7 py-4 rounded-2xl shadow-lg hover:shadow-xl transition transform active:scale-95 text-sm sm:text-base">
-              <i data-lucide="calendar" class="w-4 h-4 text-emerald-200"></i>
-              <span>จองโต๊ะริมน้ำล่วงหน้า</span>
+              <i data-lucide="message-circle" class="w-4 h-4 text-emerald-200"></i>
+              <span>สอบถามที่นั่ง & เช็คคิวล่วงหน้า</span>
             </a>
             <a href="#location" class="inline-flex items-center gap-2 bg-white/80 hover:bg-white text-[#01472e] border border-[#ccd5ae] font-semibold px-6 py-4 rounded-2xl shadow-sm hover:shadow transition text-sm sm:text-base">
               <i data-lucide="map-pin" class="w-4 h-4 text-[#01472e]"></i>
@@ -351,8 +351,8 @@
 
             <div class="flex flex-wrap items-center gap-3 pt-2">
               <a href="#booking" class="bg-[#fefae0] text-[#01472e] hover:bg-white px-5 py-3 rounded-2xl text-xs sm:text-sm font-display font-bold transition shadow-md flex items-center gap-2">
-                <i data-lucide="calendar" class="w-4 h-4"></i>
-                <span>จองโต๊ะริมน้ำเพื่อมาพายเรือ</span>
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>สอบถามที่นั่ง & พายเรือชิลๆ</span>
               </a>
               <a href="https://www.facebook.com/reel/1525303492078464" target="_blank" rel="noopener noreferrer" 
                  class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-2xl text-xs sm:text-sm font-bold transition shadow-md flex items-center gap-2 group">
@@ -600,8 +600,8 @@
           </div>
         </div>
         <a href="#booking" class="bg-[#fefae0] text-[#01472e] hover:bg-white font-display font-bold text-xs sm:text-sm px-6 py-3.5 rounded-full transition shadow-md shrink-0 flex items-center gap-2">
-          <i data-lucide="calendar" class="w-4 h-4"></i>
-          <span>จองโต๊ะริมน้ำล่วงหน้า</span>
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>สอบถามที่นั่ง & เช็คคิวล่วงหน้า</span>
         </a>
       </div>
 
@@ -632,7 +632,7 @@
           <div class="pt-6 border-t border-[#ccd5ae]/30 mt-6 flex items-center justify-between">
             <span class="text-[11px] font-bold text-[#01472e] bg-[#ccd5ae]/40 px-2.5 py-1 rounded-md">ยอดนิยมสูงสุด 🔥</span>
             <a href="#booking" class="text-xs font-bold text-[#01472e] hover:underline flex items-center gap-1">
-              จองโซนนี้ <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+              สอบถามโซนนี้ <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
             </a>
           </div>
         </div>
@@ -1119,20 +1119,48 @@
   </section>
 
   <!-- ========================================== -->
-  <!-- 📅 TABLE & SEAT BOOKING SYSTEM SECTION     -->
+  <!-- 📅 TABLE & SEAT INQUIRY SYSTEM SECTION     -->
   <!-- ========================================== -->
   <section id="booking" class="py-24 bg-white/70 relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       
       <!-- Section Header -->
-      <div class="text-center max-w-2xl mx-auto mb-14 space-y-2">
+      <div class="text-center max-w-2xl mx-auto mb-8 space-y-2">
         <span class="text-xs font-bold tracking-[0.25em] uppercase text-[#a3b18a] block">
-          Table Reservation System
+          Table Availability & Queue Inquiry
         </span>
-        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-[#01472e]">จองโต๊ะริมน้ำล่วงหน้า</h2>
-        <p class="text-[#01472e]/75 text-sm sm:text-base">
-          เลือกล็อคโซนที่นั่งโปรดได้ล่วงหน้า โดยเฉพาะวันหยุดสุดสัปดาห์ เพื่อให้คุณได้สัมผัสบรรยากาศริมคลองอย่างสบายใจ
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-[#01472e]">สอบถามที่นั่ง & เช็คคิวโต๊ะล่วงหน้า</h2>
+        <p class="text-[#01472e]/75 text-sm sm:text-base leading-relaxed">
+          เนื่องจากในบางช่วงเวลาและวันหยุด ร้านอาจมีลูกค้าหนาแน่นและโต๊ะริมน้ำหมุนเวียนตลอดเวลา ทางร้านจึงไม่สามารถการันตีล็อคโต๊ะได้ทันที แนะนำให้ทักแชทหรือโทรสอบถามสถานะโต๊ะว่างสดกับแอดมินก่อนเดินทางมานะครับ
         </p>
+      </div>
+
+      <!-- Busy Hours & Live Status Notice Banner -->
+      <div class="max-w-4xl mx-auto mb-12 bg-amber-500/10 border-2 border-amber-400/40 rounded-3xl p-5 sm:p-6 text-[#01472e] flex flex-col md:flex-row items-center justify-between gap-5 shadow-sm">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-800 flex items-center justify-center shrink-0 mt-0.5">
+            <i data-lucide="info" class="w-6 h-6"></i>
+          </div>
+          <div class="text-left space-y-1">
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="bg-amber-600 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider">ข้อแนะนำช่วงคนแน่น</span>
+              <h4 class="font-display font-bold text-sm sm:text-base text-[#01472e]">โต๊ะริมน้ำคนแน่นในบางช่วงเวลา • เช็คคิวสดได้ทันที</h4>
+            </div>
+            <p class="text-xs text-[#01472e]/80 leading-relaxed max-w-xl">
+              ทางร้านยินดีต้อนรับทุกท่านครับ! หากกำลังเดินทางมา หรือมาเป็นกลุ่ม 4 ท่านขึ้นไป สามารถทักแชท Messenger หรือโทรสอบถามสถานะที่นั่งและคิวว่างแบบเรียลไทม์ได้โดยตรง
+            </p>
+          </div>
+        </div>
+        <div class="flex sm:flex-row md:flex-col gap-2 shrink-0 w-full md:w-auto">
+          <a href="https://m.me/100057527526785" target="_blank" rel="noopener noreferrer" 
+             class="flex-1 md:flex-none text-center bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow transition flex items-center justify-center gap-1.5 whitespace-nowrap">
+            <i data-lucide="message-circle" class="w-4 h-4"></i> ทักแชทเช็คโต๊ะว่าง
+          </a>
+          <a href="tel:0805768179" 
+             class="flex-1 md:flex-none text-center bg-[#01472e] hover:bg-[#025a3a] text-[#fefae0] font-bold text-xs px-4 py-2.5 rounded-xl shadow transition flex items-center justify-center gap-1.5 whitespace-nowrap">
+            <i data-lucide="phone" class="w-4 h-4"></i> โทร 080-576-8179
+          </a>
+        </div>
       </div>
 
       <!-- Main Booking Grid -->
@@ -1145,8 +1173,8 @@
             <!-- Step 1: Choose Seating Zone -->
             <div>
               <label class="block font-display font-bold text-[#01472e] text-base mb-3 flex items-center justify-between">
-                <span>1. เลือกโซนที่นั่ง</span>
-                <span class="text-xs font-normal text-[#01472e]/60">*คลิกเลือกโซนที่ต้องการ</span>
+                <span>1. โซนที่นั่งที่สนใจ</span>
+                <span class="text-xs font-normal text-[#01472e]/60">*คลิกเลือกโซนที่ท่านอยากนั่งเพื่อเป็นข้อมูลสอบถาม</span>
               </label>
 
               <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3.5" id="zoneSelectorContainer">
@@ -1246,7 +1274,7 @@
               <div>
                 <div class="flex items-center justify-between mb-2">
                   <label class="block font-display font-semibold text-[#01472e] text-sm">
-                    3. เวลาที่ต้องการจอง
+                    3. เวลาโดยประมาณที่จะมาถึง
                   </label>
                   <span class="text-[11px] text-[#a3b18a] font-medium">ทุก 30 นาที (09:00 - 16:30 น.)</span>
                 </div>
@@ -1304,7 +1332,7 @@
               <!-- Customer Details -->
               <div class="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label for="custName" class="block font-display font-semibold text-[#01472e] text-xs mb-1.5">ชื่อผู้จอง *</label>
+                  <label for="custName" class="block font-display font-semibold text-[#01472e] text-xs mb-1.5">ชื่อผู้ติดต่อสอบถาม *</label>
                   <input type="text" id="custName" required placeholder="เช่น คุณธนบดี / คุณน้ำ" 
                          oninput="updateSummary()"
                          class="w-full px-4 py-2.5 rounded-xl border border-[#ccd5ae] bg-white focus:outline-none focus:ring-2 focus:ring-[#01472e] text-sm text-[#01472e]">
@@ -1331,11 +1359,11 @@
             <div class="pt-2">
               <button type="submit" 
                       class="w-full py-4 rounded-2xl bg-[#01472e] hover:bg-[#025a3a] text-[#fefae0] font-display font-bold text-base shadow-lg hover:shadow-xl transition transform active:scale-[0.99] flex items-center justify-center gap-2">
-                <i data-lucide="send" class="w-5 h-5 text-[#ccd5ae]"></i>
-                เตรียมคำขอจองโต๊ะ (บันทึกในอุปกรณ์นี้ • รอส่งแจ้งเจ้าหน้าที่)
+                <i data-lucide="message-circle" class="w-5 h-5 text-emerald-300"></i>
+                ส่งข้อความสอบถามที่นั่งผ่าน Facebook Messenger (รอร้านตอบกลับ)
               </button>
               <p class="text-center text-xs text-[#01472e]/70 mt-2.5">
-                *การกดปุ่มนี้จะบันทึกคำขอไว้ในอุปกรณ์ของคุณเท่านั้น ทางร้านจะได้รับข้อมูลเมื่อคุณส่งข้อความผ่าน Facebook Messenger และยืนยันกลับแล้ว
+                *แบบฟอร์มนี้ช่วยเตรียมข้อความส่งให้แอดมินทางแชทเพื่อเช็คคิวและสถานะที่นั่ง (ไม่ใช่การล็อคโต๊ะอัตโนมัติ) เพื่อให้คุณได้รับการดูแลที่รวดเร็วที่สุด
               </p>
             </div>
 
@@ -1352,16 +1380,16 @@
               <div class="flex items-center justify-between border-b border-[#025a3a] pb-4">
                 <h4 class="font-display font-bold text-base text-[#e9edc9] flex items-center gap-2">
                   <i data-lucide="clipboard-list" class="w-4 h-4 text-[#ccd5ae]"></i>
-                  สรุปคำขอจองโต๊ะ
+                  สรุปข้อมูลสอบถามที่นั่ง
                 </h4>
                 <span class="text-[10px] bg-amber-400/20 text-amber-200 font-semibold px-2.5 py-0.5 rounded-full border border-amber-300/30">
-                  รอส่งยืนยันกับเจ้าหน้าที่
+                  รอสอบถามแอดมิน (ยังไม่ยืนยันโต๊ะ)
                 </span>
               </div>
 
               <div class="space-y-3.5 text-xs">
                 <div class="flex justify-between items-start">
-                  <span class="text-[#ccd5ae]">โซนที่นั่ง:</span>
+                  <span class="text-[#ccd5ae]">โซนที่สนใจ:</span>
                   <span id="summaryZone" class="font-semibold text-white text-right">ศาลาไม้จิกน้ำริมคลอง</span>
                 </div>
                 <div class="flex justify-between items-center">
@@ -1369,7 +1397,7 @@
                   <span id="summaryDate" class="font-semibold text-[#fefae0]">เลือกวันที่ในแบบฟอร์ม</span>
                 </div>
                 <div class="flex justify-between items-center">
-                  <span class="text-[#ccd5ae]">เวลาที่จอง:</span>
+                  <span class="text-[#ccd5ae]">เวลาโดยประมาณ:</span>
                   <span id="summaryTime" class="font-semibold text-white">11:00 น.</span>
                 </div>
                 <div class="flex justify-between items-center">
@@ -1377,7 +1405,7 @@
                   <span id="summaryGuests" class="font-semibold text-white">1 - 2 ท่าน</span>
                 </div>
                 <div class="flex justify-between items-center">
-                  <span class="text-[#ccd5ae]">ผู้จอง:</span>
+                  <span class="text-[#ccd5ae]">ผู้สอบถาม:</span>
                   <span id="summaryName" class="font-semibold text-slate-200">-</span>
                 </div>
                 <div class="flex justify-between items-center">
@@ -1389,9 +1417,9 @@
               <!-- Direct Assurance -->
               <div class="bg-[#002216] rounded-xl p-3.5 border border-[#025a3a] text-[11px] text-[#ccd5ae] space-y-1">
                 <div class="flex items-center gap-1.5 text-[#fefae0] font-semibold">
-                  <i data-lucide="shield-check" class="w-3.5 h-3.5 text-[#ccd5ae]"></i> ขั้นตอนการส่งคำขอจอง
+                  <i data-lucide="info" class="w-3.5 h-3.5 text-amber-300"></i> ข้อชี้แจงการสอบถามที่นั่ง
                 </div>
-                <p>ไม่มีการเก็บมัดจำ แบบฟอร์มนี้จะถูกบันทึกไว้ในอุปกรณ์ของคุณเพื่อเตรียมข้อความ และเจ้าหน้าที่ร้านจะได้รับคำขอต่อเมื่อคุณกดส่งข้อความใน Facebook Messenger แล้วเท่านั้น</p>
+                <p>เนื่องจากในบางช่วงเวลาลูกค้าหนาแน่น ทางร้านไม่ได้รับล็อคโต๊ะตายตัว การกดส่งข้อมูลนี้จะเป็นการเปิดแชท Messenger เพื่อให้แอดมินเช็คสถานะโต๊ะว่างและคิวให้ท่านโดยตรงครับ</p>
               </div>
 
             </div>
@@ -1403,17 +1431,17 @@
           <div class="bg-white rounded-3xl p-6 shadow-sm border border-[#ccd5ae]">
             <div class="flex items-center justify-between mb-2">
               <h4 class="font-display font-bold text-sm text-[#01472e] flex items-center gap-2">
-                <i data-lucide="calendar" class="w-4 h-4 text-[#01472e]"></i>
-                คำขอจองที่บันทึกในอุปกรณ์นี้
+                <i data-lucide="clock" class="w-4 h-4 text-[#01472e]"></i>
+                ประวัติการสอบถามในเครื่องนี้
               </h4>
               <button onclick="clearMyBookings()" class="text-[11px] text-slate-400 hover:text-red-500 transition">ล้างประวัติ</button>
             </div>
             <p class="text-[11px] text-amber-800 bg-amber-50 border border-amber-200/80 rounded-xl px-3 py-1.5 mb-3">
-              บันทึกในเครื่องนี้เท่านั้น (ยังไม่ใช่การยืนยันโต๊ะ • เจ้าหน้าที่จะได้รับข้อมูลเมื่อคุณส่งข้อความผ่าน Messenger)
+              บันทึกในอุปกรณ์นี้เท่านั้น (ไม่ใช่การยืนยันโต๊ะ • เจ้าหน้าที่จะได้รับข้อมูลเมื่อท่านกดส่งข้อความใน Messenger)
             </p>
             
             <div id="myBookingsList" class="space-y-2.5 text-xs">
-              <p class="text-slate-400 text-center py-4 text-xs italic">ยังไม่มีคำขอจองในอุปกรณ์นี้ กรอกแบบฟอร์มด้านซ้ายเพื่อสร้างคำขอจองโต๊ะ</p>
+              <p class="text-slate-400 text-center py-4 text-xs italic">ยังไม่มีประวัติการสอบถามในอุปกรณ์นี้ กรอกแบบฟอร์มด้านซ้ายเพื่อเตรียมข้อความ</p>
             </div>
           </div>
 
@@ -1838,11 +1866,11 @@
 
   <!-- Floating Action Buttons -->
   <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
-    <!-- Quick Booking Button -->
+    <!-- Quick Inquiry / Queue Button -->
     <a href="#booking" 
        class="w-13 h-13 p-3.5 bg-[#01472e] hover:bg-[#025a3a] text-white rounded-full shadow-xl hover:shadow-2xl transition transform hover:scale-110 flex items-center justify-center group"
-       title="จองโต๊ะริมน้ำ">
-      <i data-lucide="calendar" class="w-6 h-6 text-emerald-200"></i>
+       title="สอบถามที่นั่ง / เช็คคิวโต๊ะ">
+      <i data-lucide="message-square" class="w-6 h-6 text-emerald-200"></i>
     </a>
     <!-- Facebook Messenger -->
     <a href="https://m.me/100057527526785" target="_blank" rel="noopener noreferrer" 
@@ -1858,35 +1886,39 @@
     </a>
   </div>
 
-  <!-- Request Saved Modal -->
+  <!-- Inquiry Prepared Modal -->
   <div id="bookingSuccessModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
     <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-[#ccd5ae] text-center space-y-5 animate-in fade-in zoom-in duration-200">
       
       <div class="w-16 h-16 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center mx-auto shadow-inner">
-        <i data-lucide="send" class="w-8 h-8"></i>
+        <i data-lucide="message-circle" class="w-8 h-8"></i>
       </div>
 
       <div class="space-y-1">
-        <span class="text-xs font-semibold text-amber-700 uppercase tracking-wider">Saved on Device • Awaiting Staff Confirmation</span>
-        <h3 class="font-display font-extrabold text-2xl text-[#01472e]">เตรียมคำขอจองโต๊ะแล้ว (รอส่งยืนยัน)</h3>
-        <p class="text-xs text-slate-500">รหัสอ้างอิงคำขอจอง: <span id="modalBookingId" class="font-mono font-bold text-[#01472e]">#TK-XXXX</span></p>
+        <span class="text-xs font-semibold text-amber-700 uppercase tracking-wider">Inquiry Prepared • Awaiting Staff Reply</span>
+        <h3 class="font-display font-extrabold text-2xl text-[#01472e]">เตรียมข้อความสอบถามที่นั่งแล้ว</h3>
+        <p class="text-xs text-slate-500">รหัสอ้างอิง: <span id="modalBookingId" class="font-mono font-bold text-[#01472e]">#TK-XXXX</span></p>
       </div>
 
       <div id="modalSummaryBox" class="bg-[#fefae0] rounded-2xl p-4 text-xs text-left space-y-2 border border-[#ccd5ae]">
         <!-- Rendered safely via DOM textContent -->
       </div>
 
-      <p class="text-xs text-amber-900 bg-amber-50 border border-amber-200 rounded-xl p-3 leading-relaxed text-left">
-        <strong>สำคัญ:</strong> ข้อมูลนี้ถูกบันทึกไว้ในอุปกรณ์ของคุณเท่านั้น ยังไม่ได้ส่งไปยังทางร้าน และยังไม่ใช่การยืนยันการจองโต๊ะ เจ้าหน้าที่ของร้านจะได้รับคำขอต่อเมื่อคุณกดส่งข้อความผ่าน Facebook Messenger ด้านล่าง (หรือโทร 080-576-8179) เพื่อรอเจ้าหน้าที่ยืนยันกลับครับ
+      <p class="text-xs text-amber-900 bg-amber-50 border border-amber-200 rounded-xl p-3.5 leading-relaxed text-left">
+        <strong>⚠️ สำคัญ (ช่วงร้านคนแน่น):</strong> ข้อมูลนี้ถูกบันทึกเตรียมไว้ในอุปกรณ์ของคุณเท่านั้น และ<strong>ยังไม่ใช่การคอนเฟิร์มล็อคโต๊ะ</strong> เนื่องจากบางช่วงเวลาร้านคนแน่นมาก โต๊ะริมน้ำหมุนเวียนตลอดเวลา กรุณากดปุ่ม <strong>"ส่งข้อความเช็คโต๊ะผ่าน Messenger"</strong> ด้านล่างเพื่อให้แอดมินช่วยเช็คสถานะโต๊ะว่างและตอบกลับยืนยันครับ
       </p>
 
       <div class="space-y-2.5">
         <a id="modalMessengerBtn" href="#" target="_blank" rel="noopener noreferrer"
            class="w-full py-3.5 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm shadow-md transition flex items-center justify-center gap-2">
-          <i data-lucide="send" class="w-4 h-4"></i> ส่งคำขอจองผ่าน Facebook Messenger ให้เจ้าหน้าที่ยืนยัน
+          <i data-lucide="send" class="w-4 h-4"></i> ส่งข้อความเช็คโต๊ะผ่าน Messenger ทันที
+        </a>
+        <a href="tel:0805768179"
+           class="w-full py-2.5 px-4 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-[#01472e] border border-[#01472e]/30 font-semibold text-xs transition flex items-center justify-center gap-2">
+          <i data-lucide="phone" class="w-3.5 h-3.5"></i> หรือโทรเช็คคิวสด: 080-576-8179
         </a>
         <button onclick="closeSuccessModal()" 
-                class="w-full py-3 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-xs transition">
+                class="w-full py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-xs transition">
           ปิดหน้าต่างนี้
         </button>
       </div>
@@ -1934,10 +1966,10 @@
       const box = document.getElementById('modalSummaryBox');
       if (!box) return;
       const rows = [
-        createSummaryRow('สถานะ:', 'คำขอจองในเครื่อง (รอส่งให้เจ้าหน้าที่ยืนยัน)', 'font-bold text-amber-700 text-right'),
-        createSummaryRow('ผู้จอง:', `${booking.name || '-'} (${booking.phone || '-'})`),
-        createSummaryRow('โซนที่นั่ง:', String(booking.zone || '-')),
-        createSummaryRow('วัน/เวลา:', `${booking.date || '-'} เวลา ${booking.time || '-'} น.`),
+        createSummaryRow('สถานะ:', 'เตรียมข้อความสอบถาม (รอส่งให้แอดมินเช็คคิว)', 'font-bold text-amber-700 text-right'),
+        createSummaryRow('ผู้ติดต่อสอบถาม:', `${booking.name || '-'} (${booking.phone || '-'})`),
+        createSummaryRow('โซนที่สนใจ:', String(booking.zone || '-')),
+        createSummaryRow('วัน/เวลาประมาณ:', `${booking.date || '-'} เวลา ${booking.time || '-'} น.`),
         createSummaryRow('จำนวน:', String(booking.guests || '-'))
       ];
       if (booking.notes) {
@@ -2100,7 +2132,7 @@
       renderModalSummary(booking);
 
       // Format Messenger URI
-      const msgText = encodeURIComponent(`สวัสดีครับคุณติดคลอง คาเฟ่ ขอส่งคำขอจองโต๊ะล่วงหน้า (รอเจ้าหน้าที่ยืนยัน) ครับ:\n- รหัสคำขอ: #${booking.id}\n- ผู้จอง: ${booking.name} (${booking.phone})\n- โซน: ${booking.zone}\n- วันที่: ${booking.date} เวลา ${booking.time} น.\n- จำนวน: ${booking.guests}\n- เพิ่มเติม: ${booking.notes || '-'}`);
+      const msgText = encodeURIComponent(`สวัสดีครับคุณติดคลอง คาเฟ่ อยากสอบถามสถานะโต๊ะว่างล่วงหน้า (ยังไม่คอนเฟิร์มโต๊ะครับ):\n- รหัสอ้างอิง: #${booking.id}\n- ผู้ติดต่อ: ${booking.name} (${booking.phone})\n- โซนที่สนใจ: ${booking.zone}\n- วันที่: ${booking.date} เวลาประมาณ ${booking.time} น.\n- จำนวน: ${booking.guests}\n- เพิ่มเติม: ${booking.notes || '-'}\nช่วงเวลานี้ร้านคนแน่นไหมครับ พอมีโต๊ะว่างไหมครับ ขอบคุณครับ`);
       document.getElementById('modalMessengerBtn').href = `https://m.me/100057527526785?text=${msgText}`;
 
       document.getElementById('bookingSuccessModal').classList.remove('hidden');
@@ -2122,7 +2154,7 @@
       if (existing.length === 0) {
         const emptyP = document.createElement('p');
         emptyP.className = 'text-slate-400 text-center py-4 text-xs italic';
-        emptyP.textContent = 'ยังไม่มีคำขอจองในอุปกรณ์นี้ กรอกแบบฟอร์มด้านซ้ายเพื่อสร้างคำขอจองโต๊ะ';
+        emptyP.textContent = 'ยังไม่มีประวัติการสอบถามในอุปกรณ์นี้ กรอกแบบฟอร์มด้านซ้ายเพื่อเตรียมข้อความ';
         container.replaceChildren(emptyP);
         return;
       }
@@ -2147,7 +2179,7 @@
 
         const statusBadge = document.createElement('div');
         statusBadge.className = 'text-[10px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-semibold inline-block';
-        statusBadge.textContent = 'บันทึกในเครื่อง • รอส่ง Messenger ให้เจ้าหน้าที่ยืนยัน';
+        statusBadge.textContent = 'บันทึกในเครื่อง • รอส่ง Messenger ให้แอดมินเช็คคิว';
 
         const zoneP = document.createElement('p');
         zoneP.className = 'font-bold text-[#01472e] text-xs break-words';
