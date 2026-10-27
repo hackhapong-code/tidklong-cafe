@@ -20,7 +20,7 @@
     "telephone": "+66805768179",
     "priceRange": "฿฿",
     "servesCuisine": ["Coffee", "Cafe", "Thai Food", "Bakery", "Dessert"],
-    "acceptsReservations": "True",
+    "acceptsReservations": "False",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Soi Bang Chak 19, Choeng Noen Subdistrict",
@@ -186,8 +186,8 @@
           <span>Reels Vibe</span>
         </a>
         <a href="#booking" class="px-3.5 py-1.5 rounded-full bg-[#01472e] text-[#fefae0] shadow hover:bg-[#025a3a] transition flex items-center gap-1.5 font-bold">
-          <i data-lucide="message-square" class="w-3.5 h-3.5 text-emerald-200"></i>
-          Check Table / Queue
+          <i data-lucide="info" class="w-3.5 h-3.5 text-emerald-200"></i>
+          Seating Policy
         </a>
         <a href="#location" class="px-3.5 py-1.5 rounded-full hover:bg-[#ccd5ae]/30 transition">Location</a>
       </nav>
@@ -208,8 +208,8 @@
         
         <!-- Mobile Booking Quick Trigger -->
         <a href="#booking" class="md:hidden inline-flex items-center gap-1 bg-[#01472e] text-[#fefae0] px-3.5 py-2 rounded-full text-xs font-bold shadow-sm">
-          <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
-          <span>Check Table</span>
+          <i data-lucide="info" class="w-3.5 h-3.5"></i>
+          <span>Seating & Info</span>
         </a>
 
         <a href="tel:0805768179" class="p-2 bg-[#01472e] text-[#fefae0] rounded-full hover:bg-[#025a3a] transition shadow-sm" title="Call Tid Klong Cafe">
@@ -250,8 +250,8 @@
 
           <div class="flex flex-wrap gap-4 pt-3">
             <a href="#booking" class="inline-flex items-center gap-2.5 bg-[#01472e] hover:bg-[#025a3a] text-[#fefae0] font-display font-bold px-7 py-4 rounded-2xl shadow-lg hover:shadow-xl transition transform active:scale-95 text-sm sm:text-base">
-              <i data-lucide="message-circle" class="w-4 h-4 text-emerald-200"></i>
-              <span>Inquire Seating & Check Queue</span>
+              <i data-lucide="info" class="w-4 h-4 text-emerald-200"></i>
+              <span>Seating Policy & Direct Inquiry</span>
             </a>
             <a href="#location" class="inline-flex items-center gap-2 bg-white/80 hover:bg-white text-[#01472e] border border-[#ccd5ae] font-semibold px-6 py-4 rounded-2xl shadow-sm hover:shadow transition text-sm sm:text-base">
               <i data-lucide="map-pin" class="w-4 h-4 text-[#01472e]"></i>
@@ -351,8 +351,8 @@
 
             <div class="flex flex-wrap items-center gap-3 pt-2">
               <a href="#booking" class="bg-[#fefae0] text-[#01472e] hover:bg-white px-5 py-3 rounded-2xl text-xs sm:text-sm font-display font-bold transition shadow-md flex items-center gap-2">
-                <i data-lucide="message-circle" class="w-4 h-4"></i>
-                <span>Check Availability & Enjoy Boating</span>
+                <i data-lucide="sparkles" class="w-4 h-4 text-emerald-700"></i>
+                <span>Walk-in & Enjoy Free Boating</span>
               </a>
               <a href="https://www.facebook.com/reel/1525303492078464" target="_blank" rel="noopener noreferrer" 
                  class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-2xl text-xs sm:text-sm font-bold transition shadow-md flex items-center gap-2 group">
@@ -600,8 +600,8 @@
           </div>
         </div>
         <a href="#booking" class="bg-[#fefae0] text-[#01472e] hover:bg-white font-display font-bold text-xs sm:text-sm px-6 py-3.5 rounded-full transition shadow-md shrink-0 flex items-center gap-2">
-          <i data-lucide="message-circle" class="w-4 h-4"></i>
-          <span>Check Availability & Inquire</span>
+          <i data-lucide="info" class="w-4 h-4"></i>
+          <span>Seating Policy & Inquire</span>
         </a>
       </div>
 
@@ -632,7 +632,7 @@
           <div class="pt-6 border-t border-[#ccd5ae]/30 mt-6 flex items-center justify-between">
             <span class="text-[11px] font-bold text-[#01472e] bg-[#ccd5ae]/40 px-2.5 py-1 rounded-md">Guest Favorite 🔥</span>
             <a href="#booking" class="text-xs font-bold text-[#01472e] hover:underline flex items-center gap-1">
-              Inquire This Spot <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+              View Zone Seating Info <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
             </a>
           </div>
         </div>
@@ -1119,334 +1119,154 @@
   </section>
 
   <!-- ========================================== -->
-  <!-- 📅 TABLE & SEAT INQUIRY SYSTEM SECTION     -->
+  <!-- 🌿 SEATING & WALK-IN POLICY SECTION        -->
   <!-- ========================================== -->
   <section id="booking" class="py-24 bg-white/70 relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       
-      <!-- Section Header -->
-      <div class="text-center max-w-2xl mx-auto mb-8 space-y-2">
-        <span class="text-xs font-bold tracking-[0.25em] uppercase text-[#a3b18a] block">
-          Table Availability & Queue Inquiry
-        </span>
-        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-[#01472e]">Waterfront Seating & Live Queue Inquiry</h2>
-        <p class="text-[#01472e]/75 text-sm sm:text-base leading-relaxed">
-          Because Tid Klong Cafe is an open-air canal sanctuary with high turnover, tables cannot be guaranteed or locked in advance during busy peak hours and weekends. We kindly invite you to message or call to check real-time seating availability before visiting!
+      <!-- Section Header with Official Cafe Claim -->
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+        <div class="inline-flex items-center gap-2 bg-amber-500/15 border border-amber-500/30 text-amber-900 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="info" class="w-4 h-4 text-amber-700"></i>
+          <span>Seating & Visiting Policy • Tid Klong Cafe</span>
+        </div>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#01472e] leading-tight">
+          The Cafe May Not Be Able to Accept Table Reservations
+        </h2>
+        <p class="text-[#01472e]/80 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
+          Because Tid Klong Cafe is an authentic open-air wooden canal sanctuary, waterfront seating is limited and exceptionally popular. During weekends and peak hours, guests continuously arrive and tables turn over naturally. We kindly declare that we may not be able to guarantee or lock advance table reservations.
         </p>
       </div>
 
-      <!-- Busy Hours & Live Status Notice Banner -->
-      <div class="max-w-4xl mx-auto mb-12 bg-amber-500/10 border-2 border-amber-400/40 rounded-3xl p-5 sm:p-6 text-[#01472e] flex flex-col md:flex-row items-center justify-between gap-5 shadow-sm">
-        <div class="flex items-start gap-4">
-          <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-800 flex items-center justify-center shrink-0 mt-0.5">
-            <i data-lucide="info" class="w-6 h-6"></i>
-          </div>
-          <div class="text-left space-y-1">
-            <div class="flex items-center gap-2 flex-wrap">
-              <span class="bg-amber-600 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider">Busy Hours Notice</span>
-              <h4 class="font-display font-bold text-sm sm:text-base text-[#01472e]">Waterfront tables are busy at times • Check live queue</h4>
+      <!-- 3 Pillars of Visiting Experience -->
+      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
+        
+        <!-- Pillar 1: Walk-ins Always Welcome -->
+        <div class="bg-white rounded-3xl p-6 sm:p-7 border border-[#ccd5ae]/80 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-[#01472e] flex items-center justify-center mb-4">
+              <i data-lucide="footprints" class="w-6 h-6"></i>
             </div>
-            <p class="text-xs text-[#01472e]/80 leading-relaxed max-w-xl">
-              We warmly welcome all guests! If you are on your way or visiting with a group of 4 or more, message us on Facebook Messenger or call our team directly to check live seating availability.
+            <span class="text-[11px] font-bold text-emerald-800 bg-emerald-100/70 px-2.5 py-0.5 rounded-md mb-2 inline-block">Walk-in Primary</span>
+            <h4 class="font-display font-bold text-lg text-[#01472e] mb-2">Walk-ins Welcome All Day</h4>
+            <p class="text-xs text-[#01472e]/75 leading-relaxed">
+              No need to worry about booking! We operate on a first-come, first-served rotation across multiple atmospheric zones: Waterfront Sala, Mangrove Bar, Covered Terrace, and Shaded Garden.
             </p>
           </div>
+          <div class="pt-4 border-t border-[#ccd5ae]/40 mt-4 text-[11px] text-[#01472e]/60 flex items-center gap-1.5">
+            <i data-lucide="clock" class="w-3.5 h-3.5 text-emerald-600"></i> Riverside tables rotate regularly all day
+          </div>
         </div>
-        <div class="flex sm:flex-row md:flex-col gap-2 shrink-0 w-full md:w-auto">
-          <a href="https://m.me/100057527526785" target="_blank" rel="noopener noreferrer" 
-             class="flex-1 md:flex-none text-center bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow transition flex items-center justify-center gap-1.5 whitespace-nowrap">
-            <i data-lucide="message-circle" class="w-4 h-4"></i> Check Table on Messenger
-          </a>
-          <a href="tel:0805768179" 
-             class="flex-1 md:flex-none text-center bg-[#01472e] hover:bg-[#025a3a] text-[#fefae0] font-bold text-xs px-4 py-2.5 rounded-xl shadow transition flex items-center justify-center gap-1.5 whitespace-nowrap">
-            <i data-lucide="phone" class="w-4 h-4"></i> Call 080-576-8179
-          </a>
+
+        <!-- Pillar 2: Enjoy While Waiting -->
+        <div class="bg-white rounded-3xl p-6 sm:p-7 border border-[#ccd5ae]/80 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center mb-4">
+              <i data-lucide="ship" class="w-6 h-6"></i>
+            </div>
+            <span class="text-[11px] font-bold text-amber-800 bg-amber-100/70 px-2.5 py-0.5 rounded-md mb-2 inline-block">Free Unlimited Boating</span>
+            <h4 class="font-display font-bold text-lg text-[#01472e] mb-2">Relax While Waiting for Water Seats</h4>
+            <p class="text-xs text-[#01472e]/75 leading-relaxed">
+              If canal-side tables are occupied momentarily, order fresh drinks or snacks, unwind under lush shade, explore vintage wooden architecture, or row free wooden boats on Bang Chak canal.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-[#ccd5ae]/40 mt-4 text-[11px] text-[#01472e]/60 flex items-center gap-1.5">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-600"></i> Enjoy immediately without standing idle
+          </div>
         </div>
+
+        <!-- Pillar 3: Inquire Ahead -->
+        <div class="bg-white rounded-3xl p-6 sm:p-7 border border-[#ccd5ae]/80 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-blue-100 text-blue-800 flex items-center justify-center mb-4">
+              <i data-lucide="message-circle" class="w-6 h-6"></i>
+            </div>
+            <span class="text-[11px] font-bold text-blue-800 bg-blue-100/70 px-2.5 py-0.5 rounded-md mb-2 inline-block">Check Before Travel</span>
+            <h4 class="font-display font-bold text-lg text-[#01472e] mb-2">Inquire Live Status Ahead</h4>
+            <p class="text-xs text-[#01472e]/75 leading-relaxed">
+              If traveling from a distance or visiting as a large family/group (4+ people), we encourage dropping a quick message or calling our staff to verify cafe density before setting out.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-[#ccd5ae]/40 mt-4 text-[11px] text-[#01472e]/60 flex items-center gap-1.5">
+            <i data-lucide="check-circle" class="w-3.5 h-3.5 text-blue-600"></i> Real-time density update
+          </div>
+        </div>
+
       </div>
 
-      <!-- Main Booking Grid -->
-      <div class="grid lg:grid-cols-12 gap-8 items-start">
-        
-        <!-- Left: Booking Form -->
-        <div class="lg:col-span-8 bg-[#fefae0] rounded-super p-6 sm:p-10 shadow-lg border border-[#ccd5ae]">
-          <form id="cafeBookingForm" onsubmit="handleBookingSubmit(event)" class="space-y-8">
-            
-            <!-- Step 1: Choose Seating Zone -->
+      <!-- Direct Contact & Inquiry Action Card -->
+      <div class="max-w-4xl mx-auto bg-gradient-to-br from-[#01472e] to-[#025a3a] text-white rounded-super p-7 sm:p-10 shadow-2xl border border-[#ccd5ae]/30 relative overflow-hidden">
+        <div class="relative z-10 space-y-6">
+          
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/15 pb-6">
             <div>
-              <label class="block font-display font-bold text-[#01472e] text-base mb-3 flex items-center justify-between">
-                <span>1. Interested Seating Zone</span>
-                <span class="text-xs font-normal text-[#01472e]/60">*Click to select your preferred zone to inquire</span>
-              </label>
-
-              <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3.5" id="zoneSelectorContainer">
-                
-                <!-- Zone 1: Waterfront Sala (Flagship) -->
-                <div onclick="selectZone('waterfront')" id="zoneCard-waterfront" 
-                     class="zone-card cursor-pointer rounded-2xl border-2 border-[#01472e] bg-white p-3.5 transition duration-200 relative group shadow-sm flex flex-col justify-between">
-                  <div>
-                    <div class="w-full h-24 rounded-xl overflow-hidden mb-2.5 bg-slate-100">
-                      <img src="assets/fb_net_23.jpg" 
-                           alt="ศาลาไม้ติดCanal-side ดอกจิกน้ำสีแดง ติดคลอง คาเฟ่" class="w-full h-full object-cover group-hover:scale-105 transition">
-                    </div>
-                    <div class="flex items-center justify-between gap-1 mb-1">
-                      <h5 class="font-display font-bold text-xs sm:text-sm text-[#01472e] leading-snug">Waterfront Sala Pavilion</h5>
-                      <span id="check-waterfront" class="w-4 h-4 rounded-full bg-[#01472e] text-white flex items-center justify-center text-[10px] shrink-0">✓</span>
-                    </div>
-                    <p class="text-[11px] text-[#01472e]/70 leading-snug">Iconic floor seating with leg-hanging deck, dangling red blossoms & breeze</p>
-                  </div>
-                  <span class="inline-block mt-2 text-[10px] font-bold text-[#01472e] bg-[#ccd5ae]/50 px-2 py-0.5 rounded self-start">Most Popular 🔥</span>
-                </div>
-
-                <!-- Zone 2: Mangrove Waterfront Bar (Zone โกงกาง) -->
-                <div onclick="selectZone('kongkang')" id="zoneCard-kongkang" 
-                     class="zone-card cursor-pointer rounded-2xl border-2 border-[#ccd5ae]/60 bg-white/70 p-3.5 transition duration-200 relative group hover:border-[#01472e] flex flex-col justify-between">
-                  <div>
-                    <div class="w-full h-24 rounded-xl overflow-hidden mb-2.5 bg-slate-100 relative">
-                      <img src="assets/user_zone_kongkang.jpg" 
-                           alt="โซนโกงกาง เคาน์เตอร์บาร์ไม้ริมน้ำ ติดคลอง คาเฟ่" class="w-full h-full object-cover group-hover:scale-105 transition">
-                      <span class="absolute top-1.5 left-1.5 bg-[#01472e] text-[#fefae0] text-[9px] font-bold px-2 py-0.5 rounded-full shadow">
-                        Mangrove Zone 🌿
-                      </span>
-                    </div>
-                    <div class="flex items-center justify-between gap-1 mb-1">
-                      <h5 class="font-display font-bold text-xs sm:text-sm text-[#01472e] leading-snug">Mangrove Riverside Bar</h5>
-                      <span id="check-kongkang" class="w-4 h-4 rounded-full bg-[#01472e] text-white flex items-center justify-center text-[10px] shrink-0 hidden">✓</span>
-                    </div>
-                    <p class="text-[11px] text-[#01472e]/70 leading-snug">Rustic wooden bar counter beneath natural mangrove canopy right on the water</p>
-                  </div>
-                  <span class="inline-block mt-2 text-[10px] font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded self-start">Top Waterfront Spot ✨</span>
-                </div>
-
-                <!-- Zone 3: Covered Wooden Terrace with Wagon Wheel (Replaces ระเบียงไม้) -->
-                <div onclick="selectZone('terrace')" id="zoneCard-terrace" 
-                     class="zone-card cursor-pointer rounded-2xl border-2 border-[#ccd5ae]/60 bg-white/70 p-3.5 transition duration-200 relative group hover:border-[#01472e] flex flex-col justify-between">
-                  <div>
-                    <div class="w-full h-24 rounded-xl overflow-hidden mb-2.5 bg-slate-100">
-                      <img src="assets/user_zone_1.jpg" 
-                           alt="Rustic Covered Terrace ติดคลอง คาเฟ่" class="w-full h-full object-cover group-hover:scale-105 transition">
-                    </div>
-                    <div class="flex items-center justify-between gap-1 mb-1">
-                      <h5 class="font-display font-bold text-xs sm:text-sm text-[#01472e] leading-snug">Rustic Covered Terrace</h5>
-                      <span id="check-terrace" class="w-4 h-4 rounded-full bg-[#01472e] text-white flex items-center justify-center text-[10px] shrink-0 hidden">✓</span>
-                    </div>
-                    <p class="text-[11px] text-[#01472e]/70 leading-snug">Shaded wooden dining tables decorated with vintage wagon wheels, private & breezy</p>
-                  </div>
-                  <span class="inline-block mt-2 text-[10px] font-bold text-[#78350f] bg-[#faefe6] px-2 py-0.5 rounded self-start">Shaded & Private 🪵</span>
-                </div>
-
-                <!-- Zone 4: Outdoor Garden under Shade Trees (Replaces สวนบัวดิน) -->
-                <div onclick="selectZone('garden')" id="zoneCard-garden" 
-                     class="zone-card cursor-pointer rounded-2xl border-2 border-[#ccd5ae]/60 bg-white/70 p-3.5 transition duration-200 relative group hover:border-[#01472e] flex flex-col justify-between">
-                  <div>
-                    <div class="w-full h-24 rounded-xl overflow-hidden mb-2.5 bg-slate-100">
-                      <img src="assets/user_zone_garden.jpg" 
-                           alt="Shaded Outdoor Garden โต๊ะร่มสนาม ติดคลอง คาเฟ่" class="w-full h-full object-cover group-hover:scale-105 transition">
-                    </div>
-                    <div class="flex items-center justify-between gap-1 mb-1">
-                      <h5 class="font-display font-bold text-xs sm:text-sm text-[#01472e] leading-snug">Shaded Outdoor Garden</h5>
-                      <span id="check-garden" class="w-4 h-4 rounded-full bg-[#01472e] text-white flex items-center justify-center text-[10px] shrink-0 hidden">✓</span>
-                    </div>
-                    <p class="text-[11px] text-[#01472e]/70 leading-snug">Parasol picnic tables beneath grand shade trees in an airy garden setting</p>
-                  </div>
-                  <span class="inline-block mt-2 text-[10px] font-bold text-[#01472e] bg-[#a3b18a]/30 px-2 py-0.5 rounded self-start">Family Friendly 🌳</span>
-                </div>
-
-              </div>
-              <input type="hidden" id="selectedZoneInput" value="Waterfront Sala Pavilion">
-            </div>
-
-            <!-- Step 2: Date & Time Picker -->
-            <div class="grid sm:grid-cols-2 gap-6 pt-2">
-              
-              <!-- Date -->
-              <div>
-                <label for="bookingDate" class="block font-display font-semibold text-[#01472e] text-sm mb-2">
-                  2. Reservation Date
-                </label>
-                <input type="date" id="bookingDate" required onchange="handleDateChange(this.value)"
-                       class="w-full px-4 py-3 rounded-xl border border-[#ccd5ae] bg-white focus:outline-none focus:ring-2 focus:ring-[#01472e] font-sans text-sm text-[#01472e]">
-                <p id="mondayWarning" class="hidden text-xs text-red-600 font-semibold mt-1.5 flex items-center gap-1">
-                  <i data-lucide="alert-circle" class="w-3.5 h-3.5"></i> Cafe is closed every Monday. Please select Tuesday – Sunday.
-                </p>
-                <p class="text-[11px] text-[#a3b18a] mt-1 font-medium">Open Tuesday – Sunday (09:00 AM – 5:00 PM)</p>
-              </div>
-
-              <!-- Time Slot -->
-              <div>
-                <div class="flex items-center justify-between mb-2">
-                  <label class="block font-display font-semibold text-[#01472e] text-sm">
-                    3. Estimated Arrival Time
-                  </label>
-                  <span class="text-[11px] text-[#a3b18a] font-medium">Every 30 mins (09:00 AM – 4:30 PM)</span>
-                </div>
-                <div class="grid grid-cols-4 gap-2" id="timeSlotsContainer">
-                  <button type="button" onclick="selectTime('09:00')" class="time-btn px-2 py-2 rounded-lg text-xs font-medium border border-[#ccd5ae] hover:border-[#01472e] transition bg-white text-[#01472e]">09:00</button>
-                  <button type="button" onclick="selectTime('09:30')" class="time-btn px-2 py-2 rounded-lg text-xs font-medium border border-[#ccd5ae] hover:border-[#01472e] transition bg-white text-[#01472e]">09:30</button>
-                  <button type="button" onclick="selectTime('10:00')" class="time-btn px-2 py-2 rounded-lg text-xs font-medium border border-[#ccd5ae] hover:border-[#01472e] transition bg-white text-[#01472e]">10:00</button>
-                  <button type="button" onclick="selectTime('10:30')" class="time-btn px-2 py-2 rounded-lg text-xs font-medium border border-[#ccd5ae] hover:border-[#01472e] transition bg-white text-[#01472e]">10:30</button>
-                  <button type="button" onclick="selectTime('11:00')" class="time-btn px-2 py-2 rounded-lg text-xs font-bold border-2 border-[#01472e] bg-[#01472e] text-white transition shadow-sm">11:00</button>
-                  <button type="button" onclick="selectTime('11:30')" class="time-btn px-2 py-2 rounded-lg text-xs font-medium border border-[#ccd5ae] hover:border-[#01472e] transition bg-white text-[#01472e]">11:30</button>
-                  <button type="button" onclick="selectTime('12:00')" class="time-btn px-2 py-2 rounded-lg text-xs font-medium border border-[#ccd5ae] hover:border-[#01472e] transition bg-white text-[#01472e]">12:00</button>
-                  <button type="button" onclick="selectTime('12:30')" class="time-btn px-2 py-2 rounded-lg text-xs font-medium border border-[#ccd5ae] hover:border-[#01472e] transition bg-white text-[#01472e]">12:30</button>
-                  <button type="button" onclick="selectTime('13:00')" class="time-btn px-2 py-2 rounded-lg text-xs font-medium border border-[#ccd5ae] hover:border-[#01472e] transition bg-white text-[#01472e]">13:00</button>
-                  <button type="button" onclick="selectTime('13:30')" class="time-btn px-2 py-2 rounded-lg text-xs font-medium border border-[#ccd5ae] hover:border-[#01472e] transition bg-white text-[#01472e]">13:30</button>
-                  <button type="button" onclick="selectTime('14:00')" class="time-btn px-2 py-2 rounded-lg text-xs font-medium border border-[#ccd5ae] hover:border-[#01472e] transition bg-white text-[#01472e]">14:00</button>
-                  <button type="button" onclick="selectTime('14:30')" class="time-btn px-2 py-2 rounded-lg text-xs font-medium border border-[#ccd5ae] hover:border-[#01472e] transition bg-white text-[#01472e]">14:30</button>
-                  <button type="button" onclick="selectTime('15:00')" class="time-btn px-2 py-2 rounded-lg text-xs font-medium border border-[#ccd5ae] hover:border-[#01472e] transition bg-white text-[#01472e]">15:00</button>
-                  <button type="button" onclick="selectTime('15:30')" class="time-btn px-2 py-2 rounded-lg text-xs font-medium border border-[#ccd5ae] hover:border-[#01472e] transition bg-white text-[#01472e]">15:30</button>
-                  <button type="button" onclick="selectTime('16:00')" class="time-btn px-2 py-2 rounded-lg text-xs font-medium border border-[#ccd5ae] hover:border-[#01472e] transition bg-white text-[#01472e]">16:00</button>
-                  <button type="button" onclick="selectTime('16:30')" class="time-btn px-2 py-2 rounded-lg text-xs font-medium border border-[#ccd5ae] hover:border-[#01472e] transition bg-white text-[#01472e]">16:30</button>
-                </div>
-
-                <!-- Custom Specific Time Option -->
-                <div class="mt-2.5 pt-2 border-t border-[#ccd5ae]/40 flex items-center justify-between text-xs">
-                  <span class="text-[#01472e]/75 text-[11px] font-medium flex items-center gap-1">
-                    <i data-lucide="clock" class="w-3 h-3 text-[#a3b18a]"></i> Or custom arrival time:
-                  </span>
-                  <input type="time" id="customTimePicker" min="09:00" max="16:45" onchange="selectCustomTime(this.value)"
-                         class="px-2.5 py-1 text-xs rounded-lg border border-[#ccd5ae] bg-white text-[#01472e] focus:outline-none focus:ring-2 focus:ring-[#01472e] font-sans font-medium">
-                </div>
-
-                <input type="hidden" id="selectedTimeInput" value="11:00">
-              </div>
-
-            </div>
-
-            <!-- Step 3: Guests & Contact Info -->
-            <div class="pt-2 space-y-6">
-              
-              <!-- Guest Count Selector -->
-              <div>
-                <label class="block font-display font-semibold text-[#01472e] text-sm mb-2">
-                  4. Number of Guests
-                </label>
-                <div class="grid grid-cols-2 sm:grid-cols-5 gap-2.5">
-                  <button type="button" onclick="selectGuests('1 - 2 Guests')" class="guest-btn py-2 px-3 rounded-xl border-2 border-[#01472e] bg-[#01472e] text-white text-xs font-bold text-center transition">1 - 2 Guests</button>
-                  <button type="button" onclick="selectGuests('3 - 4 Guests')" class="guest-btn py-2 px-3 rounded-xl border border-[#ccd5ae] bg-white text-[#01472e] text-xs font-medium text-center hover:border-[#01472e] transition">3 - 4 Guests</button>
-                  <button type="button" onclick="selectGuests('5 - 6 Guests')" class="guest-btn py-2 px-3 rounded-xl border border-[#ccd5ae] bg-white text-[#01472e] text-xs font-medium text-center hover:border-[#01472e] transition">5 - 6 Guests</button>
-                  <button type="button" onclick="selectGuests('7 - 8 Guests')" class="guest-btn py-2 px-3 rounded-xl border border-[#ccd5ae] bg-white text-[#01472e] text-xs font-medium text-center hover:border-[#01472e] transition">7 - 8 Guests</button>
-                  <button type="button" onclick="selectGuests('9+ Guests (Group)')" class="guest-btn py-2 px-3 rounded-xl border border-[#ccd5ae] bg-white text-[#01472e] text-xs font-medium text-center hover:border-[#01472e] transition">9+ Guests (Group)</button>
-                </div>
-                <input type="hidden" id="selectedGuestsInput" value="1 - 2 Guests">
-              </div>
-
-              <!-- Customer Details -->
-              <div class="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <label for="custName" class="block font-display font-semibold text-[#01472e] text-xs mb-1.5">Contact Name *</label>
-                  <input type="text" id="custName" required placeholder="e.g. John Doe / Sarah" 
-                         oninput="updateSummary()"
-                         class="w-full px-4 py-2.5 rounded-xl border border-[#ccd5ae] bg-white focus:outline-none focus:ring-2 focus:ring-[#01472e] text-sm text-[#01472e]">
-                </div>
-                <div>
-                  <label for="custPhone" class="block font-display font-semibold text-[#01472e] text-xs mb-1.5">Phone / WhatsApp *</label>
-                  <input type="tel" id="custPhone" required placeholder="e.g. 080-576-8179 / +66..." 
-                         oninput="updateSummary()"
-                         class="w-full px-4 py-2.5 rounded-xl border border-[#ccd5ae] bg-white focus:outline-none focus:ring-2 focus:ring-[#01472e] text-sm text-[#01472e]">
-                </div>
-              </div>
-
-              <!-- Special Request -->
-              <div>
-                <label for="specialNotes" class="block font-display font-semibold text-[#01472e] text-xs mb-1.5">Special Requests (Optional)</label>
-                <input type="text" id="specialNotes" placeholder="e.g. Laptop power outlet, pet-friendly seating, baby high chair" 
-                       oninput="updateSummary()"
-                       class="w-full px-4 py-2.5 rounded-xl border border-[#ccd5ae] bg-white focus:outline-none focus:ring-2 focus:ring-[#01472e] text-sm text-[#01472e]">
-              </div>
-
-            </div>
-
-            <!-- Submit Button -->
-            <div class="pt-2">
-              <button type="submit" 
-                      class="w-full py-4 rounded-2xl bg-[#01472e] hover:bg-[#025a3a] text-[#fefae0] font-display font-bold text-base shadow-lg hover:shadow-xl transition transform active:scale-[0.99] flex items-center justify-center gap-2">
-                <i data-lucide="message-circle" class="w-5 h-5 text-emerald-300"></i>
-                Send Table Inquiry via Facebook Messenger (Awaiting Confirmation)
-              </button>
-              <p class="text-center text-xs text-[#01472e]/70 mt-2.5">
-                *This prepares your visit details for our staff on Messenger to check availability (not an automated table guarantee) so you receive the fastest service.
+              <span class="text-xs font-bold text-[#ccd5ae] uppercase tracking-wider block mb-1">
+                Direct Contact & Seating Inquiry
+              </span>
+              <h3 class="font-display font-bold text-2xl sm:text-3xl text-[#fefae0]">
+                Check Seating & Ask Our Staff Directly
+              </h3>
+              <p class="text-xs sm:text-sm text-[#fefae0]/80 mt-1 max-w-xl">
+                Message or call our cafe team directly for quick, transparent answers without booking delay.
               </p>
             </div>
 
-          </form>
-        </div>
-
-        <!-- Right: Live Summary Card & My Bookings -->
-        <div class="lg:col-span-4 space-y-6">
-          
-          <!-- Summary Card -->
-          <div class="bg-[#01472e] text-white rounded-super p-6 sm:p-8 shadow-xl border border-[#025a3a] relative overflow-hidden">
-            <div class="relative z-10 space-y-5">
-              
-              <div class="flex items-center justify-between border-b border-[#025a3a] pb-4">
-                <h4 class="font-display font-bold text-base text-[#e9edc9] flex items-center gap-2">
-                  <i data-lucide="clipboard-list" class="w-4 h-4 text-[#ccd5ae]"></i>
-                  Table Inquiry Summary
-                </h4>
-                <span class="text-[10px] bg-amber-400/20 text-amber-200 font-semibold px-2.5 py-0.5 rounded-full border border-amber-300/30">
-                  Ready to Inquire (Table Not Confirmed)
-                </span>
-              </div>
-
-              <div class="space-y-3.5 text-xs">
-                <div class="flex justify-between items-start">
-                  <span class="text-[#ccd5ae]">Interested Zone:</span>
-                  <span id="summaryZone" class="font-semibold text-white text-right">Waterfront Sala Pavilion</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-[#ccd5ae]">Date:</span>
-                  <span id="summaryDate" class="font-semibold text-[#fefae0]">Please choose date</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-[#ccd5ae]">Estimated Time:</span>
-                  <span id="summaryTime" class="font-semibold text-white">11:00 AM</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-[#ccd5ae]">Guests:</span>
-                  <span id="summaryGuests" class="font-semibold text-white">1 - 2 Guests</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-[#ccd5ae]">Inquirer:</span>
-                  <span id="summaryName" class="font-semibold text-slate-200">-</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-[#ccd5ae]">Phone:</span>
-                  <span id="summaryPhone" class="font-semibold text-slate-200">-</span>
-                </div>
-              </div>
-
-              <!-- Direct Assurance -->
-              <div class="bg-[#002216] rounded-xl p-3.5 border border-[#025a3a] text-[11px] text-[#ccd5ae] space-y-1">
-                <div class="flex items-center gap-1.5 text-[#fefae0] font-semibold">
-                  <i data-lucide="info" class="w-3.5 h-3.5 text-amber-300"></i> Seating Notice & Policy
-                </div>
-                <p>No deposit required. Due to high customer volume and natural table turnover during peak times, tables cannot be locked in advance. Submitting this form opens Messenger so our team can check live availability and assist you directly.</p>
-              </div>
-
+            <div class="shrink-0 flex items-center gap-2 bg-black/25 backdrop-blur px-3.5 py-2 rounded-2xl border border-white/10 text-xs">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span class="text-white font-medium">Open 09:00 AM – 5:00 PM (Closed Mondays)</span>
             </div>
-            <!-- Decorative blur circle -->
-            <div class="absolute -right-10 -bottom-10 w-36 h-36 rounded-full bg-[#ccd5ae]/10 blur-2xl pointer-events-none"></div>
           </div>
 
-          <!-- Existing Bookings in Local Storage -->
-          <div class="bg-white rounded-3xl p-6 shadow-sm border border-[#ccd5ae]">
-            <div class="flex items-center justify-between mb-2">
-              <h4 class="font-display font-bold text-sm text-[#01472e] flex items-center gap-2">
-                <i data-lucide="clock" class="w-4 h-4 text-[#01472e]"></i>
-                Inquiries Saved on This Device
-              </h4>
-              <button onclick="clearMyBookings()" class="text-[11px] text-slate-400 hover:text-red-500 transition">Clear</button>
-            </div>
-            <p class="text-[11px] text-amber-800 bg-amber-50 border border-amber-200/80 rounded-xl px-3 py-1.5 mb-3">
-              Saved on this device only (not a confirmed reservation • staff receives your request only after you send it on Messenger)
-            </p>
+          <!-- Action Buttons Grid -->
+          <div class="grid sm:grid-cols-2 gap-4 pt-2">
             
-            <div id="myBookingsList" class="space-y-2.5 text-xs">
-              <p class="text-slate-400 text-center py-4 text-xs italic">No inquiry requests saved on this device yet. Fill out the form on the left to prepare an inquiry.</p>
+            <!-- Facebook Messenger Button -->
+            <a href="https://m.me/100057527526785?text=Hello%20Tid%20Klong%20Cafe!%20We%20are%20planning%20to%20visit%20soon.%20Could%20you%20please%20let%20us%20know%20how%20busy%20the%20cafe%20is%20right%20now%20and%20if%20waterfront%20seats%20are%20available?%20Thank%20you!" 
+               target="_blank" rel="noopener noreferrer" 
+               class="bg-blue-600 hover:bg-blue-700 text-white p-5 rounded-2xl shadow-lg transition flex items-center justify-between group">
+              <div class="flex items-center gap-3.5">
+                <div class="w-11 h-11 rounded-xl bg-white/20 flex items-center justify-center shrink-0">
+                  <svg class="w-6 h-6 fill-current text-white" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </div>
+                <div class="text-left">
+                  <p class="font-display font-bold text-sm sm:text-base">Chat on Facebook Messenger</p>
+                  <p class="text-[11px] text-blue-100">Direct message to page staff</p>
+                </div>
+              </div>
+              <i data-lucide="arrow-up-right" class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition"></i>
+            </a>
+
+            <!-- Phone Call Button -->
+            <a href="tel:0805768179" 
+               class="bg-[#fefae0] hover:bg-white text-[#01472e] p-5 rounded-2xl shadow-lg transition flex items-center justify-between group">
+              <div class="flex items-center gap-3.5">
+                <div class="w-11 h-11 rounded-xl bg-[#01472e]/10 text-[#01472e] flex items-center justify-center shrink-0">
+                  <i data-lucide="phone-call" class="w-6 h-6"></i>
+                </div>
+                <div class="text-left">
+                  <p class="font-display font-bold text-sm sm:text-base">Call Cafe Directly</p>
+                  <p class="text-[11px] text-[#01472e]/70">080-576-8179 (or 094-850-1553)</p>
+                </div>
+              </div>
+              <i data-lucide="arrow-up-right" class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition"></i>
+            </a>
+
+          </div>
+
+          <!-- FAQ Note about Table Reservations -->
+          <div class="bg-black/25 rounded-2xl p-4 text-xs text-[#ccd5ae] flex items-start gap-3">
+            <i data-lucide="help-circle" class="w-5 h-5 text-amber-300 shrink-0 mt-0.5"></i>
+            <div class="space-y-1">
+              <p class="font-semibold text-white">Why does the cafe operate primarily on a walk-in basis?</p>
+              <p class="leading-relaxed text-[11px] text-[#ccd5ae]/90">
+                Tid Klong Cafe is an open canal sanctuary where guests unwind naturally. Holding tables in advance often leaves scenic water decks empty while visiting guests wait on-site. To ensure a fair and relaxing experience for everyone, we welcome all guests on a walk-in rotation. If waterfront spots are full upon arrival, enjoy artisan drinks and paddle our complimentary boats while seats turn over!
+              </p>
             </div>
           </div>
 
         </div>
-
+        <!-- Subtle background glow -->
+        <div class="absolute -right-16 -bottom-16 w-64 h-64 rounded-full bg-[#ccd5ae]/10 blur-3xl pointer-events-none"></div>
       </div>
 
     </div>
@@ -1866,11 +1686,11 @@
 
   <!-- Floating Action Buttons -->
   <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
-    <!-- Quick Inquiry / Queue Button -->
+    <!-- Seating Policy / Quick Contact Button -->
     <a href="#booking" 
        class="w-13 h-13 p-3.5 bg-[#01472e] hover:bg-[#025a3a] text-white rounded-full shadow-xl hover:shadow-2xl transition transform hover:scale-110 flex items-center justify-center group"
-       title="Check Seating & Live Queue">
-      <i data-lucide="message-square" class="w-6 h-6 text-emerald-200"></i>
+       title="Seating Policy & Contact">
+      <i data-lucide="info" class="w-6 h-6 text-emerald-200"></i>
     </a>
     <!-- Facebook Messenger -->
     <a href="https://m.me/100057527526785" target="_blank" rel="noopener noreferrer" 
@@ -1886,347 +1706,7 @@
     </a>
   </div>
 
-  <!-- Inquiry Prepared Modal -->
-  <div id="bookingSuccessModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
-    <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-[#ccd5ae] text-center space-y-5 animate-in fade-in zoom-in duration-200">
-      
-      <div class="w-16 h-16 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center mx-auto shadow-inner">
-        <i data-lucide="message-circle" class="w-8 h-8"></i>
-      </div>
-
-      <div class="space-y-1">
-        <span class="text-xs font-semibold text-amber-700 uppercase tracking-wider">Inquiry Prepared • Awaiting Staff Reply</span>
-        <h3 class="font-display font-extrabold text-2xl text-[#01472e]">Table Inquiry Prepared</h3>
-        <p class="text-xs text-slate-500">Inquiry Reference: <span id="modalBookingId" class="font-mono font-bold text-[#01472e]">#TK-XXXX</span></p>
-      </div>
-
-      <div id="modalSummaryBox" class="bg-[#fefae0] rounded-2xl p-4 text-xs text-left space-y-2 border border-[#ccd5ae]">
-        <!-- Rendered safely via DOM textContent -->
-      </div>
-
-      <p class="text-xs text-amber-900 bg-amber-50 border border-amber-200 rounded-xl p-3.5 leading-relaxed text-left">
-        <strong>⚠️ Important (Busy Hours Notice):</strong> This inquiry is saved locally on your device and is <strong>not an instant confirmed booking</strong>. Because tables turn over naturally and peak hours can be lively, please tap <strong>"Send Inquiry via Messenger Now"</strong> below so our team can verify real-time table status and confirm with you.
-      </p>
-
-      <div class="space-y-2.5">
-        <a id="modalMessengerBtn" href="#" target="_blank" rel="noopener noreferrer"
-           class="w-full py-3.5 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm shadow-md transition flex items-center justify-center gap-2">
-          <i data-lucide="send" class="w-4 h-4"></i> Send Inquiry via Messenger Now
-        </a>
-        <a href="tel:0805768179"
-           class="w-full py-2.5 px-4 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-[#01472e] border border-[#01472e]/30 font-semibold text-xs transition flex items-center justify-center gap-2">
-          <i data-lucide="phone" class="w-3.5 h-3.5"></i> Or Call Live: 080-576-8179
-        </a>
-        <button onclick="closeSuccessModal()" 
-                class="w-full py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-xs transition">
-          Close Window
-        </button>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Booking System JavaScript Logic -->
   <script>
-    const BOOKINGS_STORAGE_KEY = 'tidklong_bookings';
-
-    function readStoredBookings() {
-      try {
-        const raw = localStorage.getItem(BOOKINGS_STORAGE_KEY);
-        if (!raw) return [];
-        const parsed = JSON.parse(raw);
-        if (!Array.isArray(parsed)) {
-          localStorage.removeItem(BOOKINGS_STORAGE_KEY);
-          return [];
-        }
-        return parsed.filter(item => item && typeof item === 'object');
-      } catch (err) {
-        try {
-          localStorage.removeItem(BOOKINGS_STORAGE_KEY);
-        } catch (_) {}
-        return [];
-      }
-    }
-
-    function createSummaryRow(label, valueText, valueClass) {
-      const row = document.createElement('div');
-      row.className = 'flex justify-between gap-2';
-      const labelSpan = document.createElement('span');
-      labelSpan.className = 'text-slate-500 shrink-0';
-      labelSpan.textContent = label;
-      const valueSpan = document.createElement('span');
-      valueSpan.className = valueClass || 'font-bold text-[#01472e] text-right break-words';
-      valueSpan.textContent = valueText;
-      row.appendChild(labelSpan);
-      row.appendChild(valueSpan);
-      return row;
-    }
-
-    function renderModalSummary(booking) {
-      const box = document.getElementById('modalSummaryBox');
-      if (!box) return;
-      const rows = [
-        createSummaryRow('Status:', 'Inquiry prepared (send via Messenger to check availability)', 'font-bold text-amber-700 text-right'),
-        createSummaryRow('Contact Name:', `${booking.name || '-'} (${booking.phone || '-'})`),
-        createSummaryRow('Interested Zone:', String(booking.zone || '-')),
-        createSummaryRow('Date & Approx Time:', `${booking.date || '-'} at ${booking.time || '-'}`),
-        createSummaryRow('Guests:', String(booking.guests || '-'))
-      ];
-      if (booking.notes) {
-        rows.push(createSummaryRow('Notes:', String(booking.notes), 'text-slate-700 text-right break-words'));
-      }
-      box.replaceChildren(...rows);
-    }
-
-    // Initialize default date (tomorrow or next valid day)
-    document.addEventListener("DOMContentLoaded", () => {
-      const dateInput = document.getElementById("bookingDate");
-      const tomorrow = new Date();
-      tomorrow.setDate(tomorrow.getDate() + 1);
-      
-      // If tomorrow is Monday (day 1), advance to Tuesday (day 2)
-      if (tomorrow.getDay() === 1) {
-        tomorrow.setDate(tomorrow.getDate() + 1);
-      }
-      
-      const yyyy = tomorrow.getFullYear();
-      const mm = String(tomorrow.getMonth() + 1).padStart(2, '0');
-      const dd = String(tomorrow.getDate()).padStart(2, '0');
-      const defaultDateStr = `${yyyy}-${mm}-${dd}`;
-      
-      dateInput.value = defaultDateStr;
-      dateInput.min = defaultDateStr;
-      handleDateChange(defaultDateStr);
-      loadMyBookings();
-    });
-
-    // Zone Selection
-    function selectZone(zoneKey) {
-      const zones = {
-        'waterfront': { name: 'Waterfront Sala Pavilion', el: 'zoneCard-waterfront', chk: 'check-waterfront' },
-        'kongkang': { name: 'Mangrove Riverside Bar', el: 'zoneCard-kongkang', chk: 'check-kongkang' },
-        'terrace': { name: 'Rustic Covered Terrace', el: 'zoneCard-terrace', chk: 'check-terrace' },
-        'garden': { name: 'Shaded Outdoor Garden', el: 'zoneCard-garden', chk: 'check-garden' }
-      };
-
-      Object.keys(zones).forEach(k => {
-        const card = document.getElementById(zones[k].el);
-        const chk = document.getElementById(zones[k].chk);
-        if (card && chk) {
-          if (k === zoneKey) {
-            card.classList.add('border-[#01472e]', 'bg-white');
-            card.classList.remove('border-[#ccd5ae]/60', 'bg-white/70');
-            chk.classList.remove('hidden');
-            document.getElementById('selectedZoneInput').value = zones[k].name;
-            document.getElementById('summaryZone').textContent = zones[k].name;
-          } else {
-            card.classList.remove('border-[#01472e]', 'bg-white');
-            card.classList.add('border-[#ccd5ae]/60', 'bg-white/70');
-            chk.classList.add('hidden');
-          }
-        }
-      });
-    }
-
-    // Time Selection
-    function selectTime(timeVal) {
-      document.getElementById('selectedTimeInput').value = timeVal;
-      document.getElementById('summaryTime').textContent = timeVal;
-      const customPicker = document.getElementById('customTimePicker');
-      if (customPicker) customPicker.value = '';
-
-      const buttons = document.querySelectorAll('.time-btn');
-      buttons.forEach(btn => {
-        if (btn.innerText.trim() === timeVal) {
-          btn.className = 'time-btn px-2 py-2 rounded-lg text-xs font-bold border-2 border-[#01472e] bg-[#01472e] text-white transition shadow-sm';
-        } else {
-          btn.className = 'time-btn px-2 py-2 rounded-lg text-xs font-medium border border-[#ccd5ae] hover:border-[#01472e] transition bg-white text-[#01472e]';
-        }
-      });
-    }
-
-    function selectCustomTime(timeVal) {
-      if (!timeVal) return;
-      document.getElementById('selectedTimeInput').value = timeVal;
-      document.getElementById('summaryTime').textContent = timeVal;
-
-      const buttons = document.querySelectorAll('.time-btn');
-      buttons.forEach(btn => {
-        btn.className = 'time-btn px-2 py-2 rounded-lg text-xs font-medium border border-[#ccd5ae] hover:border-[#01472e] transition bg-white text-[#01472e]';
-      });
-    }
-
-    // Guest Selection
-    function selectGuests(guestText) {
-      document.getElementById('selectedGuestsInput').value = guestText;
-      document.getElementById('summaryGuests').textContent = guestText;
-
-      const buttons = document.querySelectorAll('.guest-btn');
-      buttons.forEach(btn => {
-        if (btn.innerText.trim() === guestText) {
-          btn.className = 'guest-btn py-2 px-3 rounded-xl border-2 border-[#01472e] bg-[#01472e] text-white text-xs font-bold text-center transition';
-        } else {
-          btn.className = 'guest-btn py-2 px-3 rounded-xl border border-[#ccd5ae] bg-white text-[#01472e] text-xs font-medium text-center hover:border-[#01472e] transition';
-        }
-      });
-    }
-
-    // Date change with Monday validation
-    function handleDateChange(dateVal) {
-      const selected = new Date(dateVal + 'T00:00:00');
-      const warning = document.getElementById('mondayWarning');
-      
-      if (selected.getDay() === 1) { // 1 = Monday
-        warning.classList.remove('hidden');
-      } else {
-        warning.classList.add('hidden');
-      }
-
-      const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
-      const formatted = selected.toLocaleDateString('en-US', options);
-      document.getElementById('summaryDate').textContent = formatted;
-    }
-
-    // Live update for inputs
-    function updateSummary() {
-      const name = document.getElementById('custName').value.trim();
-      const phone = document.getElementById('custPhone').value.trim();
-      document.getElementById('summaryName').textContent = name || '-';
-      document.getElementById('summaryPhone').textContent = phone || '-';
-    }
-
-    // Form Submit Handler
-    function handleBookingSubmit(e) {
-      e.preventDefault();
-      
-      const dateVal = document.getElementById('bookingDate').value;
-      const selected = new Date(dateVal + 'T00:00:00');
-      if (selected.getDay() === 1) {
-        alert("Tid Klong Cafe is closed every Monday. Please select Tuesday – Sunday for your reservation.");
-        return;
-      }
-
-      const booking = {
-        id: 'TK-' + Math.floor(1000 + Math.random() * 9000),
-        status: 'request_awaiting_staff_confirmation',
-        zone: document.getElementById('selectedZoneInput').value,
-        date: document.getElementById('summaryDate').textContent,
-        dateRaw: dateVal,
-        time: document.getElementById('selectedTimeInput').value,
-        guests: document.getElementById('selectedGuestsInput').value,
-        name: document.getElementById('custName').value.trim(),
-        phone: document.getElementById('custPhone').value.trim(),
-        notes: document.getElementById('specialNotes').value.trim(),
-        createdAt: new Date().toISOString()
-      };
-
-      // Save to localStorage on this device only
-      const existing = readStoredBookings();
-      existing.unshift(booking);
-      try {
-        localStorage.setItem(BOOKINGS_STORAGE_KEY, JSON.stringify(existing));
-      } catch (_) {}
-
-      // Show Modal safely via textContent
-      document.getElementById('modalBookingId').textContent = `#${booking.id}`;
-      renderModalSummary(booking);
-
-      // Format Messenger URI
-      const msgText = encodeURIComponent(`Hello Tid Klong Cafe! I would like to inquire about table availability (table not yet confirmed):\n- Reference ID: #${booking.id}\n- Contact: ${booking.name} (${booking.phone})\n- Preferred Zone: ${booking.zone}\n- Date: ${booking.date} at approx ${booking.time}\n- Party: ${booking.guests}\n- Notes: ${booking.notes || '-'}\nIs the cafe busy around this time? Do you have tables available? Thank you!`);
-      document.getElementById('modalMessengerBtn').href = `https://m.me/100057527526785?text=${msgText}`;
-
-      document.getElementById('bookingSuccessModal').classList.remove('hidden');
-      loadMyBookings();
-      if (window.lucide && typeof window.lucide.createIcons === 'function') {
-        window.lucide.createIcons();
-      }
-    }
-
-    function closeSuccessModal() {
-      document.getElementById('bookingSuccessModal').classList.add('hidden');
-    }
-
-    function loadMyBookings() {
-      const container = document.getElementById('myBookingsList');
-      if (!container) return;
-      const existing = readStoredBookings();
-      
-      if (existing.length === 0) {
-        const emptyP = document.createElement('p');
-        emptyP.className = 'text-slate-400 text-center py-4 text-xs italic';
-        emptyP.textContent = 'No inquiry requests saved on this device yet. Fill out the form on the left to prepare an inquiry.';
-        container.replaceChildren(emptyP);
-        return;
-      }
-
-      const cards = existing.slice(0, 3).map(b => {
-        const card = document.createElement('div');
-        card.className = 'p-3.5 rounded-2xl bg-white border border-[#ccd5ae]/60 space-y-1.5 shadow-sm';
-
-        const topRow = document.createElement('div');
-        topRow.className = 'flex items-center justify-between gap-2';
-
-        const idSpan = document.createElement('span');
-        idSpan.className = 'font-mono font-bold text-[#01472e] text-xs';
-        idSpan.textContent = `#${String(b.id || 'TK-REQ')}`;
-
-        const timeSpan = document.createElement('span');
-        timeSpan.className = 'text-[10px] bg-[#ccd5ae]/40 text-[#01472e] px-2 py-0.5 rounded font-bold';
-        timeSpan.textContent = String(b.time || '-');
-
-        topRow.appendChild(idSpan);
-        topRow.appendChild(timeSpan);
-
-        const statusBadge = document.createElement('div');
-        statusBadge.className = 'text-[10px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-semibold inline-block';
-        statusBadge.textContent = 'Saved on device • Send via Messenger to check availability';
-
-        const zoneP = document.createElement('p');
-        zoneP.className = 'font-bold text-[#01472e] text-xs break-words';
-        zoneP.textContent = String(b.zone || '-');
-
-        const guestP = document.createElement('p');
-        guestP.className = 'text-[11px] text-slate-600 break-words';
-        guestP.textContent = `${String(b.name || '-')} (${String(b.phone || '-')})`;
-
-        const metaRow = document.createElement('div');
-        metaRow.className = 'flex justify-between text-[11px] text-[#01472e]/70 gap-2';
-
-        const dateSpan = document.createElement('span');
-        dateSpan.textContent = String(b.date || '-');
-
-        const guestsSpan = document.createElement('span');
-        guestsSpan.textContent = String(b.guests || '-');
-
-        metaRow.appendChild(dateSpan);
-        metaRow.appendChild(guestsSpan);
-
-        card.appendChild(topRow);
-        card.appendChild(statusBadge);
-        card.appendChild(zoneP);
-        card.appendChild(guestP);
-        card.appendChild(metaRow);
-
-        if (b.notes) {
-          const notesP = document.createElement('p');
-          notesP.className = 'text-[11px] text-slate-500 italic break-words';
-          notesP.textContent = `Notes: ${String(b.notes)}`;
-          card.appendChild(notesP);
-        }
-
-        return card;
-      });
-
-      container.replaceChildren(...cards);
-    }
-
-    function clearMyBookings() {
-      try {
-        localStorage.removeItem(BOOKINGS_STORAGE_KEY);
-      } catch (_) {}
-      loadMyBookings();
-    }
-
     // Menu Category Filter
     function filterMenu(category, btnEl) {
       // Update active tab button style
