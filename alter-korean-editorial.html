@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canal Bound (ติดคลอง คาเฟ่) — Seoul Riverside Editorial</title>
+  
+  <!-- Premium Fonts: Satoshi (Sans), JetBrains Mono, Prompt (Thai) -->
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&f[]=jetbrains-mono@400,500,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Sarabun:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Iconify CDN (Superdesign platform contract) -->
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Satoshi', 'Prompt', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+            thai: ['Prompt', 'Sarabun', 'sans-serif'],
+          },
+          colors: {
+            oat: {
+              50: '#fdfbf9',
+              DEFAULT: '#faf7f2',
+              100: '#f5efe6',
+              200: '#ede2d3',
+              dark: '#e5d7c3',
+            },
+            espresso: {
+              DEFAULT: '#1c1917',
+              900: '#151311',
+              800: '#231f1c',
+              muted: '#4a433e',
+              subtle: '#78716c',
+            },
+            amber: {
+              gold: '#d97706',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Smooth Scroll Clearance for Sticky Header */
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 6.5rem;
+    }
+    .editorial-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(28, 25, 23, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(28, 25, 23, 0.04) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body>
+  <!-- Root Container (Superdesign Contract: single root div, body has no class) -->
+  <div class="min-h-screen bg-oat text-espresso font-sans antialiased relative selection:bg-espresso selection:text-oat editorial-grid">
+    
+    <!-- Top Editorial Header -->
+    <header class="sticky top-0 z-40 bg-oat/90 backdrop-blur-md border-b border-espresso/10 transition-all">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+        
+        <!-- Logo & Monospace Timestamp -->
+        <a id="nav-brand-logo" href="#" class="flex items-center gap-3.5 group">
+          <div class="w-10 h-10 rounded-xl overflow-hidden border border-espresso/20 shadow-xs shrink-0">
+            <img src="https://canalbound.vercel.app/assets/logo.png" alt="Canal Bound Cafe Logo" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <div class="font-sans font-black text-xl tracking-tighter text-espresso uppercase leading-none">
+              CANAL BOUND<span class="text-amber-gold">.</span>
+            </div>
+            <span class="font-mono text-[9px] tracking-widest uppercase text-espresso-subtle block mt-0.5">Rayong • Est. 2024</span>
+          </div>
+          <div class="hidden lg:flex font-mono text-[9px] tracking-widest uppercase px-2 py-0.5 bg-oat-200 border border-espresso/10 rounded-sm text-espresso-muted ml-2">
+            [ 12.6841° N, 101.2825° E ]
+          </div>
+        </a>
+
+        <!-- Center Editorial Navigation -->
+        <nav class="hidden md:flex items-center gap-7 text-xs font-semibold uppercase tracking-[0.16em] text-espresso/70">
+          <a id="nav-link-story" href="#story" class="hover:text-espresso hover:underline underline-offset-4 transition">Story</a>
+          <a id="nav-link-menu" href="#menu" class="hover:text-espresso hover:underline underline-offset-4 transition">Menu</a>
+          <a id="nav-link-boat" href="#boat" class="hover:text-espresso hover:underline underline-offset-4 transition">Boat</a>
+          <a id="nav-link-policy" href="#policy" class="hover:text-espresso hover:underline underline-offset-4 transition">Policy</a>
+          <a id="nav-link-location" href="#location" class="hover:text-espresso hover:underline underline-offset-4 transition">Location</a>
+        </nav>
+
+        <!-- Right Quick Actions -->
+        <div class="flex items-center gap-2.5">
+          <a id="nav-phone-call" href="tel:0805768179" class="hidden sm:inline-flex px-4 py-2 border border-espresso/20 hover:border-espresso text-espresso text-[11px] font-mono uppercase tracking-wider rounded-sm transition">
+            080-576-8179
+          </a>
+          <a id="nav-chat-messenger" href="https://m.me/100057527526785" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-espresso text-oat text-[11px] font-mono uppercase tracking-wider hover:bg-espresso-muted transition rounded-sm flex items-center gap-1.5 shadow-sm">
+            <span>Inquiry</span>
+            <iconify-icon icon="ri:arrow-right-up-line" width="14"></iconify-icon>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Mobile Quick Chips (1-tap jump) -->
+      <div class="md:hidden px-4 pb-2.5 pt-1 overflow-x-auto scrollbar-none flex items-center gap-1.5 border-t border-espresso/10 bg-oat/95 font-mono text-[10px] tracking-wider uppercase">
+        <a id="chip-story" href="#story" class="shrink-0 px-2.5 py-1 bg-oat-100 border border-espresso/15 text-espresso rounded-sm">[ Story ]</a>
+        <a id="chip-menu" href="#menu" class="shrink-0 px-2.5 py-1 bg-espresso text-oat rounded-sm font-bold">[ Menu ]</a>
+        <a id="chip-boat" href="#boat" class="shrink-0 px-2.5 py-1 bg-oat-100 border border-espresso/15 text-espresso rounded-sm">[ Rowboat ]</a>
+        <a id="chip-policy" href="#policy" class="shrink-0 px-2.5 py-1 bg-oat-100 border border-espresso/15 text-espresso rounded-sm">[ Seating ]</a>
+        <a id="chip-location" href="#location" class="shrink-0 px-2.5 py-1 bg-oat-100 border border-espresso/15 text-espresso rounded-sm">[ Location ]</a>
+      </div>
+    </header>
+
+    <!-- Hero Section: Editorial Magazine Split -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden border-b border-espresso/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <!-- Left Column: Bold Typographic Headline -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-3 font-mono text-[10px] tracking-[0.25em] uppercase text-espresso-muted border border-espresso/15 px-3 py-1 bg-oat-100 rounded-sm">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              <span>Riverside Sanctuary • Choeng Noen</span>
+            </div>
+            
+            <h1 class="font-sans text-4xl sm:text-6xl lg:text-[4.75rem] font-black text-espresso leading-[0.98] tracking-tighter uppercase">
+              RIVERSIDE <br>
+              <span class="text-espresso/35">SLOW LIVING.</span>
+            </h1>
+
+            <p class="text-espresso-muted text-sm sm:text-base leading-relaxed max-w-xl font-normal font-thai">
+              ติดคลอง คาเฟ่ — เรือนไม้โบราณอายุกว่า 50 ปี ซ่อนตัวอย่างเงียบสงบริมคลองบางจาก ระยอง 
+              เสิร์ฟกาแฟ Specialty ดริปสโลว์บาร์ อาหารไทยรสแท้ และบริการเรือพายไม้สีฟ้าฟรีเพื่อความผ่อนคลายเต็มรูปแบบ
+            </p>
+
+            <div class="flex flex-wrap items-center gap-3 pt-2">
+              <a id="hero-btn-menu" href="#menu" class="inline-flex items-center gap-3 bg-espresso hover:bg-espresso-muted text-oat font-sans font-bold px-7 py-3.5 text-xs tracking-wider uppercase rounded-sm transition">
+                <span>Explore Menu & Prices</span>
+                <iconify-icon icon="ri:arrow-right-line" width="16"></iconify-icon>
+              </a>
+              <a id="hero-btn-boat" href="#boat" class="inline-flex items-center gap-2 border border-espresso/25 hover:border-espresso text-espresso font-mono text-xs px-6 py-3.5 rounded-sm transition bg-white/40">
+                <iconify-icon icon="ri:sailboat-line" width="15"></iconify-icon>
+                <span>Free Boating (100% Free)</span>
+              </a>
+            </div>
+
+            <div class="pt-6 grid grid-cols-3 gap-4 border-t border-espresso/10 font-mono text-xs">
+              <div>
+                <span class="text-[9px] uppercase tracking-widest text-espresso-subtle block">Hours</span>
+                <span class="font-bold text-espresso text-xs">09:00 - 17:00</span>
+              </div>
+              <div>
+                <span class="text-[9px] uppercase tracking-widest text-espresso-subtle block">Closed</span>
+                <span class="font-bold text-espresso text-xs">Every Monday</span>
+              </div>
+              <div>
+                <span class="text-[9px] uppercase tracking-widest text-espresso-subtle block">Admission</span>
+                <span class="font-bold text-emerald-700 text-xs">Walk-in Welcome</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Framed Editorial Hero Visual -->
+          <div class="lg:col-span-5">
+            <div class="relative bg-espresso/5 border border-espresso/15 p-2 rounded-sm shadow-xl">
+              <div class="aspect-[4/5] overflow-hidden relative rounded-xs">
+                <img src="https://canalbound.vercel.app/assets/hero_real.jpg" alt="เรือนไม้ริมน้ำ ติดคลอง คาเฟ่" class="w-full h-full object-cover filter contrast-[1.08] hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-espresso/80 via-transparent to-transparent"></div>
+                <div class="absolute bottom-4 left-4 right-4 text-oat font-mono">
+                  <span class="text-[9px] tracking-widest uppercase block text-oat/70">[ FIG. 01 — 50-YEAR HERITAGE ]</span>
+                  <p class="font-sans font-bold text-sm text-oat mt-0.5">Canal Bound Heritage Veranda</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Value Guarantee: "Don't compete on cheap, compete on value" -->
+    <section class="py-10 bg-espresso text-oat border-b border-espresso-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-amber-gold/20 border border-amber-gold/40 flex items-center justify-center text-amber-gold shrink-0">
+            <iconify-icon icon="ri:sparkling-2-line" width="22"></iconify-icon>
+          </div>
+          <div>
+            <span class="font-mono text-[9px] tracking-widest uppercase text-oat/60 block">Value Psychology</span>
+            <p class="font-sans font-bold text-base sm:text-lg text-oat leading-tight">"อย่าแข่งกันถูก แข่งกันคุ้ม" — ฟรีเรือพายไม้สีฟ้าไม่จำกัดเวลา</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 shrink-0">
+          <span class="font-mono text-xs text-oat/70 hidden sm:inline">[ INCLUDED WITH ANY ORDER ]</span>
+          <a id="value-boat-anchor" href="#boat" class="px-5 py-2.5 bg-oat text-espresso font-mono text-xs uppercase tracking-wider font-bold rounded-sm hover:bg-oat-dark transition">
+            See Boat Experience &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu: Cinematic Food Hero Shots (Saved Reels Thanatos66 Aesthetic) -->
+    <section id="menu" class="py-20 border-b border-espresso/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+          <div>
+            <span class="font-mono text-[10px] tracking-[0.25em] uppercase text-espresso-subtle block mb-2">[ 02 // GASTRONOMY & SLOW BAR ]</span>
+            <h2 class="font-sans text-3xl sm:text-5xl font-black text-espresso uppercase tracking-tight">
+              CURATED MENU.
+            </h2>
+          </div>
+          <p class="text-espresso-muted text-xs sm:text-sm font-thai max-w-md">
+            ภาพถ่ายอาหารและเครื่องดื่มจริงจากร้าน ปรุงสดใหม่ทุกจาน กาแฟคั่วพิเศษ และวัตถุดิบชั้นดีจากระยอง
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <!-- Dish 1: Fresh Orange Americano -->
+          <div class="group border border-espresso/15 bg-white/70 p-3 rounded-sm shadow-xs hover:border-espresso transition">
+            <div class="aspect-[4/3] bg-oat relative overflow-hidden mb-4 rounded-xs">
+              <img src="https://canalbound.vercel.app/assets/feed_item_coffee_real.jpg" alt="อเมริกาโน่น้ำส้มสด" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute top-3 left-3 px-2 py-0.5 bg-espresso text-oat font-mono text-[9px] uppercase tracking-widest">
+                [ SIGNATURE ]
+              </div>
+            </div>
+            <div class="flex items-baseline justify-between mb-1.5">
+              <h3 class="font-sans font-bold text-base text-espresso uppercase">Orange Americano</h3>
+              <span class="font-mono font-bold text-sm text-espresso">฿70</span>
+            </div>
+            <p class="text-xs text-espresso-muted font-thai leading-relaxed mb-3">
+              เอสเพรสโซ่ช็อตเข้มข้น ผสานน้ำส้มแท้ 100% สดชื่นคลายร้อนริมน้ำ
+            </p>
+            <div class="font-mono text-[9px] uppercase tracking-wider text-espresso-subtle border-t border-espresso/10 pt-2 flex items-center justify-between">
+              <span>SPECIALTY DRINK</span>
+              <span class="text-amber-gold font-bold">READY TO ORDER</span>
+            </div>
+          </div>
+
+          <!-- Dish 2: Salmon Salad -->
+          <div class="group border border-espresso/15 bg-white/70 p-3 rounded-sm shadow-xs hover:border-espresso transition">
+            <div class="aspect-[4/3] bg-oat relative overflow-hidden mb-4 rounded-xs">
+              <img src="https://canalbound.vercel.app/assets/feed_item_salmon_real.jpg" alt="ยำแซลมอนแซ่บ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute top-3 left-3 px-2 py-0.5 bg-espresso text-oat font-mono text-[9px] uppercase tracking-widest">
+                [ POPULAR ]
+              </div>
+            </div>
+            <div class="flex items-baseline justify-between mb-1.5">
+              <h3 class="font-sans font-bold text-base text-espresso uppercase">Spicy Salmon Salad</h3>
+              <span class="font-mono font-bold text-sm text-espresso">฿189</span>
+            </div>
+            <p class="text-xs text-espresso-muted font-thai leading-relaxed mb-3">
+              แซลมอนสดชิ้นหนา คลุกเคล้าน้ำยำสมุนไพรรสเด็ด จัดจ้านถึงเครื่อง
+            </p>
+            <div class="font-mono text-[9px] uppercase tracking-wider text-espresso-subtle border-t border-espresso/10 pt-2 flex items-center justify-between">
+              <span>FRESH KITCHEN</span>
+              <span class="text-amber-gold font-bold">READY TO ORDER</span>
+            </div>
+          </div>
+
+          <!-- Dish 3: Premium Matcha -->
+          <div class="group border border-espresso/15 bg-white/70 p-3 rounded-sm shadow-xs hover:border-espresso transition">
+            <div class="aspect-[4/3] bg-oat relative overflow-hidden mb-4 rounded-xs">
+              <img src="https://canalbound.vercel.app/assets/menu_drink_matcha.jpg" alt="มัทฉะลาเต้เกรดพรีเมียม" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute top-3 left-3 px-2 py-0.5 bg-espresso text-oat font-mono text-[9px] uppercase tracking-widest">
+                [ CEREMONIAL ]
+              </div>
+            </div>
+            <div class="flex items-baseline justify-between mb-1.5">
+              <h3 class="font-sans font-bold text-base text-espresso uppercase">Ceremonial Matcha</h3>
+              <span class="font-mono font-bold text-sm text-espresso">฿85</span>
+            </div>
+            <p class="text-xs text-espresso-muted font-thai leading-relaxed mb-3">
+              ผงชาเขียวแท้นำเข้า ตีสดแก้วต่อแก้ว หอมนวลละมุนลิ้น
+            </p>
+            <div class="font-mono text-[9px] uppercase tracking-wider text-espresso-subtle border-t border-espresso/10 pt-2 flex items-center justify-between">
+              <span>JAPANESE GRADE</span>
+              <span class="text-amber-gold font-bold">READY TO ORDER</span>
+            </div>
+          </div>
+
+          <!-- Dish 4: Chili Bacon Pasta -->
+          <div class="group border border-espresso/15 bg-white/70 p-3 rounded-sm shadow-xs hover:border-espresso transition">
+            <div class="aspect-[4/3] bg-oat relative overflow-hidden mb-4 rounded-xs">
+              <img src="https://canalbound.vercel.app/assets/menu_dish_spaghetti.jpg" alt="สปาเก็ตตี้พริกแห้งเบคอน" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute top-3 left-3 px-2 py-0.5 bg-espresso text-oat font-mono text-[9px] uppercase tracking-widest">
+                [ CHEF'S PICK ]
+              </div>
+            </div>
+            <div class="flex items-baseline justify-between mb-1.5">
+              <h3 class="font-sans font-bold text-base text-espresso uppercase">Chili Bacon Pasta</h3>
+              <span class="font-mono font-bold text-sm text-espresso">฿149</span>
+            </div>
+            <p class="text-xs text-espresso-muted font-thai leading-relaxed mb-3">
+              สปาเก็ตตี้ผัดพริกแห้งเบคอนกรอบ หอมกลิ่นกระทะ ไม่เลี่ยน
+            </p>
+            <div class="font-mono text-[9px] uppercase tracking-wider text-espresso-subtle border-t border-espresso/10 pt-2 flex items-center justify-between">
+              <span>ARTISAN MAIN</span>
+              <span class="text-amber-gold font-bold">READY TO ORDER</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Complimentary Boat Section -->
+    <section id="boat" class="py-20 border-b border-espresso/10 bg-oat-100/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="grid lg:grid-cols-12 gap-10 items-center">
+          
+          <div class="lg:col-span-6 space-y-6">
+            <span class="font-mono text-[10px] tracking-[0.25em] uppercase text-espresso-subtle block">[ 03 // WATERFRONT ACTIVITY ]</span>
+            <h2 class="font-sans text-3xl sm:text-5xl font-black text-espresso uppercase tracking-tight">
+              BLUE WOODEN <br>
+              <span class="text-espresso/40">ROWBOAT.</span>
+            </h2>
+            <p class="text-espresso-muted text-sm sm:text-base font-thai leading-relaxed">
+              ประสบการณ์พิเศษที่ทางร้านมอบให้ลูกค้าทุกคนฟรี ไม่มีคิดค่าชั่วโมงหรือค่าบริการเพิ่ม 
+              เพียงสั่งเครื่องดื่มหรืออาหาร ก็สามารถลงเรือพายไม้สีฟ้า ดื่มด่ำบรรยากาศคลองบางจากได้ทันที
+            </p>
+
+            <div class="space-y-3 pt-2 font-mono text-xs">
+              <div class="flex items-center gap-3">
+                <iconify-icon icon="ri:checkbox-circle-line" class="text-emerald-600 text-base"></iconify-icon>
+                <span>Life jackets available for adults and children</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <iconify-icon icon="ri:checkbox-circle-line" class="text-emerald-600 text-base"></iconify-icon>
+                <span>No time limits — rotate respectfully with other guests</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <iconify-icon icon="ri:checkbox-circle-line" class="text-emerald-600 text-base"></iconify-icon>
+                <span>Iconic Rayong photo spot against rustic wooden verandas</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6">
+            <div class="border border-espresso/20 p-2 bg-white rounded-sm shadow-xl">
+              <div class="aspect-[16/10] overflow-hidden rounded-xs">
+                <img src="https://canalbound.vercel.app/assets/fb_reel_row_boat_canvas.jpg" alt="เรือพายฟรีริมคลอง" class="w-full h-full object-cover">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Policy Section: Transparent Walk-In Notice -->
+    <section id="policy" class="py-16 border-b border-espresso/10">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <div class="border-2 border-espresso p-6 sm:p-10 rounded-sm bg-white shadow-md space-y-6">
+          
+          <div class="flex items-center justify-between border-b border-espresso/15 pb-4">
+            <div class="flex items-center gap-3">
+              <iconify-icon icon="ri:information-line" class="text-espresso text-2xl"></iconify-icon>
+              <h3 class="font-sans font-black text-xl text-espresso uppercase">Seating & Walk-In Policy</h3>
+            </div>
+            <span class="font-mono text-[10px] uppercase tracking-widest px-2 py-1 bg-amber-50 text-amber-800 border border-amber-200">
+              Notice
+            </span>
+          </div>
+
+          <p class="text-xs sm:text-sm text-espresso-muted font-thai leading-relaxed">
+            <strong class="text-espresso">ทางร้านอาจไม่สามารถรับจองโต๊ะล่วงหน้าได้</strong> เนื่องจากโต๊ะริมน้ำมีจำนวนจำกัดและมีลูกค้าหมุนเวียนอย่างสม่ำเสมอ 
+            ทางร้านเน้นให้บริการแบบ <strong>Walk-in เข้ามารับโต๊ะตามลำดับการมาถึง</strong> เพื่อความสะดวกและเป็นธรรมต่อลูกค้าทุกท่าน
+          </p>
+
+          <div class="grid sm:grid-cols-2 gap-4 pt-2">
+            <a id="policy-phone" href="tel:0805768179" class="p-4 border border-espresso/20 hover:border-espresso transition rounded-sm flex items-center justify-between">
+              <div>
+                <span class="font-mono text-[9px] uppercase tracking-widest text-espresso-subtle block">Call Cafe</span>
+                <span class="font-sans font-bold text-sm text-espresso">080-576-8179</span>
+              </div>
+              <iconify-icon icon="ri:phone-line" class="text-espresso text-lg"></iconify-icon>
+            </a>
+
+            <a id="policy-chat" href="https://m.me/100057527526785" target="_blank" rel="noopener noreferrer" class="p-4 bg-espresso text-oat hover:bg-espresso-muted transition rounded-sm flex items-center justify-between">
+              <div>
+                <span class="font-mono text-[9px] uppercase tracking-widest text-oat/70 block">Direct Chat</span>
+                <span class="font-sans font-bold text-sm text-oat">Facebook Messenger</span>
+              </div>
+              <iconify-icon icon="ri:message-3-line" class="text-oat text-lg"></iconify-icon>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Location & Directions -->
+    <section id="location" class="py-20 border-b border-espresso/10 bg-oat">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-6 space-y-6">
+            <span class="font-mono text-[10px] tracking-[0.25em] uppercase text-espresso-subtle block">[ 04 // LOCATION & ACCESS ]</span>
+            <h2 class="font-sans text-3xl sm:text-5xl font-black text-espresso uppercase tracking-tight">
+              HOW TO FIND US.
+            </h2>
+            <p class="text-espresso-muted text-sm font-thai leading-relaxed">
+              สุดซอยบางจาก 19 ตำบลเชิงเนิน อำเภอเมืองระยอง จังหวัดระยอง 21000 
+              (เลี้ยวเข้าซอยข้างร้านอาหารดีไลท์ ถนนราษฎร์บำรุง) มีลานจอดรถสะดวกสบาย
+            </p>
+
+            <div class="space-y-3 font-mono text-xs border-y border-espresso/10 py-4">
+              <div class="flex justify-between">
+                <span class="text-espresso-subtle">OPEN DAYS:</span>
+                <span class="font-bold text-espresso">Tuesday — Sunday</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-espresso-subtle">SERVICE HOURS:</span>
+                <span class="font-bold text-espresso">09:00 — 17:00</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-espresso-subtle">DAY OFF:</span>
+                <span class="font-bold text-rose-700">Closed on Monday</span>
+              </div>
+            </div>
+
+            <a id="location-maps-btn" href="https://maps.google.com/?q=%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%84%E0%B8%A5%E0%B8%AD%E0%B8%87+%E0%B8%84%E0%B8%B2%E0%B9%80%E0%B8%9F%E0%B9%88+%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%AD%E0%B8%87" 
+               target="_blank" rel="noopener noreferrer" 
+               class="inline-flex items-center gap-2 bg-espresso hover:bg-espresso-muted text-oat font-mono text-xs uppercase tracking-wider px-6 py-3.5 rounded-sm transition shadow">
+              <iconify-icon icon="logos:google-maps" width="16"></iconify-icon>
+              <span>Open in Google Maps ↗</span>
+            </a>
+          </div>
+
+          <div class="lg:col-span-6">
+            <div class="border border-espresso/20 p-2 bg-white rounded-sm shadow-xl h-80 sm:h-96">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15555!2d101.2825!3d12.6841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDQxJzAyLjgiTiAxMDHCsDE2JzU3LjAiRQ!5e0!3m2!1sth!2sth!4v1600000000000!5m2!1sth!2sth" 
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" class="w-full h-full grayscale-[50%] contrast-110">
+              </iframe>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-oat border-t border-espresso/10 font-mono text-xs text-espresso-muted">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div>
+          <span class="font-sans font-black text-lg text-espresso uppercase">CANAL BOUND.</span>
+          <p class="text-[10px] text-espresso-subtle mt-0.5">&copy; 2026 Tid Klong Cafe Rayong. Seoul Riverside Editorial.</p>
+        </div>
+        <div class="flex items-center gap-6">
+          <a id="footer-fb" href="https://www.facebook.com/profile.php?id=100057527526785" target="_blank" rel="noopener noreferrer" class="hover:text-espresso transition">
+            Facebook Page ↗
+          </a>
+          <a id="footer-tel" href="tel:0805768179" class="hover:text-espresso transition">
+            Tel: 080-576-8179
+          </a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>

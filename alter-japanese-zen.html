@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ติดคลอง คาเฟ่ (Canal Bound) — Wabi-Sabi Waterside Sanctuary</title>
+  
+  <!-- Google Fonts: Noto Serif JP, Noto Serif Thai, Prompt, Sarabun -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Serif+JP:wght@300;400;600;700&family=Noto+Serif+Thai:wght@300;400;600;700&family=Prompt:wght@300;400;500;600&family=Sarabun:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Iconify CDN (Superdesign platform contract) -->
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Noto Serif Thai', 'Noto Serif JP', 'Cormorant Garamond', 'serif'],
+            sans: ['Sarabun', 'Prompt', 'sans-serif'],
+            display: ['Noto Serif Thai', 'Cormorant Garamond', 'serif'],
+            jp: ['Noto Serif JP', 'serif'],
+          },
+          colors: {
+            sumi: {
+              950: '#0a0d0b',
+              900: '#111613',
+              850: '#161c18',
+              800: '#1c241f',
+              700: '#27332c',
+              600: '#38483e',
+            },
+            washi: {
+              50: '#faf7f2',
+              100: '#f4ede4',
+              200: '#e8dcce',
+              300: '#dbc8b4',
+            },
+            lantern: {
+              400: '#f5c563',
+              500: '#e5b048',
+              600: '#c69131',
+            },
+            matcha: {
+              400: '#6d8c74',
+              500: '#52735a',
+              600: '#3e5845',
+              700: '#2c4032',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Smooth Scroll Clearance for Sticky Header */
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 6.5rem;
+    }
+    .wabi-border {
+      border-color: rgba(232, 220, 206, 0.12);
+    }
+    .wabi-glow {
+      box-shadow: 0 0 50px -10px rgba(229, 176, 72, 0.15);
+    }
+    .paper-texture {
+      background-image: radial-gradient(rgba(244, 237, 228, 0.04) 1px, transparent 0);
+      background-size: 24px 24px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Root Container (Superdesign Contract: single root div, body has no class) -->
+  <div class="min-h-screen bg-sumi-900 text-washi-100 font-sans antialiased relative selection:bg-lantern-500 selection:text-sumi-950 paper-texture overflow-x-hidden">
+
+    <!-- Ambient Subtle Fog / Mist Overlay -->
+    <div class="pointer-events-none fixed inset-0 z-0 opacity-20 bg-gradient-to-b from-transparent via-matcha-700/10 to-sumi-950"></div>
+
+    <!-- Top Wabi-Sabi Navigation Bar -->
+    <header class="sticky top-0 z-40 bg-sumi-900/90 backdrop-blur-xl border-b border-washi-100/10 transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 py-3.5 flex items-center justify-between">
+        
+        <!-- Brand Identity -->
+        <a id="nav-brand-logo" href="#" class="flex items-center gap-3.5 group">
+          <div class="relative w-11 h-11 rounded-full overflow-hidden border border-lantern-500/40 group-hover:border-lantern-400 transition shrink-0 p-0.5">
+            <img src="https://canalbound.vercel.app/assets/logo.png" alt="โลโก้ ติดคลอง คาเฟ่" class="w-full h-full object-cover rounded-full filter grayscale-[30%] contrast-110">
+          </div>
+          <div>
+            <div class="flex items-baseline gap-2">
+              <span class="font-serif font-bold text-lg text-washi-50 tracking-wide block leading-tight">ติดคลอง คาเฟ่</span>
+              <span class="font-jp text-xs text-lantern-400/80 tracking-widest hidden sm:inline">運河のほとり</span>
+            </div>
+            <span class="text-[9px] text-washi-200/60 font-sans tracking-[0.25em] uppercase block">Canal Bound • Wabi-Sabi Waterside</span>
+          </div>
+        </a>
+
+        <!-- Center Zen Nav Links -->
+        <nav class="hidden md:flex items-center gap-1.5 px-5 py-2 rounded-full bg-sumi-850/80 border border-washi-100/10 text-xs font-serif text-washi-200">
+          <a id="nav-link-spirit" href="#philosophy" class="px-3.5 py-1.5 rounded-full hover:text-lantern-400 hover:bg-white/5 transition">ปรัชญาริมน้ำ</a>
+          <a id="nav-link-vibe" href="#atmosphere" class="px-3.5 py-1.5 rounded-full hover:text-lantern-400 hover:bg-white/5 transition">บรรยากาศไม้เก่า</a>
+          <a id="nav-link-boat" href="#boat" class="px-3.5 py-1.5 rounded-full hover:text-lantern-400 hover:bg-white/5 transition">เรือพายไม้</a>
+          <a id="nav-link-tea" href="#menu" class="px-3.5 py-1.5 rounded-full hover:text-lantern-400 hover:bg-white/5 transition">สำรับชา & กาแฟ</a>
+          <a id="nav-link-policy" href="#seating" class="px-3.5 py-1.5 rounded-full hover:text-lantern-400 hover:bg-white/5 transition">นโยบายที่นั่ง</a>
+          <a id="nav-link-map" href="#location" class="px-3.5 py-1.5 rounded-full hover:text-lantern-400 hover:bg-white/5 transition">การเดินทาง</a>
+        </nav>
+
+        <!-- Right Quick Actions -->
+        <div class="flex items-center gap-2.5">
+          <a id="nav-phone-call" href="tel:0805768179" class="px-3.5 py-2 rounded-full border border-lantern-500/40 text-lantern-400 hover:bg-lantern-500 hover:text-sumi-950 transition text-xs font-serif flex items-center gap-2 shadow-xs">
+            <iconify-icon icon="lucide:phone" width="14"></iconify-icon>
+            <span class="hidden sm:inline">080-576-8179</span>
+            <span class="sm:hidden">โทร</span>
+          </a>
+          <a id="nav-messenger-chat" href="https://m.me/100057527526785" target="_blank" rel="noopener noreferrer" class="p-2 sm:px-3.5 sm:py-2 rounded-full bg-lantern-500 text-sumi-950 hover:bg-lantern-400 transition text-xs font-bold flex items-center gap-1.5 shadow-md">
+            <iconify-icon icon="lucide:message-circle" width="15"></iconify-icon>
+            <span class="hidden sm:inline font-serif font-bold">สอบถามคิว</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Mobile Quick Chips Bar -->
+      <div class="md:hidden px-4 pb-2.5 pt-1 overflow-x-auto no-scrollbar flex items-center gap-2 border-t border-washi-100/10 bg-sumi-950/70">
+        <a id="chip-philosophy" href="#philosophy" class="shrink-0 px-3 py-1 rounded-full bg-sumi-800 text-washi-200 border border-washi-100/10 text-[11px] font-serif">🌿 ปรัชญา</a>
+        <a id="chip-boat" href="#boat" class="shrink-0 px-3 py-1 rounded-full bg-sumi-800 text-lantern-400 border border-lantern-500/30 text-[11px] font-serif">🛶 เรือพายฟรี</a>
+        <a id="chip-menu" href="#menu" class="shrink-0 px-3 py-1 rounded-full bg-sumi-800 text-washi-200 border border-washi-100/10 text-[11px] font-serif">🍵 สำรับชา</a>
+        <a id="chip-seating" href="#seating" class="shrink-0 px-3 py-1 rounded-full bg-sumi-800 text-washi-200 border border-washi-100/10 text-[11px] font-serif">ℹ️ นโยบายที่นั่ง</a>
+        <a id="chip-location" href="#location" class="shrink-0 px-3 py-1 rounded-full bg-sumi-800 text-washi-200 border border-washi-100/10 text-[11px] font-serif">🗺️ พิกัดร้าน</a>
+      </div>
+    </header>
+
+    <!-- Hero Section: Japanese Ryokan & Canal Sanctuary -->
+    <section class="relative min-h-[85vh] sm:min-h-[90vh] flex items-center justify-center py-20 px-4 sm:px-8 overflow-hidden">
+      
+      <!-- Background Image with Dark Vignette & Mist -->
+      <div class="absolute inset-0 z-0">
+        <img src="https://canalbound.vercel.app/assets/hero_real.jpg" alt="เรือนไม้โบราณ 50 ปี ติดคลอง คาเฟ่" class="w-full h-full object-cover object-center filter brightness-[45%] contrast-110 scale-105 transition duration-1000">
+        <div class="absolute inset-0 bg-gradient-to-t from-sumi-900 via-sumi-900/60 to-sumi-950/80"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-sumi-900/90 via-transparent to-sumi-900/90"></div>
+      </div>
+
+      <div class="relative z-10 max-w-4xl mx-auto text-center space-y-6">
+        
+        <!-- Kanji & Badge Accent -->
+        <div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-lantern-500/30 bg-sumi-950/70 backdrop-blur-md text-xs font-serif text-lantern-400">
+          <span class="font-jp tracking-widest text-[11px] border-r border-lantern-500/30 pr-2.5">川辺の茶寮</span>
+          <span class="tracking-wider">เรือนไม้ริมน้ำบางจาก • ระยอง</span>
+        </div>
+
+        <!-- Main Heading (Noto Serif Thai + Cormorant Garamond) -->
+        <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl font-bold text-washi-50 leading-[1.2] tracking-tight">
+          ให้เวลาค่อยๆ ไหลผ่าน <br>
+          <span class="text-lantern-400 italic font-serif">เหมือนสายน้ำริมคลอง</span>
+        </h1>
+
+        <!-- Poetic Subtext inspired by Ryokan Wandering -->
+        <p class="max-w-2xl mx-auto text-sm sm:text-base text-washi-200/80 font-sans leading-relaxed">
+          หลีกหนีความเร่งรีบ สู่เรือนไม้เก่าแก่อายุกว่า 50 ปี ทอดตัวสงบเงียบเคียงสายน้ำคลองบางจาก 
+          จิบชามัทฉะพิธีการ กาแฟดริป และลงเรือพายไม้สีฟ้าสัมผัสสายลมระยองโดยไม่มีค่าใช้จ่าย
+        </p>
+
+        <!-- CTA Action Hub -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-4">
+          <a id="hero-cta-menu" href="#menu" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-lantern-500 text-sumi-950 font-serif font-bold text-sm hover:bg-lantern-400 transition shadow-lg wabi-glow flex items-center justify-center gap-2">
+            <span>ชมสำรับชา & อาหาร</span>
+            <iconify-icon icon="lucide:arrow-right" width="16"></iconify-icon>
+          </a>
+          <a id="hero-cta-boat" href="#boat" class="w-full sm:w-auto px-7 py-3.5 rounded-full border border-washi-100/20 hover:border-lantern-400/60 text-washi-100 hover:text-lantern-400 bg-sumi-850/60 backdrop-blur-md font-serif text-sm transition flex items-center justify-center gap-2">
+            <iconify-icon icon="lucide:anchor" width="15"></iconify-icon>
+            <span>เรือพายฟรีริมคลอง</span>
+          </a>
+        </div>
+
+        <!-- Status Micro-Pill -->
+        <div class="pt-6 flex items-center justify-center gap-4 text-xs font-serif text-washi-300/70">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>เปิดบริการ อังคาร – อาทิตย์ (09:00 - 17:00 น.)</span>
+          </div>
+          <span>•</span>
+          <span>หยุดวันจันทร์</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Philosophy: Slow Living & Wabi-Sabi Waterfront -->
+    <section id="philosophy" class="py-20 px-4 sm:px-8 border-t border-washi-100/10 bg-sumi-850/40 relative">
+      <div class="max-w-6xl mx-auto">
+        
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+          
+          <div class="md:col-span-5 space-y-4">
+            <div class="flex items-center gap-2 text-lantern-400 font-jp text-xs tracking-widest uppercase">
+              <span>侘び寂び</span>
+              <span>•</span>
+              <span class="font-serif">Wabi-Sabi Riverside</span>
+            </div>
+            <h2 class="font-serif text-2xl sm:text-4xl font-bold text-washi-50 leading-tight">
+              ความงามที่ไม่สมบูรณ์แบบ <br>
+              ของไม้เก่า 50 ปี
+            </h2>
+            <p class="text-sm text-washi-200/80 leading-relaxed font-sans">
+              เราเลือกที่จะไม่รื้อถอน แต่บูรณะเรือนไม้สักเดิมริมน้ำขึ้นใหม่ ทุกริ้วรอยบนเนื้อไม้ 
+              คือบันทึกกาลเวลาของชุมชนเชิงเนิน ระยอง ให้คุณได้ยินเสียงน้ำกระเพื่อมใต้ชานระเบียง 
+              และกลิ่นหอมของกาแฟคั่วบดสดใหม่
+            </p>
+            <div class="p-4 rounded-2xl bg-sumi-800/80 border border-washi-100/10 space-y-2">
+              <span class="text-xs font-serif text-lantern-400 block font-bold">"อย่าแข่งกันถูก แข่งกันคุ้ม"</span>
+              <p class="text-xs text-washi-200/70 font-sans leading-relaxed">
+                ที่นี่เราไม่ขายเพียงเครื่องดื่ม แต่รวมประสบการณ์พายเรือไม้สีฟ้าฟรี และการพักผ่อนริมคลองธรรมชาติอย่างแท้จริง
+              </p>
+            </div>
+          </div>
+
+          <div class="md:col-span-7 grid grid-cols-2 gap-4">
+            <div class="space-y-4">
+              <div class="rounded-2xl overflow-hidden border border-washi-100/10 shadow-lg group">
+                <img src="https://canalbound.vercel.app/assets/user_zone_garden.jpg" alt="สวนเงียบสงบริมน้ำ" class="w-full h-48 sm:h-64 object-cover group-hover:scale-105 transition duration-700">
+              </div>
+              <div class="p-4 rounded-2xl bg-sumi-900 border border-washi-100/10">
+                <span class="text-xs font-jp text-lantern-400 block">静けさ</span>
+                <span class="font-serif font-bold text-sm text-washi-100 block mt-1">มุมสงบใต้เงาไม้</span>
+                <p class="text-[11px] text-washi-200/60 font-sans mt-1">ห่างจากถนนใหญ่ เพื่อความสงบใจอย่างแท้จริง</p>
+              </div>
+            </div>
+            
+            <div class="space-y-4 pt-6">
+              <div class="p-4 rounded-2xl bg-sumi-900 border border-washi-100/10">
+                <span class="text-xs font-jp text-lantern-400 block">風の道</span>
+                <span class="font-serif font-bold text-sm text-washi-100 block mt-1">สายลมพัดผ่านตลอดวัน</span>
+                <p class="text-[11px] text-washi-200/60 font-sans mt-1">ระเบียงเปิดโล่งรับลมเย็นจากผิวน้ำคลองบางจาก</p>
+              </div>
+              <div class="rounded-2xl overflow-hidden border border-washi-100/10 shadow-lg group">
+                <img src="https://canalbound.vercel.app/assets/user_zone_kongkang.jpg" alt="ป่าชายเลนและสายน้ำ" class="w-full h-48 sm:h-64 object-cover group-hover:scale-105 transition duration-700">
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Highlight: Signature Blue Wooden Rowboat -->
+    <section id="boat" class="py-20 px-4 sm:px-8 border-t border-washi-100/10 relative overflow-hidden">
+      <div class="max-w-6xl mx-auto">
+        
+        <div class="relative rounded-3xl overflow-hidden border border-washi-100/15 bg-sumi-950 p-6 sm:p-12">
+          
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            
+            <div class="md:col-span-7 space-y-5">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-lantern-500/10 border border-lantern-500/30 text-lantern-400 text-xs font-serif">
+                <iconify-icon icon="lucide:gift" width="14"></iconify-icon>
+                <span>สิทธิพิเศษสำหรับลูกค้าทุกคน • ไม่มีค่าบริการ</span>
+              </div>
+              
+              <h2 class="font-serif text-2xl sm:text-4xl font-bold text-washi-50 leading-tight">
+                เรือพายไม้สีฟ้าริมน้ำ <br>
+                <span class="text-lantern-400">ช้าๆ ทวนกระแสน้ำคลองบางจาก</span>
+              </h2>
+
+              <p class="text-sm text-washi-200/80 font-sans leading-relaxed">
+                เรือพายไม้โบราณเอกลักษณ์ประจำร้าน พร้อมไม้พายและเสื้อชูชีพเพื่อความปลอดภัย 
+                พายลอยลำชมวิถีริมคลอง ถ่ายรูปกับฉากหลังเรือนไม้เก่าและแมกไม้เขียวขจี 
+                เปิดบริการตลอดวันสำหรับลูกค้าทุกท่าน
+              </p>
+
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+                <div class="p-3 rounded-xl bg-sumi-900 border border-washi-100/10">
+                  <iconify-icon icon="lucide:shield-check" class="text-emerald-400 text-lg mb-1"></iconify-icon>
+                  <p class="text-xs font-serif font-bold text-washi-100">เสื้อชูชีพพร้อม</p>
+                  <p class="text-[10px] text-washi-200/60 font-sans">ปลอดภัยสำหรับทุกวัย</p>
+                </div>
+                <div class="p-3 rounded-xl bg-sumi-900 border border-washi-100/10">
+                  <iconify-icon icon="lucide:clock" class="text-lantern-400 text-lg mb-1"></iconify-icon>
+                  <p class="text-xs font-serif font-bold text-washi-100">พายได้ตลอดวัน</p>
+                  <p class="text-[10px] text-washi-200/60 font-sans">ตามคิวความสะดวก</p>
+                </div>
+                <div class="p-3 rounded-xl bg-sumi-900 border border-washi-100/10 col-span-2 sm:col-span-1">
+                  <iconify-icon icon="lucide:camera" class="text-sky-400 text-lg mb-1"></iconify-icon>
+                  <p class="text-xs font-serif font-bold text-washi-100">จุดถ่ายรูปไฮไลท์</p>
+                  <p class="text-[10px] text-washi-200/60 font-sans">มุมยอดนิยมระยอง</p>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="md:col-span-5">
+              <div class="relative rounded-2xl overflow-hidden border-2 border-lantern-500/30 shadow-2xl group">
+                <img src="https://canalbound.vercel.app/assets/fb_reel_row_boat_canvas.jpg" alt="เรือพายไม้สีฟ้า ติดคลอง คาเฟ่" class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition duration-700">
+                <div class="absolute bottom-3 left-3 right-3 p-3 rounded-xl bg-sumi-950/85 backdrop-blur-md border border-washi-100/10">
+                  <span class="text-[10px] font-jp text-lantern-400 block tracking-widest">青い木製ボート</span>
+                  <span class="text-xs font-serif font-bold text-washi-100">Complimentary Wooden Rowboat</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Menu Showcase: Zen Tea & Artisan Kitchen -->
+    <section id="menu" class="py-20 px-4 sm:px-8 border-t border-washi-100/10 bg-sumi-850/30">
+      <div class="max-w-6xl mx-auto space-y-12">
+        
+        <div class="text-center space-y-3">
+          <span class="font-jp text-xs text-lantern-400 tracking-widest block">お品書き • สำรับติดคลอง</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-washi-50">สำรับชา กาแฟ และอาหารคาวหวาน</h2>
+          <p class="text-sm text-washi-200/70 max-w-xl mx-auto font-sans">คัดสรรวัตถุดิบสดใหม่ ปรุงอย่างประณีต เสิร์ฟท่ามกลางบรรยากาศริมน้ำคลองระยอง</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Item 1: Matcha -->
+          <div class="rounded-2xl overflow-hidden bg-sumi-900 border border-washi-100/10 group hover:border-lantern-500/40 transition">
+            <div class="relative aspect-[4/3] overflow-hidden">
+              <img src="https://canalbound.vercel.app/assets/menu_drink_matcha.jpg" alt="มัทฉะลาเต้แท้" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <span class="absolute top-2.5 right-2.5 px-2.5 py-1 rounded-full bg-sumi-950/80 backdrop-blur-sm text-lantern-400 font-serif font-bold text-xs">฿85</span>
+            </div>
+            <div class="p-4 space-y-1.5">
+              <span class="text-[10px] font-jp text-matcha-400 tracking-wider">抹茶ラテ</span>
+              <h3 class="font-serif font-bold text-base text-washi-100">มัทฉะลาเต้เกรดพรีเมียม</h3>
+              <p class="text-xs text-washi-200/60 font-sans leading-relaxed">ผงมัทฉะแท้ตีสด หอมกลิ่นคั่วละมุน นุ่มลิ้นด้วยนมสดแท้</p>
+            </div>
+          </div>
+
+          <!-- Item 2: Coffee -->
+          <div class="rounded-2xl overflow-hidden bg-sumi-900 border border-washi-100/10 group hover:border-lantern-500/40 transition">
+            <div class="relative aspect-[4/3] overflow-hidden">
+              <img src="https://canalbound.vercel.app/assets/feed_item_coffee_real.jpg" alt="อเมริกาโน่คั่วกลางสดชื่น" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <span class="absolute top-2.5 right-2.5 px-2.5 py-1 rounded-full bg-sumi-950/80 backdrop-blur-sm text-lantern-400 font-serif font-bold text-xs">฿70</span>
+            </div>
+            <div class="p-4 space-y-1.5">
+              <span class="text-[10px] font-jp text-lantern-400 tracking-wider">特製コーヒー</span>
+              <h3 class="font-serif font-bold text-base text-washi-100">อเมริกาโน่น้ำส้มสด</h3>
+              <p class="text-xs text-washi-200/60 font-sans leading-relaxed">ช็อตเอสเพรสโซ่เข้มข้น ผสานน้ำส้มคั้นสด หวานอมเปรี้ยวชื่นใจ</p>
+            </div>
+          </div>
+
+          <!-- Item 3: Spaghetti -->
+          <div class="rounded-2xl overflow-hidden bg-sumi-900 border border-washi-100/10 group hover:border-lantern-500/40 transition">
+            <div class="relative aspect-[4/3] overflow-hidden">
+              <img src="https://canalbound.vercel.app/assets/menu_dish_spaghetti.jpg" alt="สปาเก็ตตี้พริกแห้งเบคอน" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <span class="absolute top-2.5 right-2.5 px-2.5 py-1 rounded-full bg-sumi-950/80 backdrop-blur-sm text-lantern-400 font-serif font-bold text-xs">฿149</span>
+            </div>
+            <div class="p-4 space-y-1.5">
+              <span class="text-[10px] font-jp text-washi-300 tracking-wider">和風パスタ</span>
+              <h3 class="font-serif font-bold text-base text-washi-100">สปาเก็ตตี้ผัดพริกแห้ง</h3>
+              <p class="text-xs text-washi-200/60 font-sans leading-relaxed">เส้นเหนียวนุ่ม ผัดกระเทียมพริกแห้งหอมกรุ่น เบคอนกรอบ</p>
+            </div>
+          </div>
+
+          <!-- Item 4: Salmon / Local Fresh -->
+          <div class="rounded-2xl overflow-hidden bg-sumi-900 border border-washi-100/10 group hover:border-lantern-500/40 transition">
+            <div class="relative aspect-[4/3] overflow-hidden">
+              <img src="https://canalbound.vercel.app/assets/feed_item_salmon_real.jpg" alt="ยำแซลมอนแซ่บสมุนไพร" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <span class="absolute top-2.5 right-2.5 px-2.5 py-1 rounded-full bg-sumi-950/80 backdrop-blur-sm text-lantern-400 font-serif font-bold text-xs">฿189</span>
+            </div>
+            <div class="p-4 space-y-1.5">
+              <span class="text-[10px] font-jp text-rose-400 tracking-wider">サーモンサラダ</span>
+              <h3 class="font-serif font-bold text-base text-washi-100">ยำแซลมอนสดริมคลอง</h3>
+              <p class="text-xs text-washi-200/60 font-sans leading-relaxed">แซลมอนนอร์เวย์สดชิ้นโต น้ำยำสูตรเฉพาะรสจัดจ้านสะใจ</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Transparent Seating & Walk-In Policy -->
+    <section id="seating" class="py-20 px-4 sm:px-8 border-t border-washi-100/10 relative">
+      <div class="max-w-4xl mx-auto space-y-8">
+        
+        <div class="p-6 sm:p-10 rounded-3xl bg-sumi-950 border border-lantern-500/30 space-y-6">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-2xl bg-lantern-500/10 border border-lantern-500/30 flex items-center justify-center text-lantern-400">
+              <iconify-icon icon="lucide:info" width="22"></iconify-icon>
+            </div>
+            <div>
+              <span class="font-jp text-xs text-lantern-400">座席についてのご案内</span>
+              <h2 class="font-serif text-xl sm:text-2xl font-bold text-washi-50">นโยบายที่นั่ง & การให้บริการแบบ Walk-in</h2>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-sumi-900 border border-washi-100/10">
+            <p class="text-xs sm:text-sm text-washi-200/90 leading-relaxed font-sans">
+              <strong class="text-lantern-400 font-serif">⚠️ นโยบายความโปร่งใสของร้าน:</strong> เนื่องจากร้านมีที่นั่งริมน้ำจำกัดและผู้เข้าใช้บริการหมุนเวียนตลอดวัน 
+              <strong>ทางร้านอาจไม่สามารถรับจองโต๊ะล่วงหน้าได้</strong> เพื่อความเท่าเทียมแก่ลูกค้าทุกท่านที่เดินทางมาถึง
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-xl bg-sumi-900/60 border border-washi-100/10 space-y-2">
+              <span class="font-serif font-bold text-sm text-washi-100 flex items-center gap-2">
+                <iconify-icon icon="lucide:phone-call" class="text-lantern-400"></iconify-icon>
+                <span>โทรเช็คคิวโต๊ะก่อนเดินทาง</span>
+              </span>
+              <p class="text-xs text-washi-200/70 font-sans">หากเดินทางมาจากต่างจังหวัด สามารถโทรสอบถามความหนาแน่นได้ที่เบอร์ร้านโดยตรง</p>
+              <a id="seating-call-btn" href="tel:0805768179" class="inline-block pt-1 text-xs font-serif font-bold text-lantern-400 hover:underline">
+                โทร 080-576-8179 &rarr;
+              </a>
+            </div>
+
+            <div class="p-4 rounded-xl bg-sumi-900/60 border border-washi-100/10 space-y-2">
+              <span class="font-serif font-bold text-sm text-washi-100 flex items-center gap-2">
+                <iconify-icon icon="lucide:message-square" class="text-blue-400"></iconify-icon>
+                <span>ทักแชทสอบถามสถานะ</span>
+              </span>
+              <p class="text-xs text-washi-200/70 font-sans">แอดมินเพจพร้อมตอบและแนะนำช่วงเวลาที่บรรยากาศสงบที่สุดของแต่ละวัน</p>
+              <a id="seating-chat-btn" href="https://m.me/100057527526785" target="_blank" rel="noopener noreferrer" class="inline-block pt-1 text-xs font-serif font-bold text-lantern-400 hover:underline">
+                ทัก Facebook Messenger &rarr;
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Location & Directions -->
+    <section id="location" class="py-20 px-4 sm:px-8 border-t border-washi-100/10 bg-sumi-850/30">
+      <div class="max-w-6xl mx-auto">
+        
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          
+          <div class="md:col-span-6 space-y-5">
+            <span class="font-jp text-xs text-lantern-400 tracking-widest block">交通案内 • แผนที่ร้าน</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-washi-50">การเดินทางสู่เรือนไม้ริมคลอง</h2>
+            <p class="text-sm text-washi-200/80 font-sans leading-relaxed">
+              ตั้งอยู่ในซอยบางจาก 19 ตำบลเชิงเนิน อำเภอเมืองระยอง จังหวัดระยอง (เลี้ยวเข้าซอยข้างร้านดีไลท์ ถนนราษฎร์บำรุง) 
+              มีที่จอดรถสะดวกสบายรองรับลูกค้าทุกท่าน
+            </p>
+
+            <div class="space-y-3 pt-2 text-xs text-washi-200/90 font-serif">
+              <div class="flex items-center gap-3">
+                <iconify-icon icon="lucide:map-pin" class="text-lantern-400 text-base shrink-0"></iconify-icon>
+                <span>สุดซอยบางจาก 19 ตำบลเชิงเนิน อำเภอเมืองระยอง ระยอง 21000</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <iconify-icon icon="lucide:clock" class="text-lantern-400 text-base shrink-0"></iconify-icon>
+                <span>เปิด อังคาร – อาทิตย์ : 09:00 – 17:00 น. (หยุดทุกวันจันทร์)</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <iconify-icon icon="lucide:phone" class="text-lantern-400 text-base shrink-0"></iconify-icon>
+                <span>080-576-8179 , 094-850-1553</span>
+              </div>
+            </div>
+
+            <div class="pt-4">
+              <a id="location-maps-link" href="https://maps.google.com/?q=%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%84%E0%B8%A5%E0%B8%AD%E0%B8%87+%E0%B8%84%E0%B8%B2%E0%B9%80%E0%B8%9F%E0%B9%88+%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%AD%E0%B8%87" 
+                 target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center gap-2 bg-lantern-500 hover:bg-lantern-400 text-sumi-950 font-serif font-bold px-6 py-3.5 rounded-full shadow-lg transition text-xs sm:text-sm">
+                <iconify-icon icon="logos:google-maps" width="16"></iconify-icon>
+                <span>เปิดพิกัดใน Google Maps นำทาง</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="md:col-span-6">
+            <div class="rounded-3xl overflow-hidden border border-washi-100/15 shadow-2xl h-80 sm:h-96">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15555!2d101.2825!3d12.6841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDQxJzAyLjgiTiAxMDHCsDE2JzU3LjAiRQ!5e0!3m2!1sth!2sth!4v1600000000000!5m2!1sth!2sth" 
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" class="w-full h-full filter invert-[90%] hue-rotate-180 contrast-90">
+              </iframe>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-sumi-950 py-12 px-4 sm:px-8 border-t border-washi-100/10 text-xs text-washi-300/60 font-serif">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-sumi-850 border border-lantern-500/30 flex items-center justify-center font-serif text-lantern-400 font-bold text-sm">
+            ตค
+          </div>
+          <div>
+            <p class="font-serif font-bold text-washi-100 text-sm">ติดคลอง คาเฟ่ • 運河のほとり (Canal Bound)</p>
+            <p class="text-[11px] text-washi-300/50">Wabi-Sabi Waterside Sanctuary • Rayong</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-6">
+          <a id="footer-fb" href="https://www.facebook.com/profile.php?id=100057527526785" target="_blank" rel="noopener noreferrer" class="hover:text-lantern-400 transition flex items-center gap-1.5">
+            <iconify-icon icon="logos:facebook" width="14"></iconify-icon> เพจ Facebook
+          </a>
+          <a id="footer-tel" href="tel:0805768179" class="hover:text-lantern-400 transition flex items-center gap-1.5">
+            <iconify-icon icon="lucide:phone" width="14"></iconify-icon> 080-576-8179
+          </a>
+        </div>
+        <p class="text-[11px] text-washi-300/40">
+          &copy; 2026 ติดคลอง คาเฟ่ ระยอง. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
