@@ -152,6 +152,11 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <style>
+    /* Smooth Scroll Padding for Sticky Header */
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 6.5rem;
+    }
     /* Clean custom utilities for mobile UX */
     .no-scrollbar::-webkit-scrollbar,
     .scrollbar-none::-webkit-scrollbar {
@@ -178,21 +183,21 @@
   </svg>
 
   <!-- Navigation -->
-  <header class="sticky top-0 z-40 bg-[#fefae0]/85 backdrop-blur-xl border-b border-[#ccd5ae]/50 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-22 py-4 flex items-center justify-between">
+  <header class="sticky top-0 z-40 bg-[#fefae0]/90 backdrop-blur-xl border-b border-[#ccd5ae]/50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
       
       <!-- Official Brand Logo -->
-      <a href="#" class="flex items-center gap-3.5 group">
-        <div class="relative w-12 h-12 rounded-2xl overflow-hidden shadow-md border-2 border-white/80 group-hover:scale-105 transition transform shadow-[#faac40]/30 shrink-0">
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="relative w-11 h-11 sm:w-12 sm:h-12 rounded-2xl overflow-hidden shadow-md border-2 border-white/80 group-hover:scale-105 transition transform shadow-[#faac40]/30 shrink-0">
           <img src="assets/logo.png" alt="โลโก้ ติดคลอง คาเฟ่" class="w-full h-full object-cover">
         </div>
         <div>
-          <span class="font-display font-extrabold text-xl text-[#01472e] tracking-tight block leading-tight">ติดคลอง คาเฟ่</span>
-          <span class="text-[10px] text-[#a3b18a] font-bold tracking-widest uppercase block">Canal Bound • Rayong</span>
+          <span class="font-display font-extrabold text-lg sm:text-xl text-[#01472e] tracking-tight block leading-tight">ติดคลอง คาเฟ่</span>
+          <span class="text-[9px] sm:text-[10px] text-[#a3b18a] font-bold tracking-widest uppercase block">Canal Bound • Rayong</span>
         </div>
       </a>
 
-      <!-- Center Frosted Nav Pill -->
+      <!-- Center Frosted Nav Pill (Desktop) -->
       <nav class="hidden md:flex items-center gap-1 bg-white/70 backdrop-blur-md px-5 py-2 rounded-full border border-[#ccd5ae]/70 shadow-sm text-xs font-semibold uppercase tracking-wider text-[#01472e]">
         <a href="#about" class="px-3.5 py-1.5 rounded-full hover:bg-[#ccd5ae]/30 transition">บรรยากาศร้าน</a>
         <a href="#menu" class="px-3.5 py-1.5 rounded-full hover:bg-[#ccd5ae]/30 transition">เมนูแนะนำ</a>
@@ -209,7 +214,7 @@
       </nav>
 
       <!-- Right Actions -->
-      <div class="flex items-center gap-2 sm:gap-2.5">
+      <div class="flex items-center gap-1.5 sm:gap-2.5">
         <!-- Language Switcher -->
         <div class="flex items-center bg-white/90 border border-[#ccd5ae] rounded-full p-0.5 text-xs font-bold shadow-sm">
           <span class="px-2 py-0.5 rounded-full bg-[#01472e] text-[#fefae0] text-[11px]">TH</span>
@@ -222,12 +227,111 @@
           <span>เพจ Facebook</span>
         </a>
 
+        <!-- Phone call trigger -->
         <a href="tel:0805768179" class="p-2 sm:px-3.5 sm:py-2 bg-[#01472e] text-[#fefae0] rounded-full hover:bg-[#025a3a] transition shadow-sm inline-flex items-center gap-1.5" title="โทรติดต่อสอบถาม">
           <i data-lucide="phone" class="w-4 h-4"></i>
           <span class="hidden sm:inline text-xs font-bold">โทรสอบถาม</span>
         </a>
+
+        <!-- Mobile Navigation Menu Toggle Button -->
+        <button type="button" 
+                onclick="toggleMobileMenu()" 
+                id="mobileMenuBtn"
+                aria-label="เปิดเมนูหลัก"
+                aria-expanded="false"
+                class="md:hidden p-2 bg-white/90 border border-[#ccd5ae] text-[#01472e] rounded-full hover:bg-white active:scale-95 transition shadow-sm flex items-center justify-center">
+          <i data-lucide="menu" id="mobileMenuIcon" class="w-4.5 h-4.5"></i>
+        </button>
       </div>
 
+    </div>
+
+    <!-- Mobile Sticky Quick-Jump Chips (1-tap jump to any section) -->
+    <div id="mobileQuickChips" class="md:hidden px-4 pb-2 pt-0.5 overflow-x-auto scrollbar-none flex items-center gap-1.5 border-t border-[#ccd5ae]/30 bg-[#fefae0]/80">
+      <a href="#menu" class="shrink-0 px-3 py-1 rounded-full bg-white/90 text-[#01472e] border border-[#ccd5ae]/80 text-[11px] font-bold shadow-xs active:bg-[#01472e] active:text-[#fefae0] transition flex items-center gap-1">
+        <span>🍽️ เมนู</span>
+      </a>
+      <a href="#booking" class="shrink-0 px-3 py-1 rounded-full bg-[#01472e] text-[#fefae0] text-[11px] font-bold shadow-xs active:bg-[#025a3a] transition flex items-center gap-1">
+        <i data-lucide="info" class="w-3 h-3 text-emerald-200"></i>
+        <span>นโยบายที่นั่ง</span>
+      </a>
+      <a href="#boat" class="shrink-0 px-3 py-1 rounded-full bg-white/90 text-[#01472e] border border-[#ccd5ae]/80 text-[11px] font-bold shadow-xs active:bg-[#01472e] active:text-[#fefae0] transition flex items-center gap-1">
+        <span>🛶 เรือพายฟรี</span>
+      </a>
+      <a href="#reels" class="shrink-0 px-3 py-1 rounded-full bg-white/90 text-[#01472e] border border-[#ccd5ae]/80 text-[11px] font-bold shadow-xs active:bg-[#01472e] active:text-[#fefae0] transition flex items-center gap-1">
+        <span>🎬 Reels</span>
+      </a>
+      <a href="#location" class="shrink-0 px-3 py-1 rounded-full bg-white/90 text-[#01472e] border border-[#ccd5ae]/80 text-[11px] font-bold shadow-xs active:bg-[#01472e] active:text-[#fefae0] transition flex items-center gap-1">
+        <span>🗺️ แผนที่</span>
+      </a>
+      <a href="#about" class="shrink-0 px-3 py-1 rounded-full bg-white/90 text-[#01472e] border border-[#ccd5ae]/80 text-[11px] font-bold shadow-xs active:bg-[#01472e] active:text-[#fefae0] transition flex items-center gap-1">
+        <span>🌿 บรรยากาศ</span>
+      </a>
+    </div>
+
+    <!-- Mobile Dropdown Navigation Drawer -->
+    <div id="mobileMenuDrawer" class="hidden md:hidden bg-[#fefae0]/95 backdrop-blur-2xl border-t border-[#ccd5ae]/60 shadow-2xl px-4 py-4 transition-all duration-300">
+      <div class="flex flex-col gap-1.5">
+        <a href="#menu" onclick="closeMobileMenu()" class="flex items-center justify-between p-3 rounded-2xl bg-white/80 hover:bg-white active:bg-emerald-50 text-[#01472e] font-display font-bold text-sm shadow-xs border border-[#ccd5ae]/40 transition">
+          <span class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-sm">🍽️</span>
+            <span>เมนูแนะนำ & อาหาร</span>
+          </span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-[#a3b18a]"></i>
+        </a>
+        
+        <a href="#booking" onclick="closeMobileMenu()" class="flex items-center justify-between p-3 rounded-2xl bg-white/80 hover:bg-white active:bg-emerald-50 text-[#01472e] font-display font-bold text-sm shadow-xs border border-[#ccd5ae]/40 transition">
+          <span class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-xl bg-emerald-100 text-[#01472e] flex items-center justify-center text-sm">ℹ️</span>
+            <span>นโยบายที่นั่ง & เช็คสถานะร้าน</span>
+          </span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-[#a3b18a]"></i>
+        </a>
+
+        <a href="#boat" onclick="closeMobileMenu()" class="flex items-center justify-between p-3 rounded-2xl bg-white/80 hover:bg-white active:bg-emerald-50 text-[#01472e] font-display font-bold text-sm shadow-xs border border-[#ccd5ae]/40 transition">
+          <span class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-xl bg-sky-100 text-sky-800 flex items-center justify-center text-sm">🛶</span>
+            <span>เรือพายฟรีริมคลอง</span>
+          </span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-[#a3b18a]"></i>
+        </a>
+
+        <a href="#reels" onclick="closeMobileMenu()" class="flex items-center justify-between p-3 rounded-2xl bg-white/80 hover:bg-white active:bg-emerald-50 text-[#01472e] font-display font-bold text-sm shadow-xs border border-[#ccd5ae]/40 transition">
+          <span class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-xl bg-rose-100 text-rose-800 flex items-center justify-center text-sm">🎬</span>
+            <span>Reels บรรยากาศจริง 30 วิ</span>
+          </span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-[#a3b18a]"></i>
+        </a>
+
+        <a href="#location" onclick="closeMobileMenu()" class="flex items-center justify-between p-3 rounded-2xl bg-white/80 hover:bg-white active:bg-emerald-50 text-[#01472e] font-display font-bold text-sm shadow-xs border border-[#ccd5ae]/40 transition">
+          <span class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-xl bg-indigo-100 text-indigo-800 flex items-center justify-center text-sm">🗺️</span>
+            <span>การเดินทาง & แผนที่ร้าน</span>
+          </span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-[#a3b18a]"></i>
+        </a>
+
+        <a href="#about" onclick="closeMobileMenu()" class="flex items-center justify-between p-3 rounded-2xl bg-white/80 hover:bg-white active:bg-emerald-50 text-[#01472e] font-display font-bold text-sm shadow-xs border border-[#ccd5ae]/40 transition">
+          <span class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-xl bg-teal-100 text-teal-800 flex items-center justify-center text-sm">🌿</span>
+            <span>บรรยากาศ & เอกลักษณ์ร้าน</span>
+          </span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-[#a3b18a]"></i>
+        </a>
+      </div>
+
+      <!-- Quick Action row in drawer -->
+      <div class="grid grid-cols-2 gap-2.5 pt-3.5 mt-3 border-t border-[#ccd5ae]/50">
+        <a href="tel:0805768179" class="p-2.5 bg-[#01472e] text-[#fefae0] rounded-xl text-center font-bold text-xs flex items-center justify-center gap-1.5 shadow">
+          <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+          <span>โทร 080-576-8179</span>
+        </a>
+        <a href="https://m.me/100057527526785" target="_blank" rel="noopener noreferrer" class="p-2.5 bg-blue-600 text-white rounded-xl text-center font-bold text-xs flex items-center justify-center gap-1.5 shadow">
+          <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+          <span>แชท Messenger</span>
+        </a>
+      </div>
     </div>
   </header>
 
@@ -1823,6 +1927,33 @@
 
     function closeReelModal() {
       document.getElementById('reelVideoModal').classList.add('hidden');
+    }
+
+    // Mobile Drawer Navigation Toggle
+    function toggleMobileMenu() {
+      const drawer = document.getElementById('mobileMenuDrawer');
+      const icon = document.getElementById('mobileMenuIcon');
+      const btn = document.getElementById('mobileMenuBtn');
+      if (!drawer) return;
+      const isOpen = !drawer.classList.contains('hidden');
+      if (isOpen) {
+        closeMobileMenu();
+      } else {
+        drawer.classList.remove('hidden');
+        if (btn) btn.setAttribute('aria-expanded', 'true');
+        if (icon) icon.setAttribute('data-lucide', 'x');
+        lucide.createIcons();
+      }
+    }
+
+    function closeMobileMenu() {
+      const drawer = document.getElementById('mobileMenuDrawer');
+      const icon = document.getElementById('mobileMenuIcon');
+      const btn = document.getElementById('mobileMenuBtn');
+      if (drawer) drawer.classList.add('hidden');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+      if (icon) icon.setAttribute('data-lucide', 'menu');
+      lucide.createIcons();
     }
 
     lucide.createIcons();
