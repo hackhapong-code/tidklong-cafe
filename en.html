@@ -150,6 +150,22 @@
 
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Clean custom utilities for mobile UX */
+    .no-scrollbar::-webkit-scrollbar,
+    .scrollbar-none::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar,
+    .scrollbar-none {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .snap-x {
+      -webkit-overflow-scrolling: touch;
+    }
+  </style>
 </head>
 <body class="bg-[#fefae0] text-[#01472e] font-sans antialiased selection:bg-[#ccd5ae] selection:text-[#01472e] relative">
 
@@ -201,19 +217,14 @@
         </div>
 
         <a href="https://www.facebook.com/profile.php?id=100057527526785" target="_blank" rel="noopener noreferrer" 
-           class="inline-flex items-center gap-1.5 bg-white/80 hover:bg-white text-[#01472e] px-3.5 py-2 rounded-full border border-[#ccd5ae] shadow-sm text-xs font-semibold transition">
+           class="hidden sm:inline-flex items-center gap-1.5 bg-white/80 hover:bg-white text-[#01472e] px-3.5 py-2 rounded-full border border-[#ccd5ae] shadow-sm text-xs font-semibold transition">
           <svg class="w-3.5 h-3.5 text-blue-600 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-          <span class="hidden sm:inline">Facebook</span>
-        </a>
-        
-        <!-- Mobile Booking Quick Trigger -->
-        <a href="#booking" class="md:hidden inline-flex items-center gap-1 bg-[#01472e] text-[#fefae0] px-3.5 py-2 rounded-full text-xs font-bold shadow-sm">
-          <i data-lucide="info" class="w-3.5 h-3.5"></i>
-          <span>Seating & Info</span>
+          <span>Facebook</span>
         </a>
 
-        <a href="tel:0805768179" class="p-2 bg-[#01472e] text-[#fefae0] rounded-full hover:bg-[#025a3a] transition shadow-sm" title="Call Tid Klong Cafe">
+        <a href="tel:0805768179" class="p-2 sm:px-3.5 sm:py-2 bg-[#01472e] text-[#fefae0] rounded-full hover:bg-[#025a3a] transition shadow-sm inline-flex items-center gap-1.5" title="Call Tid Klong Cafe">
           <i data-lucide="phone" class="w-4 h-4"></i>
+          <span class="hidden sm:inline text-xs font-bold">Call Cafe</span>
         </a>
       </div>
 
@@ -221,57 +232,57 @@
   </header>
 
   <!-- Hero Section: Nature-Inspired Riverside Architecture -->
-  <section class="relative overflow-hidden pt-12 pb-20 md:pt-20 md:pb-28">
+  <section class="relative overflow-hidden pt-6 pb-12 sm:pt-12 sm:pb-16 md:pt-20 md:pb-28">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       
       <!-- Operating Status Pill -->
-      <div class="inline-flex items-center gap-2.5 bg-[#ccd5ae]/40 text-[#01472e] text-xs font-bold px-4 py-2 rounded-full mb-8 border border-[#ccd5ae]">
+      <div class="inline-flex items-center gap-2.5 bg-[#ccd5ae]/40 text-[#01472e] text-[11px] sm:text-xs font-bold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full mb-4 sm:mb-8 border border-[#ccd5ae]">
         <span class="w-2.5 h-2.5 rounded-full bg-[#01472e] animate-pulse"></span>
         <span>Open Tuesday – Sunday 09:00 AM – 5:00 PM (Closed Mondays)</span>
       </div>
 
-      <div class="grid lg:grid-cols-12 gap-12 items-center">
+      <div class="grid lg:grid-cols-12 gap-8 sm:gap-12 items-center">
         
         <!-- Left Content -->
-        <div class="lg:col-span-7 space-y-6">
+        <div class="lg:col-span-7 space-y-4 sm:space-y-6">
           <span class="text-xs font-bold tracking-[0.25em] uppercase text-[#a3b18a] block">
             Canal Bound Sanctuary • Choeng Noen Rayong
           </span>
           
-          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#01472e] leading-[1.12] tracking-tight">
+          <h1 class="font-display text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#01472e] leading-[1.15] tracking-tight">
             Escape the City Rush <br>
             <span class="text-[#025a3a] underline decoration-[#ccd5ae] decoration-wavy decoration-4">Relax by the Waterside</span> 
             Vintage Wooden Haven in Rayong
           </h1>
 
-          <p class="text-[#01472e]/80 text-base sm:text-lg leading-relaxed max-w-xl">
+          <p class="text-[#01472e]/80 text-sm sm:text-base md:text-lg leading-relaxed max-w-xl">
             Discover the authentic charm of "Tid Klong Cafe" — a tranquil wooden sanctuary along Bang Chak Canal in Choeng Noen, Rayong. Enjoy freshly brewed specialty coffee, cooling tropical drinks, made-to-order Thai meals, and complimentary boat rowing.
           </p>
 
-          <div class="flex flex-wrap gap-4 pt-3">
-            <a href="#booking" class="inline-flex items-center gap-2.5 bg-[#01472e] hover:bg-[#025a3a] text-[#fefae0] font-display font-bold px-7 py-4 rounded-2xl shadow-lg hover:shadow-xl transition transform active:scale-95 text-sm sm:text-base">
+          <div class="flex flex-col sm:flex-row gap-3 pt-2 sm:pt-3">
+            <a href="#booking" class="w-full sm:w-auto justify-center inline-flex items-center gap-2.5 bg-[#01472e] hover:bg-[#025a3a] text-[#fefae0] font-display font-bold px-5 py-3.5 sm:px-7 sm:py-4 rounded-2xl shadow-md hover:shadow-xl transition transform active:scale-95 text-sm sm:text-base">
               <i data-lucide="info" class="w-4 h-4 text-emerald-200"></i>
               <span>Seating Policy & Direct Inquiry</span>
             </a>
-            <a href="#location" class="inline-flex items-center gap-2 bg-white/80 hover:bg-white text-[#01472e] border border-[#ccd5ae] font-semibold px-6 py-4 rounded-2xl shadow-sm hover:shadow transition text-sm sm:text-base">
+            <a href="#location" class="w-full sm:w-auto justify-center inline-flex items-center gap-2 bg-white/80 hover:bg-white text-[#01472e] border border-[#ccd5ae] font-semibold px-5 py-3.5 sm:px-6 sm:py-4 rounded-2xl shadow-sm hover:shadow transition text-sm sm:text-base">
               <i data-lucide="map-pin" class="w-4 h-4 text-[#01472e]"></i>
               <span>Get Directions & Map</span>
             </a>
           </div>
 
           <!-- Feature Metric Badges -->
-          <div class="grid grid-cols-3 gap-4 pt-8 border-t border-[#ccd5ae]/60">
+          <div class="grid grid-cols-3 gap-2 sm:gap-4 pt-5 sm:pt-8 border-t border-[#ccd5ae]/60">
             <div>
-              <p class="font-display font-bold text-[#01472e] text-2xl sm:text-3xl">Canal-side</p>
-              <p class="text-xs text-[#01472e]/70 font-medium">Cool breeze all day long</p>
+              <p class="font-display font-bold text-[#01472e] text-xl sm:text-2xl md:text-3xl">Canal-side</p>
+              <p class="text-[11px] sm:text-xs text-[#01472e]/70 font-medium">Cool breeze all day</p>
             </div>
             <div>
-              <p class="font-display font-bold text-[#01472e] text-2xl sm:text-3xl">Rustic Wood</p>
-              <p class="text-xs text-[#01472e]/70 font-medium">Warm natural architecture</p>
+              <p class="font-display font-bold text-[#01472e] text-xl sm:text-2xl md:text-3xl">Rustic Wood</p>
+              <p class="text-[11px] sm:text-xs text-[#01472e]/70 font-medium">Warm natural design</p>
             </div>
             <div>
-              <p class="font-display font-bold text-[#01472e] text-2xl sm:text-3xl">Free Boating</p>
-              <p class="text-xs text-[#01472e]/70 font-medium">Row & capture scenic canal memories</p>
+              <p class="font-display font-bold text-[#01472e] text-xl sm:text-2xl md:text-3xl">Free Boating</p>
+              <p class="text-[11px] sm:text-xs text-[#01472e]/70 font-medium">Row & scenic photos</p>
             </div>
           </div>
         </div>
@@ -282,7 +293,7 @@
             
             <div class="relative rounded-organic overflow-hidden shadow-2xl border-4 border-white bg-white rotate-1 hover:rotate-0 transition duration-500">
               <img src="assets/hero_real.jpg" 
-                   alt="Authentic Waterfront Atmosphere at Tid Klong Cafe Rayong" class="w-full h-96 sm:h-[440px] object-cover object-center">
+                   alt="Authentic Waterfront Atmosphere at Tid Klong Cafe Rayong" class="w-full h-80 sm:h-96 md:h-[440px] object-cover object-center">
               <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30 pointer-events-none"></div>
               
               <!-- Top-Left Location Tag -->
@@ -327,14 +338,14 @@
   </section>
 
   <!-- Free Paddle Boat Feature Banner with Real Facebook Photo -->
-  <section id="boat" class="py-12">
+  <section id="boat" class="py-8 sm:py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="bg-gradient-to-br from-[#01472e] via-[#025a3a] to-[#002216] rounded-section p-6 sm:p-10 lg:p-12 text-[#fefae0] shadow-2xl relative overflow-hidden border border-[#ccd5ae]/30">
+      <div class="bg-gradient-to-br from-[#01472e] via-[#025a3a] to-[#002216] rounded-section p-5 sm:p-10 lg:p-12 text-[#fefae0] shadow-2xl relative overflow-hidden border border-[#ccd5ae]/30">
         
-        <div class="grid lg:grid-cols-12 gap-8 items-center relative z-10">
+        <div class="grid lg:grid-cols-12 gap-6 sm:gap-8 items-center relative z-10">
           
           <!-- Left: Information & CTA -->
-          <div class="lg:col-span-7 space-y-4">
+          <div class="lg:col-span-7 space-y-3 sm:space-y-4">
             <div class="inline-flex items-center gap-2 bg-[#ccd5ae] text-[#01472e] text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-wider shadow-sm">
               <span>🛶 Signature Free Activity</span>
               <span class="w-1.5 h-1.5 rounded-full bg-[#01472e]"></span>
@@ -349,19 +360,19 @@
               One of our guests' most beloved highlights! Simply stop by for coffee or a meal at Tid Klong Cafe to enjoy free wooden rowboats or dolphin pedal boats along peaceful waters and mangrove trees at zero extra cost. Beautiful photo spots from every angle.
             </p>
 
-            <div class="flex flex-wrap items-center gap-3 pt-2">
-              <a href="#booking" class="bg-[#fefae0] text-[#01472e] hover:bg-white px-5 py-3 rounded-2xl text-xs sm:text-sm font-display font-bold transition shadow-md flex items-center gap-2">
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
+              <a href="#booking" class="w-full sm:w-auto justify-center bg-[#fefae0] text-[#01472e] hover:bg-white px-5 py-3 rounded-2xl text-xs sm:text-sm font-display font-bold transition shadow-md flex items-center gap-2">
                 <i data-lucide="sparkles" class="w-4 h-4 text-emerald-700"></i>
                 <span>Walk-in & Enjoy Free Boating</span>
               </a>
               <a href="https://www.facebook.com/reel/1525303492078464" target="_blank" rel="noopener noreferrer" 
-                 class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-2xl text-xs sm:text-sm font-bold transition shadow-md flex items-center gap-2 group">
+                 class="hidden sm:inline-flex bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-2xl text-xs sm:text-sm font-bold transition shadow-md items-center gap-2 group">
                 <svg class="w-4 h-4 fill-current text-white" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                 <span>🎬 Watch Rowboat Video (Reel 1)</span>
                 <i data-lucide="external-link" class="w-3.5 h-3.5 opacity-70 group-hover:opacity-100"></i>
               </a>
               <a href="https://www.facebook.com/reel/1827363501303769" target="_blank" rel="noopener noreferrer" 
-                 class="bg-white/10 hover:bg-white/20 text-white border border-white/25 px-4 py-3 rounded-2xl text-xs sm:text-sm font-semibold transition flex items-center gap-2 group">
+                 class="hidden sm:inline-flex bg-white/10 hover:bg-white/20 text-white border border-white/25 px-4 py-3 rounded-2xl text-xs sm:text-sm font-semibold transition items-center gap-2 group">
                 <svg class="w-4 h-4 fill-current text-blue-300" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                 <span>🐬 Watch Pedal Boat Video (Reel 2)</span>
                 <i data-lucide="external-link" class="w-3.5 h-3.5 opacity-70 group-hover:opacity-100"></i>
@@ -448,38 +459,38 @@
   </section>
 
   <!-- Reels & Vibe Showcase Section (Inspired by Instagram Reels & Short Video Vibe) -->
-  <section id="reels" class="py-16 sm:py-24 bg-gradient-to-b from-[#fefae0] to-white/90 relative overflow-hidden border-b border-[#ccd5ae]/40">
+  <section id="reels" class="py-12 sm:py-20 md:py-24 bg-gradient-to-b from-[#fefae0] to-white/90 relative overflow-hidden border-b border-[#ccd5ae]/40">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       
       <!-- Section Header -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-10 md:mb-12 gap-4">
         <div>
           <div class="inline-flex items-center gap-2 bg-[#01472e] text-[#fefae0] text-xs font-bold px-3.5 py-1.5 rounded-full mb-3 shadow-sm">
             <i data-lucide="video" class="w-3.5 h-3.5 text-emerald-300"></i>
             <span>30-Second Tour • Reels & Vibe Showcase</span>
           </div>
-          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-[#01472e] tracking-tight">
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-[#01472e] tracking-tight">
             Experience the Vibe in 30 Seconds
           </h2>
-          <p class="text-sm sm:text-base text-[#01472e]/75 mt-2 max-w-xl">
+          <p class="text-sm sm:text-base text-[#01472e]/75 mt-1 sm:mt-2 max-w-xl">
             Watch authentic reels of our wooden rowboats, Slow Bar coffee drip, and serene mangrove canopy along Bang Chak canal.
           </p>
         </div>
 
         <!-- Social Facebook Reel Channel Link -->
         <a href="https://www.facebook.com/profile.php?id=100057527526785" target="_blank" rel="noopener noreferrer"
-           class="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-[#01472e] font-bold text-xs sm:text-sm px-5 py-3 rounded-full border border-[#ccd5ae] shadow-sm transition group self-start md:self-auto shrink-0">
+           class="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-[#01472e] font-bold text-xs sm:text-sm px-4 py-2.5 sm:px-5 sm:py-3 rounded-full border border-[#ccd5ae] shadow-sm transition group self-start md:self-auto shrink-0">
           <svg class="w-4 h-4 fill-current text-blue-600" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
           <span>Watch All Reels on Facebook</span>
           <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400 group-hover:text-[#01472e] transition"></i>
         </a>
       </div>
 
-      <!-- 4 Vertical 9:16 Reels Grid -->
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+      <!-- 4 Vertical 9:16 Reels Carousel / Grid -->
+      <div class="flex overflow-x-auto sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 snap-x snap-mandatory scrollbar-none pb-4 -mx-4 px-4 sm:mx-0 sm:px-0">
         
         <!-- Reel Card 1: Row Boat -->
-        <div onclick="openReelModal(0)" class="group cursor-pointer relative rounded-3xl overflow-hidden aspect-[9/16] shadow-lg hover:shadow-2xl transition-all duration-300 border border-white/60 hover:-translate-y-1.5 bg-[#01472e]/10">
+        <div onclick="openReelModal(0)" class="w-[72vw] max-w-[270px] sm:w-auto shrink-0 snap-center sm:snap-align-none group cursor-pointer relative rounded-3xl overflow-hidden aspect-[9/16] shadow-md hover:shadow-2xl transition-all duration-300 border border-white/60 hover:-translate-y-1.5 bg-[#01472e]/10">
           <img src="assets/fb_reel_row_boat_canvas.jpg" alt="Rowing wooden boat along canal" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
           <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/20"></div>
           
@@ -507,7 +518,7 @@
         </div>
 
         <!-- Reel Card 2: Pedal Dolphin Boat -->
-        <div onclick="openReelModal(1)" class="group cursor-pointer relative rounded-3xl overflow-hidden aspect-[9/16] shadow-lg hover:shadow-2xl transition-all duration-300 border border-white/60 hover:-translate-y-1.5 bg-[#01472e]/10">
+        <div onclick="openReelModal(1)" class="w-[72vw] max-w-[270px] sm:w-auto shrink-0 snap-center sm:snap-align-none group cursor-pointer relative rounded-3xl overflow-hidden aspect-[9/16] shadow-md hover:shadow-2xl transition-all duration-300 border border-white/60 hover:-translate-y-1.5 bg-[#01472e]/10">
           <img src="assets/fb_reel_pedal_boat_canvas.jpg" alt="Dolphin pedal boat" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
           <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/20"></div>
           
@@ -532,7 +543,7 @@
         </div>
 
         <!-- Reel Card 3: Slow Bar Coffee -->
-        <div onclick="openReelModal(2)" class="group cursor-pointer relative rounded-3xl overflow-hidden aspect-[9/16] shadow-lg hover:shadow-2xl transition-all duration-300 border border-white/60 hover:-translate-y-1.5 bg-[#01472e]/10">
+        <div onclick="openReelModal(2)" class="w-[72vw] max-w-[270px] sm:w-auto shrink-0 snap-center sm:snap-align-none group cursor-pointer relative rounded-3xl overflow-hidden aspect-[9/16] shadow-md hover:shadow-2xl transition-all duration-300 border border-white/60 hover:-translate-y-1.5 bg-[#01472e]/10">
           <img src="assets/real_fb_orange_americano.jpg" alt="Slow Bar Drip Coffee" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
           <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/20"></div>
           
@@ -557,7 +568,7 @@
         </div>
 
         <!-- Reel Card 4: 50-Year Heritage Wooden House -->
-        <div onclick="openReelModal(3)" class="group cursor-pointer relative rounded-3xl overflow-hidden aspect-[9/16] shadow-lg hover:shadow-2xl transition-all duration-300 border border-white/60 hover:-translate-y-1.5 bg-[#01472e]/10">
+        <div onclick="openReelModal(3)" class="w-[72vw] max-w-[270px] sm:w-auto shrink-0 snap-center sm:snap-align-none group cursor-pointer relative rounded-3xl overflow-hidden aspect-[9/16] shadow-md hover:shadow-2xl transition-all duration-300 border border-white/60 hover:-translate-y-1.5 bg-[#01472e]/10">
           <img src="assets/hero_real.jpg" alt="50-Year Heritage Wooden House" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
           <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/20"></div>
           
@@ -584,22 +595,22 @@
       </div>
 
       <!-- Slow Living Manifesto Callout (Inspired by Post 46 & 49) -->
-      <div class="mt-10 sm:mt-12 bg-gradient-to-r from-[#01472e] via-[#025a3a] to-[#013824] text-[#fefae0] rounded-3xl p-6 sm:p-8 border border-[#ccd5ae]/30 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
-        <div class="flex items-center gap-4">
-          <div class="w-12 h-12 rounded-2xl bg-[#ccd5ae]/20 flex items-center justify-center text-emerald-300 shrink-0">
-            <i data-lucide="sparkles" class="w-6 h-6"></i>
+      <div class="mt-8 sm:mt-12 bg-gradient-to-r from-[#01472e] via-[#025a3a] to-[#013824] text-[#fefae0] rounded-3xl p-5 sm:p-8 border border-[#ccd5ae]/30 shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
+        <div class="flex items-start sm:items-center gap-3.5 sm:gap-4">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-[#ccd5ae]/20 flex items-center justify-center text-emerald-300 shrink-0">
+            <i data-lucide="sparkles" class="w-5 h-5 sm:w-6 sm:h-6"></i>
           </div>
           <div>
-            <div class="inline-flex items-center gap-1.5 text-xs text-emerald-300 font-bold tracking-wider uppercase mb-1">
+            <div class="inline-flex items-center gap-1.5 text-[11px] sm:text-xs text-emerald-300 font-bold tracking-wider uppercase mb-1">
               <span>Value Guaranteed • True Relaxation</span>
             </div>
-            <h4 class="font-display font-bold text-base sm:text-lg text-white">Slow down along the canal... 1 hour to simply listen to the water</h4>
+            <h4 class="font-display font-bold text-base sm:text-lg text-white leading-snug">Slow down along the canal... 1 hour to simply listen to the water</h4>
             <p class="text-xs sm:text-sm text-[#ccd5ae] mt-1 leading-relaxed">
               Every drink or dish order includes complimentary, unlimited rowboat & pedal boat access (฿200 value included free).
             </p>
           </div>
         </div>
-        <a href="#booking" class="bg-[#fefae0] text-[#01472e] hover:bg-white font-display font-bold text-xs sm:text-sm px-6 py-3.5 rounded-full transition shadow-md shrink-0 flex items-center gap-2">
+        <a href="#booking" class="w-full md:w-auto justify-center bg-[#fefae0] text-[#01472e] hover:bg-white font-display font-bold text-xs sm:text-sm px-6 py-3.5 rounded-full transition shadow-md shrink-0 flex items-center gap-2">
           <i data-lucide="info" class="w-4 h-4"></i>
           <span>Seating Policy & Inquire</span>
         </a>
@@ -609,7 +620,7 @@
   </section>
 
   <!-- About / Ambience Section -->
-  <section id="about" class="py-20 bg-white/70">
+  <section id="about" class="py-12 sm:py-16 md:py-20 bg-white/70">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div class="text-center max-w-2xl mx-auto mb-16 space-y-2">
         <span class="text-[#a3b18a] text-xs font-bold tracking-[0.25em] uppercase block">Atmosphere & Highlights</span>
@@ -680,7 +691,7 @@
   <!-- ========================================== -->
   <!-- 🍽️ REAL FACEBOOK MENU & SPECIALS SECTION   -->
   <!-- ========================================== -->
-  <section id="menu" class="py-24">
+  <section id="menu" class="py-12 sm:py-16 md:py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       
       <!-- Section Header -->
@@ -1121,16 +1132,16 @@
   <!-- ========================================== -->
   <!-- 🌿 SEATING & WALK-IN POLICY SECTION        -->
   <!-- ========================================== -->
-  <section id="booking" class="py-24 bg-white/70 relative overflow-hidden">
+  <section id="booking" class="py-12 sm:py-20 md:py-24 bg-white/70 relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       
       <!-- Section Header with Official Cafe Claim -->
-      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
-        <div class="inline-flex items-center gap-2 bg-amber-500/15 border border-amber-500/30 text-amber-900 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+      <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12 md:mb-14 space-y-2 sm:space-y-3">
+        <div class="inline-flex items-center gap-2 bg-amber-500/15 border border-amber-500/30 text-amber-900 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
           <i data-lucide="info" class="w-4 h-4 text-amber-700"></i>
           <span>Seating & Visiting Policy • Tid Klong Cafe</span>
         </div>
-        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#01472e] leading-tight">
+        <h2 class="font-display text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#01472e] leading-tight">
           The Cafe May Not Be Able to Accept Table Reservations
         </h2>
         <p class="text-[#01472e]/80 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
@@ -1139,10 +1150,10 @@
       </div>
 
       <!-- 3 Pillars of Visiting Experience -->
-      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
+      <div class="grid md:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto mb-8 sm:mb-12">
         
         <!-- Pillar 1: Walk-ins Always Welcome -->
-        <div class="bg-white rounded-3xl p-6 sm:p-7 border border-[#ccd5ae]/80 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+        <div class="bg-white rounded-3xl p-5 sm:p-7 border border-[#ccd5ae]/80 shadow-sm hover:shadow-md transition flex flex-col justify-between">
           <div>
             <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-[#01472e] flex items-center justify-center mb-4">
               <i data-lucide="footprints" class="w-6 h-6"></i>
@@ -1159,7 +1170,7 @@
         </div>
 
         <!-- Pillar 2: Enjoy While Waiting -->
-        <div class="bg-white rounded-3xl p-6 sm:p-7 border border-[#ccd5ae]/80 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+        <div class="bg-white rounded-3xl p-5 sm:p-7 border border-[#ccd5ae]/80 shadow-sm hover:shadow-md transition flex flex-col justify-between">
           <div>
             <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center mb-4">
               <i data-lucide="ship" class="w-6 h-6"></i>
@@ -1176,7 +1187,7 @@
         </div>
 
         <!-- Pillar 3: Inquire Ahead -->
-        <div class="bg-white rounded-3xl p-6 sm:p-7 border border-[#ccd5ae]/80 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+        <div class="bg-white rounded-3xl p-5 sm:p-7 border border-[#ccd5ae]/80 shadow-sm hover:shadow-md transition flex flex-col justify-between">
           <div>
             <div class="w-12 h-12 rounded-2xl bg-blue-100 text-blue-800 flex items-center justify-center mb-4">
               <i data-lucide="message-circle" class="w-6 h-6"></i>
@@ -1195,10 +1206,10 @@
       </div>
 
       <!-- Direct Contact & Inquiry Action Card -->
-      <div class="max-w-4xl mx-auto bg-gradient-to-br from-[#01472e] to-[#025a3a] text-white rounded-super p-7 sm:p-10 shadow-2xl border border-[#ccd5ae]/30 relative overflow-hidden">
-        <div class="relative z-10 space-y-6">
+      <div class="max-w-4xl mx-auto bg-gradient-to-br from-[#01472e] to-[#025a3a] text-white rounded-3xl sm:rounded-super p-5 sm:p-8 md:p-10 shadow-2xl border border-[#ccd5ae]/30 relative overflow-hidden">
+        <div class="relative z-10 space-y-5 sm:space-y-6">
           
-          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/15 pb-6">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/15 pb-5 sm:pb-6">
             <div>
               <span class="text-xs font-bold text-[#ccd5ae] uppercase tracking-wider block mb-1">
                 Direct Contact & Seating Inquiry
@@ -1211,19 +1222,47 @@
               </p>
             </div>
 
-            <div class="shrink-0 flex items-center gap-2 bg-black/25 backdrop-blur px-3.5 py-2 rounded-2xl border border-white/10 text-xs">
+            <div class="shrink-0 flex items-center gap-2 bg-black/25 backdrop-blur px-3.5 py-2 rounded-2xl border border-white/10 text-xs self-start md:self-auto">
               <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
               <span class="text-white font-medium">Open 09:00 AM – 5:00 PM (Closed Mondays)</span>
             </div>
           </div>
 
           <!-- Action Buttons Grid -->
-          <div class="grid sm:grid-cols-2 gap-4 pt-2">
+          <div class="grid sm:grid-cols-2 gap-3 sm:gap-4 pt-2">
             
             <!-- Facebook Messenger Button -->
             <a href="https://m.me/100057527526785?text=Hello%20Tid%20Klong%20Cafe!%20We%20are%20planning%20to%20visit%20soon.%20Could%20you%20please%20let%20us%20know%20how%20busy%20the%20cafe%20is%20right%20now%20and%20if%20waterfront%20seats%20are%20available?%20Thank%20you!" 
                target="_blank" rel="noopener noreferrer" 
-               class="bg-blue-600 hover:bg-blue-700 text-white p-5 rounded-2xl shadow-lg transition flex items-center justify-between group">
+               class="bg-blue-600 hover:bg-blue-700 text-white p-4 sm:p-5 rounded-2xl shadow-lg transition flex items-center justify-between group">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white/20 flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current text-white" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </div>
+                <div class="text-left">
+                  <p class="font-display font-bold text-sm sm:text-base">Chat on Facebook Messenger</p>
+                  <p class="text-[11px] text-blue-100">Direct message to page staff</p>
+                </div>
+              </div>
+              <i data-lucide="arrow-up-right" class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition"></i>
+            </a>
+
+            <!-- Phone Call Button -->
+            <a href="tel:0805768179" 
+               class="bg-[#fefae0] hover:bg-white text-[#01472e] p-4 sm:p-5 rounded-2xl shadow-lg transition flex items-center justify-between group">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#01472e]/10 text-[#01472e] flex items-center justify-center shrink-0">
+                  <i data-lucide="phone-call" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+                </div>
+                <div class="text-left">
+                  <p class="font-display font-bold text-sm sm:text-base">Call Cafe Directly</p>
+                  <p class="text-[11px] text-[#01472e]/70">080-576-8179 (or 094-850-1553)</p>
+                </div>
+              </div>
+              <i data-lucide="arrow-up-right" class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition"></i>
+            </a>
+
+          </div>
               <div class="flex items-center gap-3.5">
                 <div class="w-11 h-11 rounded-xl bg-white/20 flex items-center justify-center shrink-0">
                   <svg class="w-6 h-6 fill-current text-white" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -1275,7 +1314,7 @@
   <!-- ========================================== -->
   <!-- 📸 AUTHENTIC FACEBOOK PHOTO GALLERY SECTION -->
   <!-- ========================================== -->
-  <section id="gallery" class="py-20 bg-white border-y border-[#ccd5ae]/50">
+  <section id="gallery" class="py-12 sm:py-16 md:py-20 bg-white border-y border-[#ccd5ae]/50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       
       <!-- Section Header -->
@@ -1576,7 +1615,7 @@
   </section>
 
   <!-- Location & Hours Section -->
-  <section id="location" class="py-24">
+  <section id="location" class="py-12 sm:py-16 md:py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div class="grid md:grid-cols-12 gap-10 items-center">
         
@@ -1684,8 +1723,8 @@
     </div>
   </footer>
 
-  <!-- Floating Action Buttons -->
-  <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+  <!-- Floating Action Buttons (Desktop Only to keep Mobile Clean & Unobstructed) -->
+  <div class="hidden md:flex fixed bottom-6 right-6 z-50 flex-col gap-3">
     <!-- Seating Policy / Quick Contact Button -->
     <a href="#booking" 
        class="w-13 h-13 p-3.5 bg-[#01472e] hover:bg-[#025a3a] text-white rounded-full shadow-xl hover:shadow-2xl transition transform hover:scale-110 flex items-center justify-center group"
